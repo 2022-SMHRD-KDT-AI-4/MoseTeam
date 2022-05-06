@@ -1,0 +1,8 @@
+.btn1{
+    margin: 10px;
+    width: 200px;
+    height: 50px;   
+}
+.btn1:focus{
+    background-color: aqua;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>어떤걸 먹어 볼까?</title>
+	<meta name="description" content="Blueprint: A basic template for a responsive multi-level menu" />
+	<meta name="keywords" content="blueprint, template, html, css, menu, responsive, mobile-friendly" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- food icons -->
+	<link rel="stylesheet" type="text/css" href="css/organicfoodicons.css" />
+	<!-- demo styles -->
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<!-- menu styles -->
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="css/join.css" />
+
+	<script src="js/modernizr-custom.js"></script>
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<style>
+	 @import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+	 @import url('https://fonts.googleapis.com/css2?family=Gugi&family=Stylish&display=swap');
+	 @import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Gugi&family=Stylish&display=swap');
+	 
+	</style>
+
+
+</head>
+<body>
+ 
+    <form action="doJoin" method="POST" class="joinForm" onsubmit="DoJoinForm__submit(this);">
+                                                                                              
+        <h2>회원가입</h2>
+        <div class="textForm">
+          <input name="loginId" type="text" class="id" placeholder="아이디">
+          </input>
+        </div>
+        <div class="textForm">
+          <input name="loginPw" type="password" class="pw" placeholder="비밀번호">
+        </div>
+         <div class="textForm">
+          <input name="loginPwConfirm" type="password" class="pw" placeholder="비밀번호 확인">
+        </div>
+        <div class="textForm">
+          <input name="name" type="password" class="name" placeholder="이름">
+        </div>
+         <div class="textForm">
+          <input name="email" type="text" class="email" placeholder="이메일">
+        </div>
+        <div class="textForm">
+          <input name="nickname" type="text" class="nickname" placeholder="닉네임">
+        </div>
+        <input type="submit" class="btn" value="J O I N"/>
+        
+      </form>
+
+      <script>
+            $(".btn").on("mouseover",function(){
+                $("body > form > input").css("font-size","2em");
+            })
+            $(".btn").on("mouseout",function(){
+                $("body > form > input").css("font-size","1.2em");
+            })
+
+      </script>
+</body>
+</html>
