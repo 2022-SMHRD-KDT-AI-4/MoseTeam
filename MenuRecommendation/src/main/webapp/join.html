@@ -25,12 +25,12 @@
 	 @import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Gugi&family=Stylish&display=swap');
 	 
 	</style>
-
+	
 
 </head>
 <body>
  
-    <form action="JoinService" method="POST" class="joinForm" onsubmit="JoinServiceForm__submit(this);">
+    <form action="JoinService" method="POST" class="joinForm" onsubmit="return jbSubmit();">
                                                                                               
         <h2>회원가입</h2>
         <div class="textForm">
@@ -38,10 +38,10 @@
           </input>
         </div>
         <div class="textForm">
-          <input name="pw" type="password" class="pw" placeholder="비밀번호">
+          <input name="pw" type="password" class="pw" id="pw1" placeholder="비밀번호">
         </div>
          <div class="textForm">
-          <input name="pwConfirm" type="password" class="pw" placeholder="비밀번호 확인">
+          <input name="pwConfirm" type="password" class="pw" id="pw2" placeholder="비밀번호 확인">
         </div>
         <div class="textForm">
           <input name="nickname" type="text" class="nickname" placeholder="닉네임">
@@ -53,17 +53,25 @@
 
       <script>
       	
-      		if("pw"!="pwConfirm"){
-      			$("confirm").text = "비밀번호가 다릅니다"
-      		}
-      
-            $(".btn").on("mouseover",function(){
-                $("body > form > input").css("font-size","2em");
-            })
-            $(".btn").on("mouseout",function(){
-                $("body > form > input").css("font-size","1.2em");
-            })
+      	$(".btn").on("mouseover",function(){
+      		$("body > form > input").css("font-size","2em");
+      	})
+      	$(".btn").on("mouseout",function(){
+      		$("body > form > input").css("font-size","1.2em");
+      	})
 
       </script>
+      
+      <script>
+      	function jbSubmit(){
+      		var pw1 = $('#pw1').value;
+      		var pw2 = $('#pw2').value;
+      		if(pw1!=pw2){
+	      		alert('비밀번호가 다릅니다');
+      			return false;
+      		}
+      	}
+      </script>
+      
 </body>
 </html>
