@@ -39,11 +39,11 @@
 	
 				<div class="login_id">
 					<h4>ID</h4>
-					<input type="id" name="" id="" placeholder="ID">
+					<input type="id" name="id" placeholder="ID">
 				</div>
 				<div class="login_pw">
 					<h4>PW</h4>
-					<input type="password" name="" id="" placeholder="PW">
+					<input type="password" name="pw" placeholder="PW">
 				</div>
 				<div class="login_etc">
 					<div class="forgot_pw">
@@ -287,6 +287,18 @@
 		$(".button").on("mouseout",function(){
             $("body > div.container > div > button > span > span").css("font-size","40px");
         })
+	</script>
+	
+	<script>
+		function login(){
+			pageGoPost({
+				url: "LoginService",	//이동할 페이지
+			    vals: [				//전달할 인수들
+			    	["id", "id"],
+			        ["pw", "pw"]
+				]
+			});
+		}
 	</script>
 
 </body>
