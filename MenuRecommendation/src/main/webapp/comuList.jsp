@@ -6,7 +6,6 @@
 <meta charset="EUC-KR">
 <link rel="stylesheet" href="css/comu.css">
 <link rel="stylesheet" type="text/css" href="css/demo.css" />
-<script src="js/modernizr-custom.js"></script>
 <script src="js/jquery-3.6.0.min.js"></script>
 <title>Insert title here</title>
 </head>

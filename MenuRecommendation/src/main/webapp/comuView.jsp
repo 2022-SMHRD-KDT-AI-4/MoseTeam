@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
+<script src="js/jquery-3.6.0.min.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
