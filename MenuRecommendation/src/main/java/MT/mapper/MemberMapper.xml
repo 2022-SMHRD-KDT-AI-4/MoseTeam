@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 어떤 DAO에서 사용하는지 -->
+<mapper namespace="MT.model.MemberDAO">
+
+	<insert
+	id="join"
+	parameterType="MemberVO">
+	insert into member(MEMBER_ID, MEMBER_PW, NICK_NM, GRADE)
+	values(#{id},#{pw},#{nickname},'N')
+	</insert>
+	
+	<select id="login"
+	parameterType="MemberVO"
+	resultType="MemberVO">
+		select * form member
+		where MEMBER_ID = #{id}
+		and MEMBER_PW = #{pw}
+	</select>
+	
+
+</mapper>

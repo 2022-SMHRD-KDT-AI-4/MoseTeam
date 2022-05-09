@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+<!-- DB정보 가져오기 -->
+<properties resource="MT/mapper/db.properties"></properties>
+
+<!-- 데이터 타입 별 alias 설정 -->
+<typeAliases>
+	<typeAlias type="MT.model.MemberVO" alias="MemberVO"/>
+</typeAliases>
+
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  
+  <mappers>
+  <!-- SQL작성된 xml파일의 위치 -->
+    <mapper resource="MT/mapper/MemberMapper.xml"/>
+  </mappers>
+</configuration>
