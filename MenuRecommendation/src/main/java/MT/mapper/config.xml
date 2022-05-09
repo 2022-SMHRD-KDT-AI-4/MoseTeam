@@ -10,6 +10,7 @@
 <!-- 데이터 타입 별 alias 설정 -->
 <typeAliases>
 	<typeAlias type="MT.model.MemberVO" alias="MemberVO"/>
+	<typeAlias type="MT.model.BoardVO" alias="BoardVO"/>
 </typeAliases>
 
   <environments default="development">
@@ -27,5 +28,6 @@
   <mappers>
   <!-- SQL작성된 xml파일의 위치 -->
     <mapper resource="MT/mapper/MemberMapper.xml"/>
+    <mapper resource="MT/mapper/BoardMapper.xml"/>
   </mappers>
 </configuration>
