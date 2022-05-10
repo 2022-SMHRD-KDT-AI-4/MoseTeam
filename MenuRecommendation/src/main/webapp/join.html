@@ -24,13 +24,14 @@
 	 @import url('https://fonts.googleapis.com/css2?family=Gugi&family=Stylish&display=swap');
 	 @import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Gugi&family=Stylish&display=swap');
 	 
+
 	</style>
 	
 
 </head>
 <body>
  
-    <form action="JoinService" method="POST" class="joinForm" onsubmit="return jbSubmit();">
+    <form action="JoinService" method="POST" class="joinForm">
                                                                                               
         <h2>회원가입</h2>
         <div class="textForm">
@@ -38,10 +39,11 @@
           </input>
         </div>
         <div class="textForm">
-          <input name="pw" type="password" class="pw" id="pw1" placeholder="비밀번호">
+          <input name="pw" type="password" class="pw" id="pw" placeholder="비밀번호">
         </div>
          <div class="textForm">
-          <input name="pwConfirm" type="password" class="pw" id="pw2" placeholder="비밀번호 확인">
+          <input name="pwConfirm" type="password" class="pw" id="pwConfirm" placeholder="비밀번호 확인"/>
+          <span id = "pwSameness"></span>
         </div>
         <div class="textForm">
           <input name="nickname" type="text" class="nickname" placeholder="닉네임">
@@ -62,16 +64,22 @@
 
       </script>
       
-      <script>
-      	function jbSubmit(){
-      		var pw1 = $('#pw1').value;
-      		var pw2 = $('#pw2').value;
-      		if(pw1!=pw2){
-	      		alert('비밀번호가 다릅니다');
-      			return false;
+      <script type = "text/javascript">
+      	
+      	$('.pw').on("input", function(){
+      		let pw = $('#pw').val();
+      		let pwConfirm = $('#pwConfirm').val();
+
+      		if(pw != null && pw == pwConfirm){
+	      		$('#pwSameness').text('확인!').css('color','gray');
+      		}else{
+	      		$('#pwSameness').text('비밀번호가 일치하지 않습니다.').css('color','red');
       		}
-      	}
+      	
+      	})
       </script>
+ 
+
       
 </body>
 </html>
