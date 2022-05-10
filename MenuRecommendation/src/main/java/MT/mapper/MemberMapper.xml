@@ -10,15 +10,15 @@
 	id="join"
 	parameterType="MemberVO">
 	insert into member(MEMBER_ID, MEMBER_PW, NICK_NM, GRADE)
-	values(#{id},#{pw},#{nickname},'N')
+	values(#{MEMBER_ID},#{MEMBER_PW},#{NICK_NM},'N')
 	</insert>
 	
 	<select id="login"
-	parameterType="MemberVO"
-	resultType="MemberVO">
-		select * form member
-		where MEMBER_ID = #{id}
-		and MEMBER_PW = #{pw}
+			parameterType = "MemberVO"
+			resultType    = "MemberVO">
+		select * from member
+		where MEMBER_ID = #{MEMBER_ID}
+		  and MEMBER_PW = #{MEMBER_PW}
 	</select>
 	
 

@@ -13,9 +13,9 @@ import lombok.RequiredArgsConstructor;
 public class MemberVO {
 
 	@NonNull
-	private String id;
+	private String MEMBER_ID;
 	@NonNull
-	private String pw;
-	private String nickname;
+	private String MEMBER_PW;
+	private String NICK_NM;
 
 }

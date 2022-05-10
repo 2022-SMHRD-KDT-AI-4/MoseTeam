@@ -19,11 +19,11 @@ public class JoinService extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		
 		// 1. 파라미터 수집
-		String id = request.getParameter("id");
-		String pw = request.getParameter("pw");
-		String nickname = request.getParameter("nickname");
+		String MEMBER_ID = request.getParameter("id");
+		String MEMBER_PW = request.getParameter("pw");
+		String NICK_NM = request.getParameter("nickname");
 		// vo로 묶기
-		MemberVO vo = new MemberVO(id, pw, nickname);
+		MemberVO vo = new MemberVO(MEMBER_ID, MEMBER_PW, NICK_NM);
 		
 		// 2. DAO메서드 사용
 		MemberDAO dao = new MemberDAO();

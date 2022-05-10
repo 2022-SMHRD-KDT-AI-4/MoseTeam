@@ -15,12 +15,12 @@ import MT.model.MemberVO;
 public class LoginService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		request.setCharacterEncoding("utf-8");
+		
+		request.setCharacterEncoding("UTF-8");
 		// 1. 파라미터 수집
-		String id = request.getParameter("id");
-		String pw = request.getParameter("pw");
-		MemberVO vo = new MemberVO(id, pw);
+		String MEMBER_ID = request.getParameter("id");
+		String MEMBER_PW = request.getParameter("pw");
+		MemberVO vo = new MemberVO(MEMBER_ID,MEMBER_PW);
 		
 		// 2. DAO 메서드
 		MemberDAO dao = new MemberDAO();
@@ -32,12 +32,14 @@ public class LoginService extends HttpServlet {
 			System.out.println("로그인 실패");
 		}else {
 			// 성공
-			response.sendRedirect("join.html");
 			System.out.println("로그인 성공");
 			// 사용자의 정보 유지 --> Session 이용
 			HttpSession session = request.getSession();
 			session.setAttribute("vo", mvo);
 		}
+		
+		// 4. 페이지 이동
+		response.sendRedirect("main.html");
 	}
 
 }

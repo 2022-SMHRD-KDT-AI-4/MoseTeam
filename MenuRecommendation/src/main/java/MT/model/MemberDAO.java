@@ -51,13 +51,14 @@ public class MemberDAO {
 
 	// login ¸Þ¼­µå
 	public MemberVO login(MemberVO vo) {
-
+		
 		SqlSession session = sqlSessionFactory.openSession(true);
 		
-		MemberVO mvo = session.selectOne("login",vo);
+		MemberVO mvo = session.selectOne("login", vo);
 		
 		session.close();
 		return mvo;
+		
 	}
 	
 	
