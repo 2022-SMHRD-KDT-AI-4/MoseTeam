@@ -1,6 +1,8 @@
 package MT.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,20 +28,22 @@ public class LoginService extends HttpServlet {
 		MemberDAO dao = new MemberDAO();
 		MemberVO mvo = dao.login(vo);
 		
+		// 3. 결과 응답 준비
+		response.setContentType("text/html; charset = utf-8");
+		PrintWriter out = response.getWriter();
+		
 		// 3. 로그인 성공/실패 판단
 		if(mvo==null) {
 			// 실패
-			System.out.println("로그인 실패");
+			out.print(false);
 		}else {
 			// 성공
-			System.out.println("로그인 성공");
+			out.print(true);
 			// 사용자의 정보 유지 --> Session 이용
 			HttpSession session = request.getSession();
 			session.setAttribute("vo", mvo);
 		}
 		
-		// 4. 페이지 이동
-		response.sendRedirect("main.html");
 	}
 
 }
