@@ -34,18 +34,17 @@
 	<div id="myModal" class="modal">
 
 		<!-- Modal content -->
-		<form action="LoginService" method="post" class="loginForm"></form>
 		<div class="modal-content">
 			<div class="login">
 				<h2>Login</h2>
 
 				<div class="login_id">
 					<h4>ID</h4>
-					<input type="id" name="id" placeholder="ID">
+					<input type="id" id="id" name="id" placeholder="ID">
 				</div>
 				<div class="login_pw">
 					<h4>PW</h4>
-					<input type="password" name="pw" placeholder="PW">
+					<input type="password" id="pw" name="pw" placeholder="PW">
 				</div>
 				<div class="login_etc">
 					<div class="forgot_pw">
@@ -53,11 +52,11 @@
 					</div>
 				</div>
 				<div class="submit">
-					<input class="btn1" type="submit" value="login"
+					<input id="btn1" type="submit" value="login"
 						onClick="close_pop();">
 				</div>
 				<div class="submit2">
-					<input class="btn2" type="submit" value="join"
+					<input id="btn2" type="submit" value="join"
 						onClick="location.href='join.html'">
 				</div>
 
@@ -357,24 +356,14 @@
 	</script>
 
 	<script>
-		$(document).ready(function(){
-			$('.btn1').click(function(){
-				let id = 'id='+$('input[name=id]').val();
-				let pw = 'pw='+$('input[name=pw]').val();
-				$.ajax({
-					type:'post',
-					url : 'LoginService',
-					data : (id, pw),
-					dataType : 'html',
-					success : function(data){
-						console.log('연결성공')
-					},
-					error : function(){
-						console.log('연결실패')
-					}
-				})
-			})
+	
+		$.ajax({
+			url:'LoginService',
+			type:'post',
+			data: {id:$('id').var, pw:$('pw').var},
+			dataType:'json'
 		})
+		
 		
 	</script>
 
