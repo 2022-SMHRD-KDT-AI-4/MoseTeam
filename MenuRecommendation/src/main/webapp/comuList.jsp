@@ -1,3 +1,5 @@
+<%@page import="MT.model.BoardVO"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -10,6 +12,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%
+		List<BoardVO> list = (List<BoardVO>)request.getAttribute("list");
+	%>
 	<div id="board">
 		<table id="list" border="1" cellspacing="0">
 			<caption>게시글</caption>
@@ -28,24 +33,16 @@
 				</tr>
 			</thead>
 			<tbody>
+				<%for(BoardVO bvo : list){ %>
+				<%-- 나중에 view로 join해서 작성자 닉네임으로 변경하기 --%>
 				<tr>
-					<td>001</td>
-					<td>임시</td>
-					<td>smhrd</td>
-					<td>220506</td>
+					<td><%=bvo.getBOARD_NO() %></td>
+					<td><a href="ViewService?num=<%=bvo.getBOARD_NO() %>"><%=bvo.getBOARE_TITLE() %></a></td>
+					<td><%=bvo.getMEMBER_ID() %></td>
+					<td><%=bvo.getWRITE_DATE() %></td>
 				</tr>
-				<tr>
-					<td>002</td>
-					<td>임시2</td>
-					<td>smhrd</td>
-					<td>220506</td>
-				</tr>
-				<tr>
-					<td>003</td>
-					<td>임시3</td>
-					<td>smhrd</td>
-					<td>220506</td>
-				</tr>
+					
+				<%} %>
 			</tbody>
 
 		</table>

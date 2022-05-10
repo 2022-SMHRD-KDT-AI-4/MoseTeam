@@ -11,5 +11,17 @@
 		INSERT INTO BOARD
 		VALUES (boardSEQ, #{board_title},#{board_content},#{member_id}, sysdate)
 	</insert>
+	
+	<select id="selectBoard"
+	resultType="BoardVO">
+		select * from board
+	</select>
+	
+	<update id="update"
+	parameterType="BoardVO">
+	update board
+	set BOARD_TITLE = #{BOARD_TITLE}, BOARD_CONTENT = #BOARD_CONTENT
+	where BOARD_NO = #{BOARD_NO}
+	</update>
 
 </mapper>

@@ -1,3 +1,5 @@
+<%@page import="MT.model.MemberVO"%>
+<%@page import="MT.model.BoardVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -8,6 +10,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%
+		BoardVO bvo = (BoardVO)request.getAttribute("bvo");
+		MemberVO mvo = (MemberVO)request.getAttribute("mvo");
+	%>
+	<%-- view로 join해서 하나로 사용하기 --%>
+	
+	
 	<div class="row">
 		<div class="col-xs-2 col-md-2"></div>
 		<div class="col-xs-8 col-md-8">
@@ -17,39 +26,43 @@
 				<table class="table">
 					<tr>
 						<th class="success">글번호</th>
-						<td></td>
+						<td><%=bvo.getBOARD_NO() %></td>
 						<th class="success">조회수</th>
-						<td></td>
+						<td><%-- 조회수 미작성 --%></td>
 					</tr>
 
 
 					<tr>
 						<th class="success">작성자</th>
-						<td></td>
+						<td><%=mvo.getNICK_NM() %></td>
 						<th class="success">작성일</th>
-						<td></td>
+						<td><%=bvo.getWRITE_DATE() %></td>
 					</tr>
 
 					<tr>
 						<th class="success">제목</th>
-						<td colspan="3"></td>
+						<td colspan="3"><%=bvo.getBOARE_TITLE() %></td>
 					</tr>
 
 					<tr>
 						<th class="success">글 내용</th>
-						<td colspan="3"></td>
+						<td colspan="3"><%=bvo.getBOARD_CONTENT() %></td>
 					</tr>
-
 					<tr>
-						<td colspan="4" class="text-center"><input type="button"
-							class="btn btn-success" value="답글 쓰기"
+						<td colspan="4" class="text-center">
+							<%-- 댓글작성 미완성 --%>
+							<input type="button" class="btn btn-wirte" value="답글 쓰기"
 							onclick="location.href='BoardReWriteForm.jsp?num=  &ref=  &ref_step=  &ref_level='">
-							<input type="button" class="btn btn-warning" value="수정하기"
-							onclick="location.href='BoardUpdateForm.jsp?num=  '">
-							<input type="button" class="btn btn-danger" value="삭제하기"
-							onclick="location.href='BoardDeleteForm.jsp?num=  '">
-							<input type="button" class="btn btn-primary" value="목록보기"
-							onclick="location.href='BoardList.jsp'"></td>
+							
+							<a href="BEditService"><button>수정하기</button></a>
+							
+							<a href="BDeleteService"><button>삭제하기</button></a>
+							
+							<a href="ListService"><button>목록보기</button></a>
+							
+						</td>
 					</tr>
+					<tr>신고버튼 및 추가 빈공간</tr>
+					<tr>댓글출력공간</tr>
 </body>
 </html>
