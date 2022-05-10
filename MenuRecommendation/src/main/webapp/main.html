@@ -35,6 +35,7 @@
 
 		<!-- Modal content -->
 		<div class="modal-content">
+		<form action="LoginService" method="post">
 			<div class="login">
 				<h2>Login</h2>
 
@@ -52,8 +53,7 @@
 					</div>
 				</div>
 				<div class="submit">
-					<input id="btn1" type="submit" value="login"
-						onClick="close_pop();">
+					<input id="btn1" type="submit" value="login">
 				</div>
 				<div class="submit2">
 					<input id="btn2" type="submit" value="join"
@@ -61,6 +61,7 @@
 				</div>
 
 			</div>
+		</form>
 
 		</div>
 
@@ -353,18 +354,6 @@
 		$(".button").on("mouseout",function(){
             $("body > div.container > div > button > span > span").css("font-size","40px");
         })
-	</script>
-
-	<script>
-	
-		$.ajax({
-			url:'LoginService',
-			type:'post',
-			data: {id:$('id').var, pw:$('pw').var},
-			dataType:'json'
-		})
-		
-		
 	</script>
 
 </body>
