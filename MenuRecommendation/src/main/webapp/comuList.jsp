@@ -50,7 +50,7 @@
 		</table>
 
 
-		<a href="comuWrite"><button id="writer">글작성</button></a>
+		<a href="comuWrite.jsp"><button id="writer">글작성</button></a>
 		
 		<form action="SearchService" method="get" class="boardSearch">
 		<tr>
