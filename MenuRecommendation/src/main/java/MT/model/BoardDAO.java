@@ -41,9 +41,9 @@ public class BoardDAO {
 	}
 	
 	// 보드 모든 정보 가져오는 select Board method
-	public List<BoardVO> selectBoard() {
+	public List<ComuVO> selectBoard() {
 		SqlSession session = sqlSessionFactory.openSession(true);
-		List<BoardVO> list = session.selectList("selectBoard");
+		List<ComuVO> list = session.selectList("selectBoard");
 		session.close();
 		return list;
 		
@@ -67,6 +67,15 @@ public class BoardDAO {
 		}
 		session.close();
 		return cnt;
+	}
+	
+	// 보드 검색 search 메서드
+	
+	public List<ComuVO> search(String search) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		List<ComuVO> list = session.selectList("search",search);
+		session.close();
+		return list;
 	}
 	
 	

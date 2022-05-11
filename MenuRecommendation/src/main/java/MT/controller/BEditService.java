@@ -33,11 +33,11 @@ public class BEditService extends HttpServlet {
 			System.out.println("정보수정 성공");
 			//session덮어쓰기
 			session.setAttribute("vo", dao);
-			response.sendRedirect("comuList.jsp");
+			response.sendRedirect("ListService.jsp");
 		}else {
 			// 실패
 			System.out.println("정보수정 실패");
-			response.sendRedirect("comuList.jsp");
+			response.sendRedirect("ListService.jsp");
 		}
 		
 	}

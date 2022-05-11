@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import MT.model.BoardDAO;
 import MT.model.BoardVO;
+import MT.model.ComuVO;
 
 @WebServlet("/ListService")
 public class ListService extends HttpServlet {
@@ -20,7 +21,7 @@ public class ListService extends HttpServlet {
 		
 		// DAO메서드로 글 정보 가져오기
 		BoardDAO dao = new BoardDAO();
-		List<BoardVO> list = dao.selectBoard();
+		List<ComuVO> list = dao.selectBoard();
 		
 		// 객체 바인딩
 		request.setAttribute("list", list);

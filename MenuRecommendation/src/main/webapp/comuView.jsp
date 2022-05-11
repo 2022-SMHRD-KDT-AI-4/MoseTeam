@@ -1,3 +1,4 @@
+<%@page import="MT.model.ComuVO"%>
 <%@page import="MT.model.MemberVO"%>
 <%@page import="MT.model.BoardVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
@@ -11,10 +12,8 @@
 </head>
 <body>
 	<%
-		BoardVO bvo = (BoardVO)request.getAttribute("bvo");
-		MemberVO mvo = (MemberVO)request.getAttribute("mvo");
+		ComuVO cvo = (ComuVO)request.getAttribute("cvo");
 	%>
-	<%-- view로 join해서 하나로 사용하기 --%>
 	
 	
 	<div class="row">
@@ -26,7 +25,7 @@
 				<table class="table">
 					<tr>
 						<th class="success">글번호</th>
-						<td><%=bvo.getBOARD_NO() %></td>
+						<td><%=cvo.getBOARD_NO() %></td>
 						<th class="success">조회수</th>
 						<td><%-- 조회수 미작성 --%></td>
 					</tr>
@@ -34,20 +33,25 @@
 
 					<tr>
 						<th class="success">작성자</th>
-						<td><%=mvo.getNICK_NM() %></td>
+						<td><%=cvo.getNICK_NM() %></td>
 						<th class="success">작성일</th>
-						<td><%=bvo.getWRITE_DATE() %></td>
+						<td><%=cvo.getWRITE_DATE() %></td>
 					</tr>
 
 					<tr>
 						<th class="success">제목</th>
-						<td colspan="3"><%=bvo.getBOARE_TITLE() %></td>
+						<td colspan="3"><%=cvo.getBOARD_TITLE() %></td>
+					</tr>
+					<tr>
+						<th class="success">글 내용(이미지)</th>
+						<td colspan="3"><%=cvo.getFILE_NAME() %></td>
+					</tr>
+					
+					<tr>
+						<th class="success">글 내용(텍스트)</th>
+						<td colspan="3"><%=cvo.getBOARD_CONTENT() %></td>
 					</tr>
 
-					<tr>
-						<th class="success">글 내용</th>
-						<td colspan="3"><%=bvo.getBOARD_CONTENT() %></td>
-					</tr>
 					<tr>
 						<td colspan="4" class="text-center">
 							<%-- 댓글작성 미완성 --%>
