@@ -53,9 +53,9 @@ public class BoardDAO {
 	}
 	
 	// 게시글 삭제
-	public void delete(BoardVO vo) {
+	public void delete(int num) {
 		SqlSession session = sqlSessionFactory.openSession(true);
-		int cnt = session.delete("delete",vo);
+		int cnt = session.delete("delete",num);
 		session.close();
 	}
 	
@@ -73,11 +73,20 @@ public class BoardDAO {
 	}
 	
 	// 보드 검색 search 메서드
-	public List<ComuVO> search(String search) {
+	public List<BoardVO> search(String search) {
 		SqlSession session = sqlSessionFactory.openSession(true);
-		List<ComuVO> list = session.selectList("search",search);
+		List<BoardVO> list = session.selectList("search",search);
 		session.close();
 		return list;
+	}
+	
+	
+	// 한개만 가져오는 메서드(selectOne)
+	public BoardVO selectOne(int num) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		BoardVO bvo = session.selectOne("selectOne",num);
+		session.close();
+		return bvo;
 	}
 	
 	

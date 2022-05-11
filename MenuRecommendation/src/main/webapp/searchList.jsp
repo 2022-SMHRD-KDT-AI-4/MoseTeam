@@ -1,3 +1,4 @@
+<%@page import="MT.model.BoardVO"%>
 <%@page import="MT.model.ComuVO"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
@@ -11,7 +12,7 @@
 <body>
 
 	<%
-		List<ComuVO> list = (List<ComuVO>)request.getAttribute("list");
+		List<BoardVO> list = (List<BoardVO>)request.getAttribute("list");
 	%>
 	<div id="board">
 		<table id="list" border="1" cellspacing="0">
@@ -31,14 +32,14 @@
 				</tr>
 			</thead>
 			<tbody>
-				<%for(ComuVO cvo : list){ %>
+				<%for(BoardVO vo : list){ %>
 				<%-- 나중에 view로 join해서 작성자 닉네임으로 변경하기 --%>
 				<tr>
-					<td><%=cvo.getBOARD_NO() %></td>
-					<td><a href="ViewService?num=<%=cvo.getBOARD_NO() %>">
-						<%=cvo.getBOARD_TITLE() %></a></td>
-					<td><%=cvo.getMEMBER_ID() %></td>
-					<td><%=cvo.getWRITE_DATE() %></td>
+					<td><%=vo.getBOARD_NO() %></td>
+					<td><a href="ViewService?num=<%=vo.getBOARD_NO() %>">
+						<%=vo.getBOARD_TITLE() %></a></td>
+					<td><%=vo.getWRITER() %></td>
+					<td><%=vo.getWRITE_DATE() %></td>
 				</tr>
 					
 				<%} %>

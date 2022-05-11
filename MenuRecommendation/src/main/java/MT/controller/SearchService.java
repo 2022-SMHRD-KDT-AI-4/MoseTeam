@@ -30,7 +30,7 @@ public class SearchService extends HttpServlet {
 
 		// DAO메서드 사용
 		BoardDAO dao = new BoardDAO();
-		List<ComuVO> list = dao.search("%"+search+"%");
+		List<BoardVO> list = dao.search("%"+search+"%");
 		
 		// 객체 바인딩
 		request.setAttribute("list", list);

@@ -10,7 +10,7 @@
 	parameterType="BoardVO">
 		insert into board
 		values(
-		board_no_seq.nextval,
+		board_seq.nextval,
 		#{BOARD_TITLE},
 		#{BOARD_CONTENT},
 		#{MEMBER_ID},
@@ -34,18 +34,22 @@
 	</update>
 	
 	<select id="search"
-	resultType="ComuVO">
-		select b.*, m.nick_nm
-		from member m, board b
-		where b.board_title like #{search}
-		and m.member_id, b.member_id
+	resultType="BoardVO">
+		select * from board
+		where board_title like #{search}
 	</select>
 	
 	<delete id="delete"
-	parameterType="BoardVO">
+	parameterType="int">
 	delete from board
 	where board_no = #{board_no}
 	</delete>
+	
+	<select id="selectOne"
+	resultType="BoardVO">
+		select * from board
+		where board_no = #{num}
+	</select>
 	
 
 </mapper>

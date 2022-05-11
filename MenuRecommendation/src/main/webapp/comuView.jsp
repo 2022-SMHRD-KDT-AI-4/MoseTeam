@@ -12,7 +12,7 @@
 </head>
 <body>
 	<%
-		ComuVO cvo = (ComuVO)request.getAttribute("cvo");
+		BoardVO vo = (BoardVO)request.getAttribute("bvo");
 	%>
 	
 	
@@ -25,7 +25,7 @@
 				<table class="table">
 					<tr>
 						<th class="success">글번호</th>
-						<td><%=cvo.getBOARD_NO() %></td>
+						<td><%=vo.getBOARD_NO() %></td>
 						<th class="success">조회수</th>
 						<td><%-- 조회수 미작성 --%></td>
 					</tr>
@@ -33,23 +33,23 @@
 
 					<tr>
 						<th class="success">작성자</th>
-						<td><%=cvo.getNICK_NM() %></td>
+						<td><%=vo.getWRITER() %></td>
 						<th class="success">작성일</th>
-						<td><%=cvo.getWRITE_DATE() %></td>
+						<td><%=vo.getWRITE_DATE() %></td>
 					</tr>
 
 					<tr>
 						<th class="success">제목</th>
-						<td colspan="3"><%=cvo.getBOARD_TITLE() %></td>
+						<td colspan="3"><%=vo.getBOARD_TITLE() %></td>
 					</tr>
 					<tr>
 						<th class="success">글 내용(이미지)</th>
-						<td colspan="3"><%=cvo.getFILE_NAME() %></td>
+						<td colspan="3"><%=vo.getFILE_NAME() %></td>
 					</tr>
 					
 					<tr>
 						<th class="success">글 내용(텍스트)</th>
-						<td colspan="3"><%=cvo.getBOARD_CONTENT() %></td>
+						<td colspan="3"><%=vo.getBOARD_CONTENT() %></td>
 					</tr>
 
 					<tr>
@@ -58,9 +58,9 @@
 							<input type="button" class="btn btn-wirte" value="답글 쓰기"
 							onclick="location.href='BoardReWriteForm.jsp?num=  &ref=  &ref_step=  &ref_level='">
 							
-							<a href="BEditService"><button>수정하기</button></a>
+							<a href="BEditService?num=<%=vo.getBOARD_NO() %>"><button>수정하기</button></a>
 							
-							<a href="BDeleteService"><button>삭제하기</button></a>
+							<a href="BDeleteService?num=<%=vo.getBOARD_NO() %>"><button>삭제하기</button></a>
 							
 							<a href="ListService"><button>목록보기</button></a>
 							
