@@ -8,22 +8,24 @@ select * from member
 
 select * from BOARD
 
-alter table BOARD add FILE_NAME varchar(100) not null;
-
-
-alter table BOARD drop column filename;
-
-
-
-create or replace view COMU 
- as select board_no
-		   ,board_title 
-		   ,board_content 
-		   ,member_id
-		   ,write_date 
-		   ,file_name
-		   from BOARD;
+alter table board add  writer  varchar(40) not null;
 		   
+drop view comu
 		   
+
 		   
 select * from COMU
+
+
+create SEQUENCE board_seq
+start with 1
+increment by 1
+maxvalue 10000;
+
+drop sequence borad;
+
+
+select * from board_seq
+
+board_seq.nextval;
+board_seq.board;
