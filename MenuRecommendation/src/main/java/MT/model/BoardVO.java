@@ -17,6 +17,7 @@ public class BoardVO {
 	String BOARE_TITLE;
 	@NonNull
 	String BOARD_CONTENT;
+	String FILE_NAME;
 	String MEMBER_ID;
 	String WRITE_DATE = null;
 }
