@@ -1,0 +1,43 @@
+body{
+    margin: 10%;
+    color:  white;
+}
+.select_res{
+    width: 400px;
+    
+}
+.btnS{
+    float: right;
+}
+#rv{
+    width: 10%;
+    border-radius: 10px;;
+     
+    background-color: coral;
+}
+#good{
+    width: 15%;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(61, 111, 248);
+}
+#bad{
+    width: 15%;
+    border-radius: 10px;
+    background-color: rgb(247, 40, 40);
+    color: white;
+}
+.sel{
+    font-size: 20px;
+    background-color: rgb(250, 160, 76);
+    color:  white;
+    height: 40px;
+}
+
+.innerReview{
+    float: right;
+    text-align: right;
+    width: 80%;
+    height: 30px;
+    background-color: coral;
+}
