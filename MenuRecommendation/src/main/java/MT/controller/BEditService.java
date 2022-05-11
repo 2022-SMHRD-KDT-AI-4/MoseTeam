@@ -21,7 +21,7 @@ public class BEditService extends HttpServlet {
 		HttpSession session = request.getSession();
 		BoardVO vo = (BoardVO)session.getAttribute("vo");
 		int BOARD_NO = vo.getBOARD_NO();
-		String BOARD_TITLE = vo.getBOARE_TITLE();
+		String BOARD_TITLE = vo.getBOARD_TITLE();
 		String BOARD_CONTENT = vo.getBOARD_CONTENT();
 		BoardVO bvo = new BoardVO(BOARD_NO, BOARD_TITLE, BOARD_CONTENT);
 		

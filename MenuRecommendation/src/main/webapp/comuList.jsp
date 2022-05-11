@@ -15,7 +15,7 @@
 </head>
 <body>
 	<%
-		List<ComuVO> list = (List<ComuVO>)request.getAttribute("list");
+		List<BoardVO> list = (List<BoardVO>)request.getAttribute("list");
 	%>
 	<div id="board">
 		<table id="list" border="1" cellspacing="0">
@@ -35,13 +35,13 @@
 				</tr>
 			</thead>
 			<tbody>
-				<%for(ComuVO cvo : list){ %>
+				<%for(BoardVO vo : list){ %>
 				<tr>
-					<td><%=cvo.getBOARD_NO() %></td>
-					<td><a href="ViewService?num=<%=cvo.getBOARD_NO() %>">
-						<%=cvo.getBOARD_TITLE() %></a></td>
-					<td><%=cvo.getNICK_NM() %></td>
-					<td><%=cvo.getWRITE_DATE() %></td>
+					<td><%=vo.getBOARD_NO() %></td>
+					<td><a href="ViewService?num=<%=vo.getBOARD_NO() %>">
+						<%=vo.getBOARD_TITLE() %></a></td>
+					<td><%=vo.getWRITER() %></td>
+					<td><%=vo.getWRITE_DATE() %></td>
 				</tr>
 					
 				<%} %>

@@ -21,7 +21,7 @@ public class ListService extends HttpServlet {
 		
 		// DAO메서드로 글 정보 가져오기
 		BoardDAO dao = new BoardDAO();
-		List<ComuVO> list = dao.selectBoard();
+		List<BoardVO> list = dao.selectBoard();
 		
 		// 객체 바인딩
 		request.setAttribute("list", list);

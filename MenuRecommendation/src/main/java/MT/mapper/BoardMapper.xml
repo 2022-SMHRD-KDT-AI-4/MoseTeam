@@ -6,11 +6,20 @@
 <!-- 어떤 DAO에서 사용하는지 -->
 <mapper namespace="MT.model.BoardDAO">
 
-	<insert id="upload"
-		    parameterType="BoardVO">
-		INSERT INTO BOARD
-		VALUES (boardSEQ, #{board_title},#{board_content},#{member_id}, sysdate)
+	<insert id="write"
+	parameterType="BoardVO">
+		insert into board
+		values(
+		board_no_seq.nextval,
+		#{BOARD_TITLE},
+		#{BOARD_CONTENT},
+		#{MEMBER_ID},
+		sysdate,
+		#{FILE_NAME},
+		#{WRITER}
+		)
 	</insert>
+
 	
 	<select id="selectBoard"
 	resultType="BoardVO">

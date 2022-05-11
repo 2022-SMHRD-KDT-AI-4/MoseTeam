@@ -14,11 +14,12 @@
 				<table id="list">
 					<tr>
 						<td>제목</td>
-						<td><input name="title" type="text" > </td>
-					</tr>
-					<tr>
-						<td>작성자</td>
-						<td><input name="writer" type="text" > </td>
+						<td><input name="title" type="text" >
+							<%-- value값(닉) <%= %>로 닉네임 넣기 --%>
+							<input name="writer" type="hidden" value="aaa">
+							<%-- value값(id) <%= %>로 id 넣기 --%>
+							<input name="id" type="hidden" value="yj1">
+						</td>
 					</tr>
 					<tr>
 						<td colspan="2">내용</td>
@@ -38,13 +39,5 @@
 				</table>
 				</form>
 			</div>
-			<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
 </body>
 </html>
