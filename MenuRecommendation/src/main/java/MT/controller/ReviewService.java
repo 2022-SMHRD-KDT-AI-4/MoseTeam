@@ -17,10 +17,16 @@ public class ReviewService extends HttpServlet {
 		
 		request.setCharacterEncoding("utf-8");
 		
-		int REST_ID = Integer.parseInt(request.getParameter("restId"));
+		System.out.println(request.getParameter("resrId"));
+		System.out.println(request.getParameter("rate"));
+		System.out.println(request.getParameter("text"));
+		System.out.println(request.getParameter("memberId"));
+		
+		int REST_ID = Integer.parseInt(request.getParameter("resrId"));
 		int REVIEW_LEVEL = Integer.parseInt(request.getParameter("rate"));
 		String REVIEW_CONTENT= request.getParameter("text");
 		String MEMBER_ID = request.getParameter("memberId");
+		
 		ReviewVO vo = new ReviewVO(REST_ID, REVIEW_LEVEL, REVIEW_CONTENT, MEMBER_ID);
 		
 		ReviewDAO dao = new ReviewDAO();
