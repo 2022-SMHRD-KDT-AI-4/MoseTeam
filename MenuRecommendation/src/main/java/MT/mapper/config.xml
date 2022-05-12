@@ -13,6 +13,8 @@
 	<typeAlias type="MT.model.BoardVO" alias="BoardVO"/>
 	<typeAlias type="MT.model.MenuVO" alias="MenuVO"/>
 	<typeAlias type="MT.model.ReviewVO" alias="ReviewVO"/>
+	<typeAlias type="MT.model.RestaurantVO" alias="RestaurantVO"/>
+	<typeAlias type="MT.model.RestmenuVO" alias="RestmenuVO"/>
 </typeAliases>
 
   <environments default="development">
@@ -32,6 +34,10 @@
     <mapper resource="MT/mapper/MemberMapper.xml"/>
     <mapper resource="MT/mapper/BoardMapper.xml"/>
     <mapper resource="MT/mapper/MenuMapper.xml"/>
+<<<<<<< HEAD
     <mapper resource="MT/mapper/ReviewMapper.xml"/>
+=======
+    <mapper resource="MT/mapper/RestaurantMapper.xml"/>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-4/MoseTeam
   </mappers>
 </configuration>
