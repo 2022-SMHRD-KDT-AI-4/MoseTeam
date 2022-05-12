@@ -1,0 +1,38 @@
+body{
+    margin: 10%;
+    color: white;
+}
+#list{
+    background-color: white;
+    color: black;
+    
+}
+.btn{
+    border-radius: 10px;
+    width: 18%;
+    color: #e76d09;
+}
+.table{
+    width: 82%;
+}
+#btn-success{
+    margin: 1%;
+}
+#btn-warning{
+    margin: 1%
+}
+#btn-danger{
+    margin: 1%
+}
+#btn-primary{
+    margin: 1%
+}
+.text-center{
+    font-size: 1.5em;
+    margin: 10%;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body > div > div.col-xs-8.col-md-8 > div > table > tbody > tr> th{
+    width: 10%;
+}
