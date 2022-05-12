@@ -6,4 +6,13 @@
 <!-- 어떤 DAO에서 사용하는지 -->
 <mapper namespace="MT.model.MenuDAO">
 
+	<select id="selectMenu" resultType="MenuVO">
+		SELECT A.*
+		  FROM (
+				SELECT *
+				FROM MENU
+				ORDER BY DBMS_RANDOM.VALUE ) A
+		 WHERE ROWNUM = 1
+	</select>
+	
 </mapper>
