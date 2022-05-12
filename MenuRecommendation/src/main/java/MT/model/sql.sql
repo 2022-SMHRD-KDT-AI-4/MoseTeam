@@ -7,3 +7,7 @@ select * from member
 select * from BOARD
 
 select * from COMU
+
+alter table BOARD modify FILE_NAME;
+
+insert into board values(board_seq.nextval, 'aa','aa','yj1',sysdate,null,'aaa')

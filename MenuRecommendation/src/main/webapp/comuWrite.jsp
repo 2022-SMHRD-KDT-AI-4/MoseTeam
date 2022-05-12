@@ -26,7 +26,7 @@
 					</tr>
 					<tr>
 						<td colspan="2">
-							<input name="file" type="file" style="float: right;">
+							<input id="file" name="file" type="file" style="float: right;">
 							<textarea name="content" rows="10" style="resize: none;"></textarea>			
 						</td>
 					</tr>
@@ -39,5 +39,11 @@
 				</table>
 				</form>
 			</div>
+			
+			<script>
+				/* if($("#file").val()!=null){
+				$("form").attr("enctype","multipart/form-data");
+				} */
+			</script>
 </body>
 </html>

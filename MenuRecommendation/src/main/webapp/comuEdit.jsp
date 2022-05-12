@@ -15,11 +15,12 @@
 	%>
 
 			<div id = "board">
-				<form action="BEditService" method="post" enctype="multipart/form-data">
+				<form action="BEditService" method="post" >
 				<table id="list">
 					<tr>
+					
 						<td>Á¦¸ñ</td>
-						<td><input name="title" type="text"  value="<%=vo.getBOARD_TITLE() %>">
+						<td><input name="title" type="text"  value="1">
 							<input name="num" type="hidden" value="<%=vo.getBOARD_NO() %>">
 						</td>
 					</tr>

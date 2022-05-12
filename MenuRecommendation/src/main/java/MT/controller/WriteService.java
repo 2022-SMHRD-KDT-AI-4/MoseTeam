@@ -45,12 +45,19 @@ public class WriteService extends HttpServlet {
 		BoardVO bvo = new BoardVO();
 		bvo.setBOARD_TITLE(BOARD_TITLE);
 		bvo.setWRITER(WRITER);
-		bvo.setMEMBER_ID(MEMBER_ID);;
+		bvo.setMEMBER_ID(MEMBER_ID);
 		bvo.setBOARD_CONTENT(BOARD_CONTENT);
+		
 		bvo.setFILE_NAME(FILE_NAME);
 		
+		int cnt;
 		BoardDAO dao = new BoardDAO();
-		int cnt = dao.write(bvo);
+		
+		if(bvo.getFILE_NAME()==null) {
+			cnt = dao.write(bvo);
+		}else {
+			cnt = dao.imgWrite(bvo);
+		}
 
 		if(cnt>0) {
 			System.out.println("게시글 작성 성공");

@@ -21,6 +21,7 @@ public class BEditService extends HttpServlet {
 		System.out.println(request.getParameter("num"));
 		System.out.println(request.getParameter("title"));
 		System.out.println(request.getParameter("content"));
+		
 		int BOARD_NO = Integer.parseInt(request.getParameter("num"));
 		String BOARD_TITLE = request.getParameter("title");
 		String BOARD_CONTENT = request.getParameter("content");

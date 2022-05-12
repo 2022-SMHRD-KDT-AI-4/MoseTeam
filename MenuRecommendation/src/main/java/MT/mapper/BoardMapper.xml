@@ -6,7 +6,7 @@
 <!-- 어떤 DAO에서 사용하는지 -->
 <mapper namespace="MT.model.BoardDAO">
 
-	<insert id="write"
+	<insert id="imgWrite"
 	parameterType="BoardVO">
 		insert into board
 		values(
@@ -16,6 +16,21 @@
 		#{MEMBER_ID},
 		sysdate,
 		#{FILE_NAME},
+		#{WRITER}
+		)
+	</insert>
+	
+	
+	<insert id="write"
+	parameterType="BoardVO">
+		insert into board
+		values(
+		board_seq.nextval,
+		#{BOARD_TITLE},
+		#{BOARD_CONTENT},
+		#{MEMBER_ID},
+		sysdate,
+		'test',
 		#{WRITER}
 		)
 	</insert>

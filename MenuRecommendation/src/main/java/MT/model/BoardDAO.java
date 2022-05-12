@@ -26,7 +26,24 @@ public class BoardDAO {
 
 	// ==============================================================
 	
-	// 게시글 작성
+	// 게시글 작성(이미지 있음)
+	public int imgWrite(BoardVO bvo) {
+		
+		SqlSession session = sqlSessionFactory.openSession(true);
+		
+		int cnt = 0; 
+		
+		try {
+			cnt = session.insert("imgWrite", bvo);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		session.close();
+		return cnt;
+	}
+	
+	
+	// 게시글 작성(이미지 없음)
 	public int write(BoardVO bvo) {
 		
 		SqlSession session = sqlSessionFactory.openSession(true);
