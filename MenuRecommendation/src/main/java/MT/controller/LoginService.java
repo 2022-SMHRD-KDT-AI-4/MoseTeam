@@ -23,6 +23,7 @@ public class LoginService extends HttpServlet {
 		String MEMBER_ID = request.getParameter("id");
 		String MEMBER_PW = request.getParameter("pw");
 		MemberVO vo = new MemberVO(MEMBER_ID,MEMBER_PW);
+		System.out.println(vo.getMEMBER_ID());
 		
 		// 2. DAO ¸Þ¼­µå
 		MemberDAO dao = new MemberDAO();

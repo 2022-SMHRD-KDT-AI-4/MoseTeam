@@ -11,6 +11,9 @@ import javax.swing.text.DefaultTextUI;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
+import MT.model.BoardDAO;
+import MT.model.BoardVO;
+
 @WebServlet("/WriteService")
 public class WriteService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -24,12 +27,45 @@ public class WriteService extends HttpServlet {
 		String encoding = "euc-kr";
 		
 		// MultipartRequest 생성
-		MultipartRequest multi = new MultipartRequest(request, savePath, maxSize, encoding, new DefaultFileRenamePolicy());
+		MultipartRequest multi = new MultipartRequest(request,
+													savePath,
+													maxSize,
+													encoding,
+													new DefaultFileRenamePolicy());
 		
 		// 파라미터 수집
 		String BOARD_TITLE = multi.getParameter("title");
-		String BOARE_CONTENT = multi.getParameter("content");
-		// 데이터 수집 더 하기
+		String WRITER = multi.getParameter("writer");
+		String MEMBER_ID = multi.getParameter("id");
+		String BOARD_CONTENT = multi.getParameter("content");
+		
+		String FILE_NAME = multi.getFilesystemName("file");
+		System.out.println(FILE_NAME);
+		
+		BoardVO bvo = new BoardVO();
+		bvo.setBOARD_TITLE(BOARD_TITLE);
+		bvo.setWRITER(WRITER);
+		bvo.setMEMBER_ID(MEMBER_ID);
+		bvo.setBOARD_CONTENT(BOARD_CONTENT);
+		
+		bvo.setFILE_NAME(FILE_NAME);
+		
+		int cnt;
+		BoardDAO dao = new BoardDAO();
+		
+		if(bvo.getFILE_NAME()==null) {
+			cnt = dao.write(bvo);
+		}else {
+			cnt = dao.imgWrite(bvo);
+		}
+
+		if(cnt>0) {
+			System.out.println("게시글 작성 성공");
+			response.sendRedirect("ListService");
+		}else {
+			System.out.println("게시글 작성 실패");
+			response.sendRedirect("comuWrite.jsp");
+		}
 		
 	}
 

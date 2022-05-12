@@ -1,3 +1,4 @@
+<%@page import="MT.model.BoardVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -9,16 +10,18 @@
 </head>
 <body>
 
+	<%
+		BoardVO vo = (BoardVO)request.getAttribute("bvo");
+	%>
+
 			<div id = "board">
-				<form action="WriteService" method="post" enctype="multipart/form-data">
+				<form action="BEditService" method="post" >
 				<table id="list">
 					<tr>
+					
 						<td>제목</td>
-						<td><input name="title" type="text" >
-							<%-- value값(닉) <%= %>로 닉네임 넣기 --%>
-							<input name="writer" type="hidden" value="aaa">
-							<%-- value값(id) <%= %>로 id 넣기 --%>
-							<input name="id" type="hidden" value="yj1">
+						<td><input name="title" type="text"  value="<%=vo.getBOARD_TITLE() %>">
+							<input name="num" type="hidden" value="<%=vo.getBOARD_NO() %>">
 						</td>
 					</tr>
 					<tr>
@@ -26,8 +29,7 @@
 					</tr>
 					<tr>
 						<td colspan="2">
-							<input id="file" name="file" type="file" style="float: right;">
-							<textarea name="content" rows="10" style="resize: none;"></textarea>			
+							<textarea name="content" rows="10" style="resize: none;"><%=vo.getBOARD_CONTENT() %></textarea>			
 						</td>
 					</tr>
 					<tr>
@@ -39,11 +41,5 @@
 				</table>
 				</form>
 			</div>
-			
-			<script>
-				/* if($("#file").val()!=null){
-				$("form").attr("enctype","multipart/form-data");
-				} */
-			</script>
 </body>
 </html>

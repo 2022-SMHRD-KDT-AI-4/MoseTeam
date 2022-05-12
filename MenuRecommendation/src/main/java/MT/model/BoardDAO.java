@@ -26,19 +26,39 @@ public class BoardDAO {
 
 	// ==============================================================
 	
-	// 최초 등록
-	public int upload(BoardVO bvo) {
-		SqlSession session = sqlSessionFactory.openSession();
+	// 게시글 작성(이미지 있음)
+	public int imgWrite(BoardVO bvo) {
+		
+		SqlSession session = sqlSessionFactory.openSession(true);
 		
 		int cnt = 0; 
+		
 		try {
-			cnt = session.insert("upload", bvo);
+			cnt = session.insert("imgWrite", bvo);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		session.close();
 		return cnt;
 	}
+	
+	
+	// 게시글 작성(이미지 없음)
+	public int write(BoardVO bvo) {
+		
+		SqlSession session = sqlSessionFactory.openSession(true);
+		
+		int cnt = 0; 
+		
+		try {
+			cnt = session.insert("write", bvo);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		session.close();
+		return cnt;
+	}
+		
 	
 	// 보드 모든 정보 가져오는 select Board method
 	public List<BoardVO> selectBoard() {
@@ -50,9 +70,9 @@ public class BoardDAO {
 	}
 	
 	// 게시글 삭제
-	public void delete(BoardVO vo) {
+	public void delete(int num) {
 		SqlSession session = sqlSessionFactory.openSession(true);
-		int cnt = session.delete("delete",vo);
+		int cnt = session.delete("delete",num);
 		session.close();
 	}
 	
@@ -68,6 +88,26 @@ public class BoardDAO {
 		session.close();
 		return cnt;
 	}
+	
+	// 보드 검색 search 메서드
+	public List<BoardVO> search(String search) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		List<BoardVO> list = session.selectList("search",search);
+		session.close();
+		return list;
+	}
+	
+	
+	// 한개만 가져오는 메서드(selectOne)
+	public BoardVO selectOne(int num) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		BoardVO bvo = session.selectOne("selectOne",num);
+		session.close();
+		return bvo;
+	}
+	
+	
+	
 	
 	
 	

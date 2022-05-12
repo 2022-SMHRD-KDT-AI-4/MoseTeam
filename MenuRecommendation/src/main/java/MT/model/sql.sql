@@ -4,6 +4,7 @@ select * from member
 		where MEMBER_ID = 'test'
 		and MEMBER_PW = '1234'
 		
+<<<<<<< HEAD
 		
 
 select * from BOARD
@@ -29,3 +30,12 @@ select * from board_seq
 
 board_seq.nextval;
 board_seq.board;
+=======
+select * from BOARD
+
+select * from COMU
+
+alter table BOARD modify FILE_NAME;
+
+insert into board values(board_seq.nextval, 'aa','aa','yj1',sysdate,null,'aaa')
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-4/MoseTeam.git

@@ -6,17 +6,19 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
-@Data 
-@AllArgsConstructor 
+@Data
+@AllArgsConstructor
 @NoArgsConstructor
 @RequiredArgsConstructor
 public class BoardVO {
 	@NonNull
 	int BOARD_NO;
 	@NonNull
-	String BOARE_TITLE;
+	String BOARD_TITLE;
 	@NonNull
 	String BOARD_CONTENT;
+	String FILE_NAME;
 	String MEMBER_ID;
 	String WRITE_DATE = null;
+	String WRITER;
 }

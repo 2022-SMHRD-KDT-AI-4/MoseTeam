@@ -1,18 +1,15 @@
-<%@page import="MT.model.MemberVO"%>
 <%@page import="MT.model.BoardVO"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
-<link rel="stylesheet" href="css/comu.css">
-<link rel="stylesheet" type="text/css" href="css/demo.css" />
-<script src="js/jquery-3.6.0.min.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
+
 	<%
 		List<BoardVO> list = (List<BoardVO>)request.getAttribute("list");
 	%>
@@ -35,6 +32,7 @@
 			</thead>
 			<tbody>
 				<%for(BoardVO vo : list){ %>
+				<%-- 나중에 view로 join해서 작성자 닉네임으로 변경하기 --%>
 				<tr>
 					<td><%=vo.getBOARD_NO() %></td>
 					<td><a href="ViewService?num=<%=vo.getBOARD_NO() %>">
@@ -49,7 +47,7 @@
 		</table>
 
 
-		<a href="comuWrite.jsp"><button id="writer">글작성</button></a>
+		<a href="comuWrite"><button id="writer">글작성</button></a>
 		
 		<form action="SearchService" method="get" class="boardSearch">
 		<tr>
@@ -59,5 +57,7 @@
 		</form>
 
 	</div>
+	
+
 </body>
 </html>

@@ -4,43 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="js/modernizr-custom.js"></script>
+	<script src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/ResHis.css" />
+    <title>히스토리</title>
 </head>
 <body>
-    <div><h1>마이페이지</h1>
-         <h2>내가 고른 메뉴</h2>    
+    <div>
+        <h1>마이페이지</h1>
+        <h2>어떤걸 먹었을까?</h2>    
     </div>
     <div>
         <tr>
             <td colspan="3"><input name = "search" type="text"></td>
-            <td align="left"><button onclick="boardSearch()">검색</button></td>
+            <td align="right"><button onclick="boardSearch()">검색</button></td>
         </tr>
     </div>
-        <button>후기</button><button>좋아요</button><button>싫어요</button>
-    <div>    
-        <table>
-            <div class="sel">
-                <tr>
-                    <td>a식당</td>
-                    <td>20220206</td>
-                    <td>후기 1개</td>
-                </tr>
-            </div>
-            <div class="sel">
-                <tr>
-                    <td>b식당</td>
-                    <td>20220206</td>
-                    <td>후기 없음</td>
-                </tr>
-            </div>
-            <div class="sel">
-                <tr>
-                    <td>c식당</td>
-                    <td>20220206</td>
-                    <td>후기 2개</td>
-                </tr>
-            </div>
-         </table>
+    <div class="select_res">
+        <button class="btnS" id="bad">싫어요</button><button class="btnS" id="good">좋아요</button><button class="btnS" id="rv" onclick="revv1()">후기</button>
+   
+        <div class="sel">
+            <tr>
+                <td>해성 식당</td>
+                <td>2022-05-11</td>
+            </tr>
+        </div>
+        <div  id="review1" >
+            <tr>
+                
+            </tr>
+        </div>
+                
     </div>
+    <div class="select_res">
+        <button class="btnS" id="bad">싫어요</button><button class="btnS" id="good">좋아요</button><button class="btnS" id="rv" onclick="revv2()">후기</button>
+   
+        <div class="sel">
+            <tr>
+                <td>새마을 식당</td>
+                <td>2022-05-5</td>
+            </tr>
+        </div>
+                
+        <div id="review2"></div>
+    </div>
+    
 </body>
+<script src="js/reviewHis.js"></script>
 </html>

@@ -1,8 +1,57 @@
+body{
+    margin: 10%;
+}
 #list{
     background-color: white;
     color: black;
     
 }
 #input{
-    width: 18%;
+    width: 40%;
+    margin: 0px;
+    height: 20px;
 }
+.input1{
+    width: 100%;
+}
+#btn{
+    width: 15%;
+}
+.btn1{
+    width: 100%;
+    border-radius: 10px;
+    margin: 0px;
+    color: #e76d09;
+}
+#write{
+    width: 30%;
+    border-radius: 10px;
+    margin: 3px;
+    
+}
+.write1{
+    width: 60%;
+    border-radius: 10px;
+    background-color: white;
+    color: #e76d09;
+}
+#searchType{
+    height: 20px;
+    margin: 0px;
+    color: #e76d09;
+}
+.cap{
+    font-size: 1.5em;
+    margin: 10%;
+    color: white;
+}
+.head{
+    font-weight: bold;
+}
+#board > table.btng > tbody > tr > td> input{
+    width: 60%;
+}
+#btnBoard{
+    margin: 5px;
+}
+

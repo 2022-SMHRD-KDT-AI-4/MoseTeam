@@ -12,7 +12,7 @@ public class MemberDAO {
 
 	// Connection pool만들기
 	private static SqlSessionFactory sqlSessionFactory;
-
+	
 	static {
 		try {
 			// Connection pool설정
@@ -24,6 +24,10 @@ public class MemberDAO {
 			e.printStackTrace();
 		}
 	}
+	
+	
+
+	
 
 	// ==============================================================
 
@@ -52,6 +56,7 @@ public class MemberDAO {
 	// login 메서드
 	public MemberVO login(MemberVO vo) {
 		
+		System.out.println("test"+vo.getMEMBER_ID());
 		SqlSession session = sqlSessionFactory.openSession(true);
 		
 		MemberVO mvo = session.selectOne("login", vo);

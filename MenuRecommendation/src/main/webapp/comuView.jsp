@@ -5,16 +5,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="utf-8">
 <script src="js/jquery-3.6.0.min.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
 	<%
-		BoardVO bvo = (BoardVO)request.getAttribute("bvo");
-		MemberVO mvo = (MemberVO)request.getAttribute("mvo");
+		BoardVO vo = (BoardVO)request.getAttribute("bvo");
 	%>
-	<%-- view로 join해서 하나로 사용하기 --%>
 	
 	
 	<div class="row">
@@ -26,7 +24,7 @@
 				<table class="table">
 					<tr>
 						<th class="success">글번호</th>
-						<td><%=bvo.getBOARD_NO() %></td>
+						<td><%=vo.getBOARD_NO() %></td>
 						<th class="success">조회수</th>
 						<td><%-- 조회수 미작성 --%></td>
 					</tr>
@@ -34,29 +32,35 @@
 
 					<tr>
 						<th class="success">작성자</th>
-						<td><%=mvo.getNICK_NM() %></td>
+						<td><%=vo.getWRITER() %></td>
 						<th class="success">작성일</th>
-						<td><%=bvo.getWRITE_DATE() %></td>
+						<td><%=vo.getWRITE_DATE() %></td>
 					</tr>
 
 					<tr>
 						<th class="success">제목</th>
-						<td colspan="3"><%=bvo.getBOARE_TITLE() %></td>
+						<td colspan="3"><%=vo.getBOARD_TITLE() %></td>
+					</tr>
+					<tr>
+						<th class="success">글 내용(이미지)</th>
+						<td colspan="3">
+						<img alt="" src="comuFileImg/<%=vo.getFILE_NAME() %>"></td>
+					</tr>
+					
+					<tr>
+						<th class="success">글 내용(텍스트)</th>
+						<td colspan="3"><%=vo.getBOARD_CONTENT() %></td>
 					</tr>
 
-					<tr>
-						<th class="success">글 내용</th>
-						<td colspan="3"><%=bvo.getBOARD_CONTENT() %></td>
-					</tr>
 					<tr>
 						<td colspan="4" class="text-center">
 							<%-- 댓글작성 미완성 --%>
 							<input type="button" class="btn btn-wirte" value="답글 쓰기"
 							onclick="location.href='BoardReWriteForm.jsp?num=  &ref=  &ref_step=  &ref_level='">
 							
-							<a href="BEditService"><button>수정하기</button></a>
+							<a href="BEditLoadService?num=<%=vo.getBOARD_NO() %>"><button>수정하기</button></a>
 							
-							<a href="BDeleteService"><button>삭제하기</button></a>
+							<a href="BDeleteService?num=<%=vo.getBOARD_NO() %>"><button>삭제하기</button></a>
 							
 							<a href="ListService"><button>목록보기</button></a>
 							
