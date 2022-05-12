@@ -1,8 +1,68 @@
 .btn1{
     margin: 10px;
     width: 200px;
+    height: 50px;
+    background-color: white;   
+    color: #e76d09;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 5px solid #e76d09;
+}
+.btn2{
+    margin: 10px;
+    width: 200px;
+    height: 50px; 
+    background-color: white;    
+    color: #e76d09;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 5px solid #e76d09;
+}
+.btn3{
+    margin: 10px;
+    width: 200px;
     height: 50px;   
+    background-color: white;  
+    color: #e76d09;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 5px solid #e76d09;
 }
-.btn1:focus{
-    background-color: aqua;
+.btn4{
+    margin: 10px;
+    width: 200px;
+    height: 50px;   
+    background-color: white;  
+    color: #e76d09;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 5px solid #e76d09;
 }
+.btn5{
+    margin: 10px;
+    width: 200px;
+    height: 50px;   
+    background-color: white;  
+    color: #e76d09;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 5px solid #e76d09;
+}
+.select_btn{
+    margin: 20px;
+}
+.fin_btn{
+    margin: 10px;
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+    color: rgb(94, 221, 158);
+    font-weight: bold;
+    border: 5px solid rgb(94, 221, 158);
+}
+.fin_btn:hover{
+    background-color: rgb(94, 221, 158);
+    color: white;
+}
+
