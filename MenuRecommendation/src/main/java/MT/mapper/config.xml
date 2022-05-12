@@ -11,6 +11,7 @@
 <typeAliases>
 	<typeAlias type="MT.model.MemberVO" alias="MemberVO"/>
 	<typeAlias type="MT.model.BoardVO" alias="BoardVO"/>
+	<typeAlias type="MT.model.MenuVO" alias="MenuVO"/>
 </typeAliases>
 
   <environments default="development">
@@ -29,5 +30,6 @@
   <!-- SQL작성된 xml파일의 위치 -->
     <mapper resource="MT/mapper/MemberMapper.xml"/>
     <mapper resource="MT/mapper/BoardMapper.xml"/>
+    <mapper resource="MT/mapper/MenuMapper.xml"/>
   </mappers>
 </configuration>
