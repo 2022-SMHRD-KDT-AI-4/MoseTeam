@@ -12,6 +12,8 @@
 	<typeAlias type="MT.model.MemberVO" alias="MemberVO"/>
 	<typeAlias type="MT.model.BoardVO" alias="BoardVO"/>
 	<typeAlias type="MT.model.MenuVO" alias="MenuVO"/>
+	<typeAlias type="MT.model.RestaurantVO" alias="RestaurantVO"/>
+	<typeAlias type="MT.model.RestmenuVO" alias="RestmenuVO"/>
 </typeAliases>
 
   <environments default="development">
@@ -31,5 +33,6 @@
     <mapper resource="MT/mapper/MemberMapper.xml"/>
     <mapper resource="MT/mapper/BoardMapper.xml"/>
     <mapper resource="MT/mapper/MenuMapper.xml"/>
+    <mapper resource="MT/mapper/RestaurantMapper.xml"/>
   </mappers>
 </configuration>
