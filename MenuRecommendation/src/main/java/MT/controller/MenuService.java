@@ -29,7 +29,7 @@ public class MenuService extends HttpServlet {
 		
 		request.setAttribute("menuvo", menuvo);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("randomResult.html");
+		RequestDispatcher rd = request.getRequestDispatcher("randomResult.jsp");
 		rd.forward(request, response);
 	}
 }
