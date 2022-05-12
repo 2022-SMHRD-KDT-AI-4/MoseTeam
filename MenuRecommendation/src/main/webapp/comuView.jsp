@@ -1,4 +1,3 @@
-<%@page import="MT.model.ComuVO"%>
 <%@page import="MT.model.MemberVO"%>
 <%@page import="MT.model.BoardVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
@@ -58,7 +57,7 @@
 							<input type="button" class="btn btn-wirte" value="답글 쓰기"
 							onclick="location.href='BoardReWriteForm.jsp?num=  &ref=  &ref_step=  &ref_level='">
 							
-							<a href="BEditService?num=<%=vo.getBOARD_NO() %>"><button>수정하기</button></a>
+							<a href="BEditLoadService?num=<%=vo.getBOARD_NO() %>"><button>수정하기</button></a>
 							
 							<a href="BDeleteService?num=<%=vo.getBOARD_NO() %>"><button>삭제하기</button></a>
 							

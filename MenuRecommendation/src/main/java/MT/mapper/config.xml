@@ -11,7 +11,6 @@
 <typeAliases>
 	<typeAlias type="MT.model.MemberVO" alias="MemberVO"/>
 	<typeAlias type="MT.model.BoardVO" alias="BoardVO"/>
-	<typeAlias type="MT.model.ComuVO" alias="ComuVO"/>
 </typeAliases>
 
   <environments default="development">

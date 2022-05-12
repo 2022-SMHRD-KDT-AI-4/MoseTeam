@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import MT.model.BoardDAO;
 import MT.model.BoardVO;
-import MT.model.ComuVO;
 
 @WebServlet("/ListService")
 public class ListService extends HttpServlet {

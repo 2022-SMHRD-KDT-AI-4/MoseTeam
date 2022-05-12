@@ -18,13 +18,16 @@ public class BEditService extends HttpServlet {
 		
 		request.setCharacterEncoding("euc-kr");
 		
-		HttpSession session = request.getSession();
-		BoardVO vo = (BoardVO)session.getAttribute("vo");
-		int BOARD_NO = vo.getBOARD_NO();
-		String BOARD_TITLE = vo.getBOARD_TITLE();
-		String BOARD_CONTENT = vo.getBOARD_CONTENT();
+		System.out.println(request.getParameter("num"));
+		System.out.println(request.getParameter("title"));
+		System.out.println(request.getParameter("content"));
+		int BOARD_NO = Integer.parseInt(request.getParameter("num"));
+		String BOARD_TITLE = request.getParameter("title");
+		String BOARD_CONTENT = request.getParameter("content");
 		BoardVO bvo = new BoardVO(BOARD_NO, BOARD_TITLE, BOARD_CONTENT);
 		
+		HttpSession session = request.getSession();
+		BoardVO vo = (BoardVO)session.getAttribute("vo");
 		BoardDAO dao = new BoardDAO();
 		int cnt = dao.update(bvo);
 		

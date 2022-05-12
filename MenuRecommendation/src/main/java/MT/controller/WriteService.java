@@ -13,7 +13,6 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 import MT.model.BoardDAO;
 import MT.model.BoardVO;
-import MT.model.ComuVO;
 
 @WebServlet("/WriteService")
 public class WriteService extends HttpServlet {

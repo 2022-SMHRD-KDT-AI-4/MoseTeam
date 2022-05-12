@@ -29,7 +29,7 @@
 	<update id="update"
 	parameterType="BoardVO">
 	update board
-	set BOARD_TITLE = #{BOARD_TITLE}, BOARD_CONTENT = #BOARD_CONTENT
+	set BOARD_TITLE = #{BOARD_TITLE}, BOARD_CONTENT = #{BOARD_CONTENT}
 	where BOARD_NO = #{BOARD_NO}
 	</update>
 	
