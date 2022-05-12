@@ -1,5 +1,4 @@
 <%@page import="MT.model.MemberVO"%>
-<%@page import="MT.model.ComuVO"%>
 <%@page import="MT.model.BoardVO"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
