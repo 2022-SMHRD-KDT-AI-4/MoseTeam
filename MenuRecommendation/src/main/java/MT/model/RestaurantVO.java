@@ -2,6 +2,13 @@ package MT.model;
 
 import java.util.ArrayList;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class RestaurantVO {
 	private int rest_id;
 	private String rest_nm;
