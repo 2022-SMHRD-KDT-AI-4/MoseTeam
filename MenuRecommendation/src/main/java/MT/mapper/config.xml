@@ -34,10 +34,7 @@
     <mapper resource="MT/mapper/MemberMapper.xml"/>
     <mapper resource="MT/mapper/BoardMapper.xml"/>
     <mapper resource="MT/mapper/MenuMapper.xml"/>
-<<<<<<< HEAD
     <mapper resource="MT/mapper/ReviewMapper.xml"/>
-=======
     <mapper resource="MT/mapper/RestaurantMapper.xml"/>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-4/MoseTeam
   </mappers>
 </configuration>
