@@ -43,7 +43,8 @@
 					</tr>
 					<tr>
 						<th class="success">글 내용(이미지)</th>
-						<td colspan="3"><%=vo.getFILE_NAME() %></td>
+						<td colspan="3">
+						<img alt="" src="comuFileImg/<%=vo.getFILE_NAME() %>"></td>
 					</tr>
 					
 					<tr>

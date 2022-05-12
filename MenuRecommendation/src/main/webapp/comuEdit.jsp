@@ -20,7 +20,7 @@
 					<tr>
 					
 						<td>Á¦¸ñ</td>
-						<td><input name="title" type="text"  value="1">
+						<td><input name="title" type="text"  value="<%=vo.getBOARD_TITLE() %>">
 							<input name="num" type="hidden" value="<%=vo.getBOARD_NO() %>">
 						</td>
 					</tr>
