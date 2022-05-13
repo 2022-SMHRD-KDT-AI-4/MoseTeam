@@ -21,9 +21,11 @@ public class ListService extends HttpServlet {
 		// DAO메서드로 글 정보 가져오기
 		BoardDAO dao = new BoardDAO();
 		List<BoardVO> list = dao.selectBoard();
+		List<BoardVO> list2 = dao.notice();
 		
 		// 객체 바인딩
 		request.setAttribute("list", list);
+		request.setAttribute("list2", list2);
 		// 페이지 이동
 		RequestDispatcher rd = request.getRequestDispatcher("comuList.jsp");
 		rd.forward(request,response);

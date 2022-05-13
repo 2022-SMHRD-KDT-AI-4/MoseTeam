@@ -21,4 +21,6 @@ public class BoardVO {
 	private String MEMBER_ID;
 	private String WRITE_DATE = null;
 	private String WRITER;
+	private int GOOD;
+	
 }
