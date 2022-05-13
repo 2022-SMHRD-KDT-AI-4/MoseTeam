@@ -41,9 +41,9 @@
 			</div>
 			
 			<script>
-				/* if($("#file").val()!=null){
+				if($("#file").val()!=null){
 				$("form").attr("enctype","multipart/form-data");
-				} */
+				}
 			</script>
 </body>
 </html>

@@ -17,6 +17,7 @@
 		sysdate,
 		#{FILE_NAME},
 		#{WRITER},
+		0,
 		0
 		)
 	</insert>
@@ -33,6 +34,7 @@
 		sysdate,
 		'test',
 		#{WRITER},
+		0,
 		0
 		)
 	</insert>
