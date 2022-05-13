@@ -37,5 +37,12 @@ select * from COMU
 
 alter table BOARD modify FILE_NAME;
 
+<<<<<<< HEAD
 insert into board values(board_seq.nextval, 'aa','aa','yj1',sysdate,null,'aaa')
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-4/MoseTeam.git
+=======
+insert into board values(board_seq.nextval, 'aa','aa','yj1',sysdate,null,'aaa')
+
+select * from REVIEW
+select rest_id from RESTAURANT
 >>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-4/MoseTeam.git

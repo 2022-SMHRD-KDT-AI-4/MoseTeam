@@ -6,6 +6,10 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name = "viewport" content="width=device-width , initial-scale=1">
+<link rel = "stylesheet" type = "text/css" media = "screen" href="./comment.css">
+<link rel = "stylesheet" href="https://stackpath.bootstranpcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <script src="js/jquery-3.6.0.min.js"></script>
 <title>Insert title here</title>
 </head>
@@ -55,7 +59,7 @@
 					<tr>
 						<td colspan="4" class="text-center">
 							<%-- 댓글작성 미완성 --%>
-							<input type="button" class="btn btn-wirte" value="답글 쓰기"
+							<input type="button" class="btn btn-wirte" value="댓글 쓰기"
 							onclick="location.href='BoardReWriteForm.jsp?num=  &ref=  &ref_step=  &ref_level='">
 							
 							<a href="BEditLoadService?num=<%=vo.getBOARD_NO() %>"><button>수정하기</button></a>
@@ -68,5 +72,13 @@
 					</tr>
 					<tr>신고버튼 및 추가 빈공간</tr>
 					<tr>댓글출력공간</tr>
+	<div id = "form-commentInfo">
+		<div id = "comment-count"> 댓글 <span id ="count">0</span></div>
+		<input id = "comment-input" placeholder="댓글을 입력해 주세요.">
+		<button id = "submit">등록</button>
+	</div>
+	<div id = comments>
+	</div>
+	<script src="./comment.js"></script>
 </body>
 </html>

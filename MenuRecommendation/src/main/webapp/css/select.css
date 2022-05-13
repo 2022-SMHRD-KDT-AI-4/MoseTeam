@@ -1,8 +1,110 @@
+body{
+    background-color: #96da6a
+}
 .btn1{
     margin: 10px;
     width: 200px;
-    height: 50px;   
+    height: 50px;
+    background-color: white;   
+    color: #e76d09;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 5px solid #e76d09;
 }
-.btn1:focus{
-    background-color: aqua;
+.btn2{
+    margin: 10px;
+    width: 200px;
+    height: 50px; 
+    background-color: white;    
+    color: #e76d09;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 5px solid #e76d09;
+}
+.btn3{
+    margin: 10px;
+    width: 200px;
+    height: 50px;   
+    background-color: white;  
+    color: #e76d09;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 5px solid #e76d09;
+}
+.btn4{
+    margin: 10px;
+    width: 200px;
+    height: 50px;   
+    background-color: white;  
+    color: #e76d09;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 5px solid #e76d09;
+}
+.btn5{
+    margin: 10px;
+    width: 200px;
+    height: 50px;   
+    background-color: white;  
+    color: #e76d09;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 5px solid #e76d09;
+}
+.select_btn{
+    margin: 1%;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+.fin_btn{
+    margin: 10px;
+    width: 100px;
+    height: 50px;
+    background-color: #e76d09;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    border: 5px solid white;
+    align-items: center;
+}
+.fin_btn:hover{
+    background-color: white;
+    color: #e76d09;
+    border: 5px solid #e76d09;
+}
+#btn1{
+    width: 1360px;
+    margin: 1%;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+#btn2{
+    width: 683px;
+    margin: 1%;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+#btn3{
+    width: 685px;
+    margin: 1%;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+#btn4{
+    width: 460px;
+    margin: 1%;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+#btn5{
+    width: 683px;
+    margin: 1%;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 10px;
 }

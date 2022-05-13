@@ -10,15 +10,17 @@ import lombok.RequiredArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @RequiredArgsConstructor
-public class BoardVO {
+public class ReviewVO {
+
+	private int REVIEW_NO;
 	@NonNull
-	private int BOARD_NO;
+	private int REST_ID;
 	@NonNull
-	private String BOARD_TITLE;
+	private int REVIEW_LEVEL;
 	@NonNull
-	private String BOARD_CONTENT;
-	private String FILE_NAME;
+	private String REVIEW_CONTENT;
+	@NonNull
 	private String MEMBER_ID;
-	private String WRITE_DATE = null;
-	private String WRITER;
+	private String REVIEW_DATE = null;
+	
 }

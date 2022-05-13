@@ -7,10 +7,10 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-public class MenuDAO {
-
-	// Connection pool
+public class ReviewDAO {
+	
 	private static SqlSessionFactory sqlSessionFactory;
+	
 
 	static {
 		try {
@@ -24,20 +24,21 @@ public class MenuDAO {
 		}
 	}
 
-	// 메뉴목록 조회
-	public MenuVO getMenu() {
-		SqlSession session = sqlSessionFactory.openSession(true);
-		MenuVO vo = session.selectOne("selectMenu");
-		session.close();
-		return vo;
-	}
+	// ==============================================================
 	
-	// Main에서 아이콘으로 선택한 메뉴 조회
-	public MenuVO getIconMenu(String menu_id) {
+	// 새 리뷰 작성
+	public int insert(ReviewVO vo) {
+
 		SqlSession session = sqlSessionFactory.openSession(true);
-		MenuVO vo = session.selectOne("selectIconMenu", menu_id);
+		int cnt = 0;
+		try {
+			cnt = session.insert("insert",vo);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 		session.close();
-		return vo;
+		return cnt;
 	}
 
 }

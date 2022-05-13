@@ -1,14 +1,15 @@
 package MT.model;
 
 import java.io.InputStream;
+import java.util.List;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-public class MenuDAO {
-
+public class RestaurantDAO {
+	
 	// Connection pool
 	private static SqlSessionFactory sqlSessionFactory;
 
@@ -23,21 +24,11 @@ public class MenuDAO {
 			e.printStackTrace();
 		}
 	}
-
-	// 메뉴목록 조회
-	public MenuVO getMenu() {
-		SqlSession session = sqlSessionFactory.openSession(true);
-		MenuVO vo = session.selectOne("selectMenu");
-		session.close();
-		return vo;
-	}
 	
-	// Main에서 아이콘으로 선택한 메뉴 조회
-	public MenuVO getIconMenu(String menu_id) {
+	public List<RestaurantVO> getMenuRestaurant(String menu_id) {
 		SqlSession session = sqlSessionFactory.openSession(true);
-		MenuVO vo = session.selectOne("selectIconMenu", menu_id);
+		List<RestaurantVO> restList = session.selectList("selectMenuRest", menu_id);
 		session.close();
-		return vo;
+		return restList;
 	}
-
 }
