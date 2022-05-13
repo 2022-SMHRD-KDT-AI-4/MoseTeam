@@ -22,4 +22,5 @@ public class BoardVO {
 	private String WRITE_DATE = null;
 	private String WRITER;
 	private int GOOD;
+	
 }

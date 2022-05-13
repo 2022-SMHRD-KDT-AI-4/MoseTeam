@@ -28,7 +28,7 @@
 						<th class="success">추천수</th>
 						<td><%=vo.getGOOD() %></td>
 						<td>
-						<button type="button" id="goodAdd" onclick="goodAdd();">추천하기</button>
+						<a href="GoodAddService?num=<%=vo.getBOARD_NO() %>"><button>추천하기</button></a>
 						</td>
 					</tr>
 
@@ -71,8 +71,5 @@
 					</tr>
 					<tr>신고버튼 및 추가 빈공간</tr>
 					<tr>댓글출력공간</tr>
-		<script>
-			
-		</script>
 </body>
 </html>

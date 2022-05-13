@@ -106,7 +106,24 @@ public class BoardDAO {
 		return bvo;
 	}
 	
+	// 추천확인
+	public int goodCheck(PushVO dao) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		int cnt=0;
+		if(session.selectOne("goodCheck",dao)==null) {
+			cnt=1;
+		}
+		session.close();
+		return cnt;
+	}
 	
+	// 추천 올리기
+	public void goodAdd(PushVO dao) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		int cnt = session.update("goodAdd",dao);
+		int cnt2 = session.insert("push", dao);
+		session.close();
+	}
 	
 	
 	
