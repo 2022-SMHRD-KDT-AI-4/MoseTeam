@@ -1,0 +1,580 @@
+
+body {
+	--button-border-radius: 10px;
+	--button-bg: #d8d4cf;
+	--button-stroke: #d8d4cf;
+	--button-stroke-width: 0px;
+	--button-text: #000;
+	--button-bg-hover: #d8d4cf;
+	--button-stroke-hover: rgb(250, 184, 99);
+	--button-stroke-width-hover: 2px;
+	--button-text-hover: rgb(250, 184, 99);
+	--cursor-stroke: #(250, 184, 99);
+    --cursor-fill: #(250, 184, 99);
+    --cursor-stroke-width: 0px;
+}
+
+.button {
+	cursor: pointer;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	border-width: var(--button-stroke-width);
+	border-color: var(--button-stroke);
+	border-style: solid;
+	color: var(--button-text);
+	background: var(--button-bg);
+	border-radius: var(--button-border-radius);
+	min-width: 12rem;
+	height: 5rem;
+	padding: 0;
+	margin: auto;
+	font-family: inherit;
+	font-size: 1.5rem;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: border-color 0.2s ease;
+	background-color: white;
+	cursor:pointer;
+}
+
+.button:focus,
+.button--hover {
+	outline: none;
+	border-width: var(--button-stroke-width-hover);
+	border-color: var(--button-stroke-hover);
+	color: var(--button-text-hover);
+	background: var(--button-bg-hover);
+}
+
+.button__text, 
+.button__text-inner {
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	font-family:  'Cute Font', cursive;
+	font-size: 40px;
+	color: #e76d09;
+}
+
+
+* {margin: 0;;padding:0;box-sizing:border-box;}
+ul, li {list-style:none;}
+
+[name="slide"] {display:none;}
+.slidebox {max-width:1000px;width:100%;margin:0 auto;text-align:center;}
+.slidebox img {max-width:100%;}
+.slidebox .slidelist {
+	white-space:nowrap;
+	font-size:0;
+	overflow:hidden;
+}
+.slidebox .slideitem {
+	position:relative;
+	display:inline-block;
+	vertical-align:middle;
+	width:100%;
+	transition:all .35s;
+}
+
+
+/* 페이징 스타일 */
+
+
+[id="slide01"]:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide01 60s infinite;}
+[id="slide02"]:checked ~ .slidelist .slideitem {transform:translateX(-100%);animation:slide02 60s infinite;}
+[id="slide03"]:checked ~ .slidelist .slideitem {transform:translateX(-200%);animation:slide03 60s infinite;}
+[id="slide04"]:checked ~ .slidelist .slideitem {transform:translateX(-300%);animation:slide04 60s infinite;}
+[id="slide05"]:checked ~ .slidelist .slideitem {transform:translateX(-400%);animation:slide05 60s infinite;}
+[id="slide07"]:checked ~ .slidelist .slideitem {transform:translateX(-500%);animation:slide07 60s infinite;}
+[id="slide08"]:checked ~ .slidelist .slideitem {transform:translateX(-600%);animation:slide08 60s infinite;}
+[id="slide09"]:checked ~ .slidelist .slideitem {transform:translateX(-700%);animation:slide09 60s infinite;}
+[id="slide10"]:checked ~ .slidelist .slideitem {transform:translateX(-800%);animation:slide10 60s infinite;}
+[id="slide11"]:checked ~ .slidelist .slideitem {transform:translateX(-900%);animation:slide11 60s infinite;}
+[id="slide12"]:checked ~ .slidelist .slideitem {transform:translateX(-1000%);animation:slide12 60s infinite;}
+[id="slide13"]:checked ~ .slidelist .slideitem {transform:translateX(-1100%);animation:slide13 60s infinite;}
+[id="slide14"]:checked ~ .slidelist .slideitem {transform:translateX(-1200%);animation:slide14 60s infinite;}
+[id="slide15"]:checked ~ .slidelist .slideitem {transform:translateX(-1300%);animation:slide15 60s infinite;}
+[id="slide16"]:checked ~ .slidelist .slideitem {transform:translateX(-1400%);animation:slide16 60s infinite;}
+[id="slide17"]:checked ~ .slidelist .slideitem {transform:translateX(-1500%);animation:slide17 60s infinite;}
+[id="slide18"]:checked ~ .slidelist .slideitem {transform:translateX(-1600%);animation:slide18 60s infinite;}
+[id="slide19"]:checked ~ .slidelist .slideitem {transform:translateX(-1700%);animation:slide19 60s infinite;}
+[id="slide20"]:checked ~ .slidelist .slideitem {transform:translateX(-1800%);animation:slide20 60s infinite;}
+[id="slide21"]:checked ~ .slidelist .slideitem {transform:translateX(-1900%);animation:slide21 60s infinite;}
+
+
+@keyframes slide01 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:-900%;}
+	50% {left:-1000%;}
+	55% {left:-1100%;}
+	60% {left:-1200%;}
+	65% {left:-1300%;}
+	70% {left:-1400%;}
+	75% {left:-1500%;}
+	80% {left:-1600%;}
+	85% {left:-1700%;}
+	90% {left:-1800%;}
+	95% {left:-1900%;}
+	100% {left:0%;}
+}
+@keyframes slide02 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:-900%;}
+	50% {left:-1000%;}
+	55% {left:-1100%;}
+	60% {left:-1200%;}
+	65% {left:-1300%;}
+	70% {left:-1400%;}
+	75% {left:-1500%;}
+	80% {left:-1600%;}
+	85% {left:-1700%;}
+	90% {left:-1800%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide03 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:-900%;}
+	50% {left:-1000%;}
+	55% {left:-1100%;}
+	60% {left:-1200%;}
+	65% {left:-1300%;}
+	70% {left:-1400%;}
+	75% {left:-1500%;}
+	80% {left:-1600%;}
+	85% {left:-1700%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide04 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:-900%;}
+	50% {left:-1000%;}
+	55% {left:-1100%;}
+	60% {left:-1200%;}
+	65% {left:-1300%;}
+	70% {left:-1400%;}
+	75% {left:-1500%;}
+	80% {left:-1600%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide05 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:-900%;}
+	50% {left:-1000%;}
+	55% {left:-1100%;}
+	60% {left:-1200%;}
+	65% {left:-1300%;}
+	70% {left:-1400%;}
+	75% {left:-1500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide07 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:-900%;}
+	50% {left:-1000%;}
+	55% {left:-1100%;}
+	60% {left:-1200%;}
+	65% {left:-1300%;}
+	70% {left:-1400%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide08 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:-900%;}
+	50% {left:-1000%;}
+	55% {left:-1100%;}
+	60% {left:-1200%;}
+	65% {left:-1300%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide09 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:-900%;}
+	50% {left:-1000%;}
+	55% {left:-1100%;}
+	60% {left:-1200%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide10 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:-900%;}
+	50% {left:-1000%;}
+	55% {left:-1100%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide11 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:-900%;}
+	50% {left:-1000%;}
+	55% {left:900%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide12 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:-900%;}
+	50% {left:1000%;}
+	55% {left:900%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide13 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:1100%;}
+	50% {left:1000%;}
+	55% {left:900%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide14 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:1200%;}
+	45% {left:1100%;}
+	50% {left:1000%;}
+	55% {left:900%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide15 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:1300%;}
+	40% {left:1200%;}
+	45% {left:1100%;}
+	50% {left:1000%;}
+	55% {left:900%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide16 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:1400%;}
+	35% {left:1300%;}
+	40% {left:1200%;}
+	45% {left:1100%;}
+	50% {left:1000%;}
+	55% {left:900%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide17 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:1500%;}
+	30% {left:1400%;}
+	35% {left:1300%;}
+	40% {left:1200%;}
+	45% {left:1100%;}
+	50% {left:1000%;}
+	55% {left:900%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide18 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:1600%;}
+	25% {left:1500%;}
+	30% {left:1400%;}
+	35% {left:1300%;}
+	40% {left:1200%;}
+	45% {left:1100%;}
+	50% {left:1000%;}
+	55% {left:900%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide19 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:1700%;}
+	20% {left:1600%;}
+	25% {left:1500%;}
+	30% {left:1400%;}
+	35% {left:1300%;}
+	40% {left:1200%;}
+	45% {left:1100%;}
+	50% {left:1000%;}
+	55% {left:900%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide20 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:1800%;}
+	15% {left:1700%;}
+	20% {left:1600%;}
+	25% {left:1500%;}
+	30% {left:1400%;}
+	35% {left:1300%;}
+	40% {left:1200%;}
+	45% {left:1100%;}
+	50% {left:1000%;}
+	55% {left:900%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide21 {
+	0% {left:0%;}
+	5% {left:1900%;}
+	10% {left:1800%;}
+	15% {left:1700%;}
+	20% {left:1600%;}
+	25% {left:1500%;}
+	30% {left:1400%;}
+	35% {left:1300%;}
+	40% {left:1200%;}
+	45% {left:1100%;}
+	50% {left:1000%;}
+	55% {left:900%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+
+
+
+
+body > div > div > h1{
+	text-align: center;
+	font-family: 'Cute Font', cursive;
+	font-size : 120px;
+	color: white;
+	margin: 20px;
+}
