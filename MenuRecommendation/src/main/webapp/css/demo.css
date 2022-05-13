@@ -56,18 +56,18 @@
 
 
 body {
-	--button-border-radius: 7px;
+	--button-border-radius: 10px;
 	--button-bg: #d8d4cf;
 	--button-stroke: #d8d4cf;
-	--button-stroke-width: 1px;
+	--button-stroke-width: 0px;
 	--button-text: #000;
 	--button-bg-hover: #d8d4cf;
-	--button-stroke-hover: #000;
+	--button-stroke-hover: rgb(250, 184, 99);
 	--button-stroke-width-hover: 2px;
-	--button-text-hover: #000;
-	--cursor-stroke: #000;
-    --cursor-fill: #000;
-    --cursor-stroke-width: 1px;
+	--button-text-hover: rgb(250, 184, 99);
+	--cursor-stroke: #(250, 184, 99);
+    --cursor-fill: #(250, 184, 99);
+    --cursor-stroke-width: 0px;
 }
 
 .button {
@@ -146,7 +146,7 @@ ul, li {list-style:none;}
 	cursor:pointer;
 }
 
-/* �럹�씠吏� �뒪���씪 */
+/* 페이징 스타일 */
 .paginglist {text-align:center;padding:30px 0;}
 .paginglist > li {display:inline-block;vertical-align:middle;margin:0 10px;}
 .paginglist > li > label {display:block;padding:10px 30px;border-radius:10px;background:#ccc;cursor:pointer;}
@@ -205,6 +205,7 @@ ul, li {list-style:none;}
 
 
 
+
 body> div> div> div > h1{
 	text-align: center;
 	font-family: 'Cute Font', cursive;
@@ -255,10 +256,11 @@ a:hover {
 }
 
 .bp-header__title {
-	font-size: 1.3em;
+	font-size: 2em;
 	font-weight: 400;
 	line-height: 1.3;
 	margin: 0.25em 0 0;
+	font-family: 'Cute Font', cursive;
 	color: white;
 }
 
@@ -336,7 +338,7 @@ a:hover {
 }
 
 .bp-nav__item:hover {
-	background: #14c25d;
+	background: #17ce63;
 }
 
 .bp-icon:after {
@@ -417,17 +419,25 @@ a:hover {
 	background: url(../img/loading.svg) no-repeat 50% 50%;
 }
 
-.products {
-	margin: 0;
-	padding: 2em;
+#products {
+	width: 95%;
+	min-width: 600px;
+	height: 800px;
+	box-sizing: border-box;
+	border: 6px solid #14c25d;
+	padding: 0;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-top: 5%;
+	margin-bottom: 5%;
 	text-align: center;
+	border-radius: 20px;
 }
 
 .product {
 	display: inline-block;
 	width: 200px;
 	height: 200px;
-	margin: 10px;
 	border-radius: 5px;
 	background: #14c25d;
 }
