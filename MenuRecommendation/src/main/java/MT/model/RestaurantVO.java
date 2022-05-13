@@ -1,6 +1,6 @@
 package MT.model;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,5 +15,6 @@ public class RestaurantVO {
 	private String main_cate;
 	private String sub_cate;
 	private String rest_addr;
-	private ArrayList<RestmenuVO> restMenu;  
+	private String menu_id;
+	private List<RestmenuVO> restMenu;  
 }

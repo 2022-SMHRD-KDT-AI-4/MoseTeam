@@ -6,5 +6,47 @@
 <!-- 어떤 DAO에서 사용하는지 -->
 <mapper namespace="MT.model.RestaurantDAO">
 
+	<!-- 결정창 식당출력데이터 -->
+		<resultMap id="MenuRestaurants" type="RestaurantVO">
+	    <result property="rest_id" column="REST_ID"/>
+	    <result property="rest_nm" column="REST_NM"/>
+	    <result property="main_cate" column="MAIN_CATE"/>
+	    <result property="sub_cate" column="SUB_CATE"/>
+	    <result property="rest_addr" column="REST_ADDR"/>
+	    <result property="menu_id" column="MENU_ID"/>
+	    <collection property="restMenu" 
+	    			column="{rest_id = REST_ID, menu_id = MENU_ID}" 
+	    			javaType="java.util.List"
+	    			select="selectMenuById"/>
+		</resultMap>
 	
+	<select id="selectMenuRest"
+	 resultMap="MenuRestaurants"
+	>
+		SELECT DISTINCT B.REST_ID	AS REST_ID
+				     ,  B.REST_NM	AS REST_NM
+				     ,  B.MAIN_CATE	AS MAIN_CATE
+				     ,  B.SUB_CATE	AS SUB_CATE
+				     ,  B.REST_ADDR	AS REST_ADDR
+				     ,  #{menu_id}  AS MENU_ID
+		  FROM RESTMENU   A
+		    ,  RESTAURANT B
+		 WHERE A.MENU_ID = #{menu_id}
+		   AND A.REST_ID = B.REST_ID
+	</select>
+	
+	<select id="selectMenuById" 
+			parameterType="java.util.Map" 
+			resultType="RestmenuVO">
+		SELECT RMENU_ID   
+		    ,  RMENU_NM  
+		    ,  REST_ID    
+		    ,  MENU_ID    
+		    ,  PRICE      
+		  FROM RESTMENU  
+		 WHERE REST_ID = #{rest_id}
+		   AND MENU_ID = #{menu_id}
+ 	 <![CDATA[AND ROWNUM <= 2]]>
+  	<!-- XML에서 부등호는 태그로 인식하기 때문에 ![CDATA[]]로 문자임을 표기해줘야함 -->
+	</select>
 </mapper>
