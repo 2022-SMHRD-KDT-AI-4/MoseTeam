@@ -19,10 +19,22 @@
 	    			javaType="java.util.List"
 	    			select="selectMenuById"/>
 		</resultMap>
-	
+		
+		<resultMap id="Restaurant" type="RestaurantVO">
+	    <result property="rest_id" column="REST_ID"/>
+	    <result property="rest_nm" column="REST_NM"/>
+	    <result property="main_cate" column="MAIN_CATE"/>
+	    <result property="sub_cate" column="SUB_CATE"/>
+	    <result property="rest_addr" column="REST_ADDR"/>
+	    <result property="menu_id" column="MENU_ID"/>
+	    <collection property="restMenu" 
+	    			column= "REST_ID" 
+	    			javaType="java.util.List"
+	    			select="selectMenuAll"/>
+		</resultMap>
+		
 	<select id="selectMenuRest"
-	 resultMap="MenuRestaurants"
-	>
+	 resultMap="MenuRestaurants">
 		SELECT DISTINCT B.REST_ID	AS REST_ID
 				     ,  B.REST_NM	AS REST_NM
 				     ,  B.MAIN_CATE	AS MAIN_CATE
@@ -48,5 +60,30 @@
 		   AND MENU_ID = #{menu_id}
  	 <![CDATA[AND ROWNUM <= 2]]>
   	<!-- XML에서 부등호는 태그로 인식하기 때문에 ![CDATA[]]로 문자임을 표기해줘야함 -->
+	</select>
+	
+	
+	<!--  식당 상세정보 출력 -->
+	<select id="selectRestaurant"
+	 resultMap="Restaurant">
+		SELECT REST_ID	
+			,  REST_NM	
+			,  MAIN_CATE	
+			,  SUB_CATE	
+			,  REST_ADDR	
+			,  null
+		  FROM RESTAURANT 
+		 WHERE REST_ID = #{rest_id}
+	</select>
+	
+	<select id="selectMenuAll" 
+			resultType="RestmenuVO">
+		SELECT RMENU_ID   
+		    ,  RMENU_NM  
+		    ,  REST_ID    
+		    ,  MENU_ID    
+		    ,  PRICE      
+		  FROM RESTMENU  
+		 WHERE REST_ID = #{rest_id}
 	</select>
 </mapper>

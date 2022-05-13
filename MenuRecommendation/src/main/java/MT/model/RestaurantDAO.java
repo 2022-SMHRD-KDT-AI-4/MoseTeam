@@ -31,4 +31,11 @@ public class RestaurantDAO {
 		session.close();
 		return restList;
 	}
+	
+	public RestaurantVO getRestaurant(String rest_id) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		RestaurantVO vo = session.selectOne("selectRestaurant", rest_id);
+		session.close();
+		return vo;
+	}
 }
