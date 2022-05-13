@@ -146,17 +146,6 @@ ul, li {list-style:none;}
 	cursor:pointer;
 }
 
-/* 페이징 스타일 */
-.paginglist {text-align:center;padding:30px 0;}
-.paginglist > li {display:inline-block;vertical-align:middle;margin:0 10px;}
-.paginglist > li > label {display:block;padding:10px 30px;border-radius:10px;background:#ccc;cursor:pointer;}
-.paginglist > li:hover > label {background:#333;}
-
-[id="slide01"]:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide01 7s infinite;}
-[id="slide02"]:checked ~ .slidelist .slideitem {transform:translateX(-100%);animation:slide02 7s infinite;}
-[id="slide03"]:checked ~ .slidelist .slideitem {transform:translateX(-200%);animation:slide03 7s infinite;}
-[id="slide04"]:checked ~ .slidelist .slideitem {transform:translateX(-300%);animation:slide04 7s infinite;}
-
 
 [id="slide01"]:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide01 30s infinite;}
 [id="slide02"]:checked ~ .slidelist .slideitem {transform:translateX(-100%);animation:slide02 30s infinite;}
