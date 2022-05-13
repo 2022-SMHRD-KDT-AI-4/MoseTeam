@@ -41,6 +41,7 @@
 	<select id="selectBoard"
 	resultType="BoardVO">
 		select * from board
+		order by BOARD_NO desc
 	</select>
 	
 	<update id="update"
