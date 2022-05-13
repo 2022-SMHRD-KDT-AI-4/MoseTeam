@@ -1,3 +1,6 @@
+<%@page import="java.util.List"%>
+<%@page import="MT.model.RestmenuVO"%>
+<%@page import="MT.model.RestaurantVO"%>
 <%@page import="MT.model.MenuVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
@@ -12,41 +15,41 @@
 <body>
 	<%
 	MenuVO vo = (MenuVO) request.getAttribute("menuvo");
+	List<RestaurantVO> restList = (List) request.getAttribute("restList");
 	%>
 	<div>
 		<div class="menuWrap">
 			<p class="menuName"><%=vo.getMenu_nm()%></p>
 			<img
 				src=<%=vo.getImage_path() == null ? "https://img.apti.co.kr/aptHome/images/sub/album_noimg.gif" : vo.getImage_path()%>
-				width="100%"> 
-			<P class = "menuDiscript"> 스테이크는 맛있다 </P>
+				width="100%">
+			<P class="menuDiscript">
+				<%=vo.getDiscript()%>
+			</P>
 		</div>
 		<div class="restaurantList">
-			<div class="restaurantWrap">
-				스테이크보스
-				<button class="resBtn">
-					<a href='#'>상세정보>></a>
-				</button>
-				<button class="btnChoice">Pick!</button>
-				<p class="rmenuName">등심스테이크 ---20000원</p>
-			</div>
-			<div class="restaurantWrap">
-				핵스테이크
-				<button class="resBtn">
-					<a href='#'>상세정보>></a>
-				</button>
-				<button class="btnChoice">Pick!</button>
-				<p class="rmenuName">등심스테이크 ---11000원</p>
-				<p class="rmenuName">안심스테이크 ---15000원</p>
-			</div>
-			<div class="restaurantWrap">
-				하와이스테이크
-				<button class="resBtn">
-					<a href='#'>상세정보>></a>
-				</button>
-				<button class="btnChoice">Pick!</button>
-				<p class="rmenuName"></p>
-			</div>
+			<%
+			if (restList != null) {
+				for (int r = 0; r < restList.size(); r++) {
+			%>
+				<div class="restaurantWrap">
+					<p class="restName"><%=restList.get(r).getRest_nm()%></p>
+					<button class="resBtn">
+						<a href='#'>상세정보>></a>
+					</button>
+					<button class="btnChoice">Pick!</button>
+					<%
+					List<RestmenuVO> rmenuList = restList.get(r).getRestMenu();
+					for (int rm = 0; rm < rmenuList.size(); rm++) {
+					%>
+						<span class="rmenuName"><%=rmenuList.get(rm).getRmenu_nm()%></span>
+						<span class="rmenuPrice"><%= "    -----" + rmenuList.get(rm).getPrice()%></span>
+						<br>
+					<%
+					}
+				}
+			}
+			%>
 		</div>
 	</div>
 </body>
