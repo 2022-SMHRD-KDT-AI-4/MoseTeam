@@ -15,9 +15,42 @@
 <body>
 	<%
 		List<BoardVO> list = (List<BoardVO>)request.getAttribute("list");
+		List<BoardVO> list2 = (List<BoardVO>)request.getAttribute("list2");
 	%>
 	<div id="board">
 		<table id="list" border="1" cellspacing="0">
+		
+		<caption>공지사항</caption>
+			<colgroup>
+				<col>
+				<col width="110">
+				<col width="100">
+				<col width="80">
+			</colgroup>
+			<thead>
+				<tr>
+					<td>번호</td>
+					<td>추천수</td>
+					<td>제목</td>
+					<td>작성자</td>
+					<td>시간</td>
+				</tr>
+			</thead>
+			<tbody>
+				<%for(BoardVO vo : list2){ %>
+				<tr>
+					<td><%=vo.getBOARD_NO() %></td>
+					<td><%=vo.getGOOD() %></td>
+					<td><a href="ViewService?num=<%=vo.getBOARD_NO() %>">
+						<%=vo.getBOARD_TITLE() %></a></td>
+					<td><%=vo.getWRITER() %></td>
+					<td><%=vo.getWRITE_DATE() %></td>
+				</tr>
+					
+				<%} %>
+			</tbody>
+			
+			
 			<caption>게시글</caption>
 			<colgroup>
 				<col>

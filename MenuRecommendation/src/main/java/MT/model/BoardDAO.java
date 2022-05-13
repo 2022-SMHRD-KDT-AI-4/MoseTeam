@@ -66,7 +66,13 @@ public class BoardDAO {
 		List<BoardVO> list = session.selectList("selectBoard");
 		session.close();
 		return list;
-		
+	}
+	// 공지사항 가져오기
+	public List<BoardVO> notice() {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		List<BoardVO> list = session.selectList("notice");
+		session.close();
+		return list;
 	}
 	
 	// 게시글 삭제

@@ -44,6 +44,15 @@
 		order by BOARD_NO desc
 	</select>
 	
+	
+	<select id="notice"
+	resultType="BoardVO">
+		select * from board
+		where member_id = 'admin'
+		order by BOARD_NO desc
+	</select>
+	
+	
 	<update id="update"
 	parameterType="BoardVO">
 	update board
