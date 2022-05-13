@@ -146,7 +146,7 @@ ul, li {list-style:none;}
 	cursor:pointer;
 }
 
-/* 페이징 스타일 */
+/* �럹�씠吏� �뒪���씪 */
 .paginglist {text-align:center;padding:30px 0;}
 .paginglist > li {display:inline-block;vertical-align:middle;margin:0 10px;}
 .paginglist > li > label {display:block;padding:10px 30px;border-radius:10px;background:#ccc;cursor:pointer;}
@@ -336,7 +336,7 @@ a:hover {
 }
 
 .bp-nav__item:hover {
-	background: rgb(255, 77, 46);
+	background: #14c25d;
 }
 
 .bp-icon:after {
