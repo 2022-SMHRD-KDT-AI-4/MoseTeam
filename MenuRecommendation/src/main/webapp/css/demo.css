@@ -158,50 +158,490 @@ ul, li {list-style:none;}
 [id="slide04"]:checked ~ .slidelist .slideitem {transform:translateX(-300%);animation:slide04 7s infinite;}
 
 
+[id="slide01"]:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide01 30s infinite;}
+[id="slide02"]:checked ~ .slidelist .slideitem {transform:translateX(-100%);animation:slide02 30s infinite;}
+[id="slide03"]:checked ~ .slidelist .slideitem {transform:translateX(-200%);animation:slide03 30s infinite;}
+[id="slide04"]:checked ~ .slidelist .slideitem {transform:translateX(-300%);animation:slide04 30s infinite;}
+[id="slide05"]:checked ~ .slidelist .slideitem {transform:translateX(-400%);animation:slide05 30s infinite;}
+[id="slide07"]:checked ~ .slidelist .slideitem {transform:translateX(-500%);animation:slide07 30s infinite;}
+[id="slide08"]:checked ~ .slidelist .slideitem {transform:translateX(-600%);animation:slide08 30s infinite;}
+[id="slide09"]:checked ~ .slidelist .slideitem {transform:translateX(-700%);animation:slide09 30s infinite;}
+[id="slide10"]:checked ~ .slidelist .slideitem {transform:translateX(-800%);animation:slide10 30s infinite;}
+[id="slide11"]:checked ~ .slidelist .slideitem {transform:translateX(-900%);animation:slide11 30s infinite;}
+[id="slide12"]:checked ~ .slidelist .slideitem {transform:translateX(-1000%);animation:slide12 30s infinite;}
+[id="slide13"]:checked ~ .slidelist .slideitem {transform:translateX(-1100%);animation:slide13 30s infinite;}
+[id="slide14"]:checked ~ .slidelist .slideitem {transform:translateX(-1200%);animation:slide14 30s infinite;}
+[id="slide15"]:checked ~ .slidelist .slideitem {transform:translateX(-1300%);animation:slide15 30s infinite;}
+[id="slide16"]:checked ~ .slidelist .slideitem {transform:translateX(-1400%);animation:slide16 30s infinite;}
+[id="slide17"]:checked ~ .slidelist .slideitem {transform:translateX(-1500%);animation:slide17 30s infinite;}
+[id="slide18"]:checked ~ .slidelist .slideitem {transform:translateX(-1600%);animation:slide18 30s infinite;}
+[id="slide19"]:checked ~ .slidelist .slideitem {transform:translateX(-1700%);animation:slide19 30s infinite;}
+[id="slide20"]:checked ~ .slidelist .slideitem {transform:translateX(-1800%);animation:slide20 30s infinite;}
+[id="slide21"]:checked ~ .slidelist .slideitem {transform:translateX(-1900%);animation:slide21 30s infinite;}
+
+
 @keyframes slide01 {
 	0% {left:0%;}
-	23% {left:0%;}
-	25% {left:-100%;}
-	48% {left:-100%;}
-	50% {left:-200%;}
-	73% {left:-200%;}
-	75% {left:-300%;}
-	98% {left:-300%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:-900%;}
+	50% {left:-1000%;}
+	55% {left:-1100%;}
+	60% {left:-1200%;}
+	65% {left:-1300%;}
+	70% {left:-1400%;}
+	75% {left:-1500%;}
+	80% {left:-1600%;}
+	85% {left:-1700%;}
+	90% {left:-1800%;}
+	95% {left:-1900%;}
 	100% {left:0%;}
 }
 @keyframes slide02 {
 	0% {left:0%;}
-	23% {left:0%;}
-	25% {left:-100%;}
-	48% {left:-100%;}
-	50% {left:-200%;}
-	73% {left:-200%;}
-	75% {left:100%;}
-	98% {left:100%;}
+	5% {left:-100%;}
+	10% {left:-200;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:-900%;}
+	50% {left:-1000%;}
+	55% {left:-1100%;}
+	60% {left:-1200%;}
+	65% {left:-1300%;}
+	70% {left:-1400%;}
+	75% {left:-1500%;}
+	80% {left:-1600%;}
+	85% {left:-1700%;}
+	90% {left:-1800%;}
+	95% {left:100%;}
 	100% {left:0%;}
 }
 @keyframes slide03 {
 	0% {left:0%;}
-	23% {left:0%;}
-	25% {left:-100%;}
-	48% {left:-100%;}
-	50% {left:200%;}
-	73% {left:200%;}
-	75% {left:100%;}
-	98% {left:100%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:-900%;}
+	50% {left:-1000%;}
+	55% {left:-1100%;}
+	60% {left:-1200%;}
+	65% {left:-1300%;}
+	70% {left:-1400%;}
+	75% {left:-1500%;}
+	80% {left:-1600%;}
+	85% {left:-1700%;}
+	90% {left:200%;}
+	95% {left:100%;}
 	100% {left:0%;}
 }
 @keyframes slide04 {
 	0% {left:0%;}
-	23% {left:0%;}
-	25% {left:300%;}
-	48% {left:300%;}
-	50% {left:200%;}
-	73% {left:200%;}
-	75% {left:100%;}
-	98% {left:100%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:-900%;}
+	50% {left:-1000%;}
+	55% {left:-1100%;}
+	60% {left:-1200%;}
+	65% {left:-1300%;}
+	70% {left:-1400%;}
+	75% {left:-1500%;}
+	80% {left:-1600%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
 	100% {left:0%;}
 }
+@keyframes slide05 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:-900%;}
+	50% {left:-1000%;}
+	55% {left:-1100%;}
+	60% {left:-1200%;}
+	65% {left:-1300%;}
+	70% {left:-1400%;}
+	75% {left:-1500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide07 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:-900%;}
+	50% {left:-1000%;}
+	55% {left:-1100%;}
+	60% {left:-1200%;}
+	65% {left:-1300%;}
+	70% {left:-1400%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide08 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:-900%;}
+	50% {left:-1000%;}
+	55% {left:-1100%;}
+	60% {left:-1200%;}
+	65% {left:-1300%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide09 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:-900%;}
+	50% {left:-1000%;}
+	55% {left:-1100%;}
+	60% {left:-1200%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide10 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:-900%;}
+	50% {left:-1000%;}
+	55% {left:-1100%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide11 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:-900%;}
+	50% {left:-1000%;}
+	55% {left:900%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide12 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:-900%;}
+	50% {left:1000%;}
+	55% {left:900%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide13 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:-800%;}
+	45% {left:1100%;}
+	50% {left:1000%;}
+	55% {left:900%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide14 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:-700%;}
+	40% {left:1200%;}
+	45% {left:1100%;}
+	50% {left:1000%;}
+	55% {left:900%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide15 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:-600%;}
+	35% {left:1300%;}
+	40% {left:1200%;}
+	45% {left:1100%;}
+	50% {left:1000%;}
+	55% {left:900%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide16 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:-500%;}
+	30% {left:1400%;}
+	35% {left:1300%;}
+	40% {left:1200%;}
+	45% {left:1100%;}
+	50% {left:1000%;}
+	55% {left:900%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide17 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:-400%;}
+	25% {left:1500%;}
+	30% {left:1400%;}
+	35% {left:1300%;}
+	40% {left:1200%;}
+	45% {left:1100%;}
+	50% {left:1000%;}
+	55% {left:900%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide18 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:-300%;}
+	20% {left:1600%;}
+	25% {left:1500%;}
+	30% {left:1400%;}
+	35% {left:1300%;}
+	40% {left:1200%;}
+	45% {left:1100%;}
+	50% {left:1000%;}
+	55% {left:900%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide19 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:-200%;}
+	15% {left:1700%;}
+	20% {left:1600%;}
+	25% {left:1500%;}
+	30% {left:1400%;}
+	35% {left:1300%;}
+	40% {left:1200%;}
+	45% {left:1100%;}
+	50% {left:1000%;}
+	55% {left:900%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide20 {
+	0% {left:0%;}
+	5% {left:-100%;}
+	10% {left:1800%;}
+	15% {left:1700%;}
+	20% {left:1600%;}
+	25% {left:1500%;}
+	30% {left:1400%;}
+	35% {left:1300%;}
+	40% {left:1200%;}
+	45% {left:1100%;}
+	50% {left:1000%;}
+	55% {left:900%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide21 {
+	0% {left:0%;}
+	5% {left:1900%;}
+	10% {left:1800%;}
+	15% {left:1700%;}
+	20% {left:1600%;}
+	25% {left:1500%;}
+	30% {left:1400%;}
+	35% {left:1300%;}
+	40% {left:1200%;}
+	45% {left:1100%;}
+	50% {left:1000%;}
+	55% {left:900%;}
+	60% {left:800%;}
+	65% {left:700%;}
+	70% {left:600%;}
+	75% {left:500%;}
+	80% {left:400%;}
+	85% {left:300%;}
+	90% {left:200%;}
+	95% {left:100%;}
+	100% {left:0%;}
+}
+
+
 
 
 
