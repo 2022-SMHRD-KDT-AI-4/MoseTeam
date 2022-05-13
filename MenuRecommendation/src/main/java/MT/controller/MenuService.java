@@ -21,15 +21,26 @@ public class MenuService extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		
 		MenuDAO dao = new MenuDAO();
 		RestaurantDAO restdao = new RestaurantDAO();
-
-		// 1. 조건에 맞는 메뉴리스트 가져오기
-		MenuVO menuvo = dao.getMenu();
 		
-		// 2. 메뉴를 가지고 있는 식당리스트 가져오기
-		String menu_id = menuvo.getMenu_id();
+		// 페이지 호출위치 구분
+		// Main : menu_id를 파라미터로 가지고 들어옴
+		// Category : codeList를 파라미터로 가지고 들어옴
+		request.setCharacterEncoding("EUC-KR");
+		String menu_id = request.getParameter("menu_id");
+		
+		// 메뉴 가져오기
+		MenuVO menuvo = new MenuVO();
+		if(menu_id == null) {
+			menuvo = dao.getMenu();
+		}else {
+			menuvo = dao.getIconMenu(menu_id);
+		}
+		
+		// 2. 결정된 메뉴를 판매하고 있는 식당 리스트와 판매 메뉴리스트(2개) 가져오기
+		menu_id = menuvo.getMenu_id();
 		List<RestaurantVO> restList = (List) restdao.getMenuRestaurant(menu_id);
 
 		request.setAttribute("menuvo", menuvo);

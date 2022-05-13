@@ -7,7 +7,12 @@
 <mapper namespace="MT.model.MenuDAO">
 
 	<select id="selectMenu" resultType="MenuVO">
-		SELECT A.*
+		SELECT A.MENU_ID
+             , A.MENU_NM
+             , A.PARENT_ID
+             , A.DISCRIPTION
+             , A.CODE_LIST
+             , A.IMAGE_PATH
 		  FROM (
 				SELECT *
 				FROM MENU
@@ -15,4 +20,14 @@
 		 WHERE ROWNUM = 1
 	</select>
 	
+	<select id="selectIconMenu" resultType="MenuVO">
+		SELECT MENU_ID
+             , MENU_NM
+             , PARENT_ID
+             , DISCRIPTION
+             , CODE_LIST
+             , IMAGE_PATH
+		  FROM MENU
+         WHERE MENU_ID = #{menu_id}
+	</select>
 </mapper>
