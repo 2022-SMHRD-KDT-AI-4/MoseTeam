@@ -146,6 +146,15 @@ public class BoardDAO {
 		session.close();
 	}
 	
+	// 인기글 순서 모든 정보
+	public List<BoardVO> popList() {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		List<BoardVO> list = session.selectList("popList");
+		session.close();
+		return list;
+	}
+	
+	
 	
 	
 }

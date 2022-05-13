@@ -117,5 +117,11 @@
 		where BOARD_NO = #{num}
 	</update>
 	
+	<select id="popList"
+	resultType="BoardVO">
+		select * from board
+		order by good desc
+	</select>
+	
 	
 </mapper>
