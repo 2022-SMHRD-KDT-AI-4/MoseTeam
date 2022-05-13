@@ -28,6 +28,7 @@
 			<thead>
 				<tr>
 					<td>번호</td>
+					<td>추천수</td>
 					<td>제목</td>
 					<td>작성자</td>
 					<td>시간</td>
@@ -37,6 +38,7 @@
 				<%for(BoardVO vo : list){ %>
 				<tr>
 					<td><%=vo.getBOARD_NO() %></td>
+					<td><%=vo.getGOOD() %></td>
 					<td><a href="ViewService?num=<%=vo.getBOARD_NO() %>">
 						<%=vo.getBOARD_TITLE() %></a></td>
 					<td><%=vo.getWRITER() %></td>

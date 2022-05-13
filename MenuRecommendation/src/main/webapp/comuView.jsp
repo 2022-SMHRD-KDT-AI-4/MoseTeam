@@ -26,7 +26,7 @@
 						<th class="success">글번호</th>
 						<td><%=vo.getBOARD_NO() %></td>
 						<th class="success">추천수</th>
-						<td><%--vo.getGood() --%></td>
+						<td><%=vo.getGOOD() %></td>
 						<td>
 						<button type="button" id="goodAdd" onclick="goodAdd();">추천하기</button>
 						</td>
@@ -71,8 +71,8 @@
 					</tr>
 					<tr>신고버튼 및 추가 빈공간</tr>
 					<tr>댓글출력공간</tr>
-	<script>
-		
-	</script>
+		<script>
+			
+		</script>
 </body>
 </html>

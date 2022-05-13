@@ -16,7 +16,8 @@
 		#{MEMBER_ID},
 		sysdate,
 		#{FILE_NAME},
-		#{WRITER}
+		#{WRITER},
+		0
 		)
 	</insert>
 	
@@ -31,7 +32,8 @@
 		#{MEMBER_ID},
 		sysdate,
 		'test',
-		#{WRITER}
+		#{WRITER},
+		0
 		)
 	</insert>
 
