@@ -64,6 +64,7 @@
 	resultType="BoardVO">
 		select * from board
 		where board_title like #{search}
+		order by BOARD_NO desc
 	</select>
 	
 	<delete id="delete"
@@ -101,5 +102,18 @@
 		)
 	</insert>
 	
+	<select id="badList"
+	resultType="BoardVO">
+		select * from board
+		where bad >= 1
+		order by BOARD_NO desc
+	</select>
 
+	<update id="badAdd"
+	parameterType="int">
+		update board set bad = board.bad + 1
+		where BOARD_NO = #{num}
+	</update>
+	
+	
 </mapper>

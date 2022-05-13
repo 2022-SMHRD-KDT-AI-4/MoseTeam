@@ -131,7 +131,20 @@ public class BoardDAO {
 		session.close();
 	}
 	
+	// 신고글 모든 정보 가져오는 select Board method
+	public List<BoardVO> badList() {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		List<BoardVO> list = session.selectList("badList");
+		session.close();
+		return list;
+	}
 	
+	// 신고하기
+	public void badAdd(int num) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		int cnt = session.update("badAdd",num);
+		session.close();
+	}
 	
 	
 	

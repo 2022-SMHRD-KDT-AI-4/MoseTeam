@@ -37,13 +37,16 @@ public class LoginService extends HttpServlet {
 		if(mvo==null) {
 			// 실패
 			out.print(false);
+			System.out.println("로그인 실패");
 		}else {
-			// 성공
-			out.print(true);
 			// 사용자의 정보 유지 --> Session 이용
 			HttpSession session = request.getSession();
 			session.setAttribute("vo", mvo);
+			// 성공
+			out.print(true);
+			System.out.println("로그인 성공");
 		}
+
 		
 	}
 

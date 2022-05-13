@@ -72,9 +72,8 @@
 							<a href="ListService"><button>목록보기</button></a>
 							
 						</td>
+						<td><a href="BadReportService?num=<%=vo.getBOARD_NO() %>"><button>신고하기</button></a>
 					</tr>
-					<tr>신고버튼 및 추가 빈공간</tr>
-					<tr>댓글출력공간</tr>
 	<div id = "form-commentInfo">
 		<div id = "comment-count"> 댓글 <span id ="count">0</span></div>
 		<input id = "comment-input" placeholder="댓글을 입력해 주세요.">
