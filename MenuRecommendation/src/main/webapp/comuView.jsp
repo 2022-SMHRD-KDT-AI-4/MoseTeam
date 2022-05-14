@@ -1,3 +1,5 @@
+<%@page import="java.util.List"%>
+<%@page import="MT.model.ReplyVO"%>
 <%@page import="MT.model.MemberVO"%>
 <%@page import="MT.model.BoardVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
@@ -16,6 +18,8 @@
 <body>
 	<%
 		BoardVO vo = (BoardVO)request.getAttribute("bvo");
+		List<ReplyVO> list = (List<ReplyVO>)request.getAttribute("list");
+		int count = (int)request.getAttribute("count");
 	%>
 	
 	
@@ -74,13 +78,49 @@
 						</td>
 						<td><a href="BadReportService?num=<%=vo.getBOARD_NO() %>"><button>신고하기</button></a>
 					</tr>
-	<div id = "form-commentInfo">
-		<div id = "comment-count"> 댓글 <span id ="count">0</span></div>
-		<input id = "comment-input" placeholder="댓글을 입력해 주세요.">
-		<button id = "submit">등록</button>
+					
+					
+					
+	<div id="comment">
+		<table>
+		<thead>
+			<form action="CommentService" method="get" class="addComment">
+				<tr>
+					<div> 댓글 <span id ="count"><%=count %></span></>
+				</tr>
+				<tr>
+					<td colspan="3"><input name="comment" type="text" placeholder="댓글을 입력해 주세요."></td>
+					<td colspan="3"><input name="bodnum" type="hidden" value="<%=vo.getBOARD_NO()%>"></td>
+					<td colspan="3"><input name="id" type="hidden" value="yj1<%-- 세션 ID --%>"></td>
+					<td colspan="3"><input name="nick" type="hidden" value="test<%-- 세션 ID 닉네임 --%>"></td>
+					<td align="left"><button type="submit" onclick="boardSearch()">등록</button></td>
+				</tr>
+			</form>
+		</thead>
+		
+		<tbody>
+			<div id="comment_list">
+			
+				<tr>
+					<td>작성자</td>
+					<td>작성날짜</td>
+					<td>작성내용</td>
+				</tr>
+				
+				<%for(ReplyVO rvo : list){ %>
+				<div>
+				<tr>
+					<td><%=rvo.getNICK() %></td>
+					<td><%=rvo.getWRITE_DATE() %></td>
+					<td><%=rvo.getREPLY_CONTENT() %></td>
+				</tr>
+				</div>
+					
+				<%} %>
+			</div>
+		</tbody>
+		</table>
 	</div>
-	<div id = comments>
-	</div>
-	<script src="./comment.js"></script>
+		
 </body>
 </html>

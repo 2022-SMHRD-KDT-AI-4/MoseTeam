@@ -4,8 +4,30 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- 어떤 DAO에서 사용하는지 -->
-<mapper namespace="MT.model.replyDAO">
+<mapper namespace="MT.model.ReplyDAO">
 
+	<insert id="addComment"
+	parameterType="ReplyVO">
+		insert into reply
+		values(
+		reply_seq.nextval,
+		#{BOARD_NO},
+		#{REPLY_CONTENT},
+		#{MEMBER_ID},
+		sysdate,
+		#{NICK}
+		)
+	</insert>
+
+	<select id="selectList"
+	parameterType="int"
+	resultType="ReplyVO">
+		select * from reply
+		where board_no = #{num}
+		order by reply_no desc
+	</select>
+	
+	
 	
 	
 </mapper>
