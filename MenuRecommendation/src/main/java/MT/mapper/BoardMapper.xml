@@ -71,8 +71,8 @@
 	
 	<delete id="delete"
 	parameterType="int">
-	delete from board
-	where BOARD_NO = #{BOARD_NO}
+		delete from board
+		where BOARD_NO = #{num}
 	</delete>
 	
 	<select id="selectOne"

@@ -23,6 +23,7 @@ public class BDeleteService extends HttpServlet {
 		int num = Integer.parseInt(request.getParameter("num"));
 		
 		BoardDAO dao = new BoardDAO();
+		System.out.println(num);
 		dao.delete(num);
 		
 		response.sendRedirect("ListService");
