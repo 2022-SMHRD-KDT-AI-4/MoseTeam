@@ -15,7 +15,7 @@
 <!-- food icons -->
 <link rel="stylesheet" type="text/css" href="css/organicfoodicons.css" />
 <!-- demo styles -->
-<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="css/demo.css?ver=1" />
 <!-- menu styles -->
 <link rel="stylesheet" type="text/css" href="css/component.css" />
 <link rel="stylesheet" href="css/login.css">
@@ -34,16 +34,18 @@
 	<div id="myModal" class="modal">
 
 		<!-- Modal content -->
+		<form action="LoginService" method="post" class="loginForm"></form>
 		<div class="modal-content">
 			<div class="login">
 				<h2>Login</h2>
+
 				<div class="login_id">
 					<h4>ID</h4>
-					<input type="text" id="id" name="id" placeholder="ID">
+					<input type="id" name="id" placeholder="ID">
 				</div>
 				<div class="login_pw">
 					<h4>PW</h4>
-					<input type="password" id="pw" name="pw" placeholder="PW">
+					<input type="password" name="pw" placeholder="PW">
 				</div>
 				<div class="login_etc">
 					<div class="forgot_pw">
@@ -51,15 +53,15 @@
 					</div>
 				</div>
 				<div class="submit">
-					<input id="btn1" type="submit" value="login">
+					<input class="btn1" type="submit" value="login" onclick="close_pop()">
 				</div>
 				<div class="submit2">
-					<input id="btn2" type="submit" value="join"
+					<input class="btn2" type="submit" value="join"
 						onClick="location.href='join.html'">
 				</div>
 
 			</div>
-		
+
 		</div>
 
 	</div>
@@ -89,11 +91,8 @@
 						data-info="영양 정보"><span>칼로리</span></a> <a
 						class="bp-nav__item bp-icon bp-icon--archive"
 						href="https://smhrd.or.kr/" " data-info="smhrd"><span>smhrd</span></a>
-				</nav>			
-			
-				
+				</nav>
 			</div>
-			
 		</header>
 		<button class="action action--open" aria-label="Open Menu">
 			<span class="icon icon--menu"></span>
@@ -110,260 +109,76 @@
 					<li class="menu__item" role="menuitem"><a class="menu__link"
 						data-submenu="submenu-2" aria-owns="submenu-2" href="#">마이페이지</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link"
-						data-submenu="submenu-3" aria-owns="submenu-3" href="#">전체메뉴
-							조회</a></li>
+						data-submenu="submenu-3" aria-owns="submenu-3" href="#">전체메뉴 조회</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link"
 						data-submenu="submenu-4" aria-owns="submenu-4" href="#">그냥</a></li>
 				</ul>
 				<!-- Submenu 1 -->
 				<ul data-menu="submenu-1" id="submenu-1" class="menu__level"
-					tabindex="-1" role="menu" aria-label="Vegetables">
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">공지사항</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">게시글</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">인기글</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">내글 관리</a></li>
-
+					tabindex="-1" role="menu" aria-label="community">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">공지사항</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#" onclick="changeIframeUrl('community.jsp')">게시글</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#" onclick="changeIframeUrl('popularityList.jsp')">인기글</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">내글 관리</a></li>
 				</ul>
 				<!-- Submenu 1-1 -->
-				<ul data-menu="submenu-1-1" id="submenu-1-1" class="menu__level"
-					tabindex="-1" role="menu" aria-label="Sale %">
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">Fair Trade Roots</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">Dried Veggies</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">Our Brand</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">Homemade</a></li>
+				<ul data-menu="submenu-1-1" id="submenu-1-1" class="menu__level" tabindex="-1" role="menu" aria-label="Sale %">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Fair Trade Roots</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Dried Veggies</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Our Brand</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Homemade</a></li>
 				</ul>
 				<!-- Submenu 2 -->
-				<ul data-menu="submenu-2" id="submenu-2" class="menu__level"
-					tabindex="-1" role="menu" aria-label="Fruits">
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">개인정보 수정</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">내가 고른 메뉴</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						data-submenu="submenu-2-1" aria-owns="submenu-2-1" href="#">메뉴관리</a></li>
+				<ul data-menu="submenu-2" id="submenu-2" class="menu__level" tabindex="-1" role="menu" aria-label="myPage">
+					<li class="menu__item" role="menuitem">
+						<a class="menu__link" href="#" onclick="changeIframeUrl('RestaurantHistory.html')">어떤걸 먹었을까?</a>
+					</li>
+					<li class="menu__item" role="menuitem">
+						<a class="menu__link" data-submenu="submenu-2-1" aria-owns="submenu-2-1" href="#">메뉴관리</a>
+					</li>
 				</ul>
 				<!-- Submenu 2-1 -->
-				<ul data-menu="submenu-2-1" id="submenu-2-1" class="menu__level"
-					tabindex="-1" role="menu" aria-label="Special Selection">
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">좋아요</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">싫어요</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">내후기</a></li>
+				<ul data-menu="submenu-2-1" id="submenu-2-1" class="menu__level" tabindex="-1" role="menu" aria-label="Special Selection">
+					<li class="menu__item" role="menuitem"><a class="menu__link"href="#">좋아요</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link"href="#">싫어요</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link"href="#">내후기</a></li>
 				</ul>
 				<!-- Submenu 3 -->
 				<ul data-menu="submenu-3" id="submenu-3" class="menu__level"
 					tabindex="-1" role="menu" aria-label="Grains">
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">Buckwheat</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">Millet</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">Quinoa</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">Wild Rice</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">Durum Wheat</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						data-submenu="submenu-3-1" aria-owns="submenu-3-1" href="#">Promo
-							Packs</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Buckwheat</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Millet</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Quinoa</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Wild Rice</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Durum Wheat</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3-1" aria-owns="submenu-3-1" href="#">Promo Packs</a></li>
 				</ul>
 				<!-- Submenu 3-1 -->
-				<ul data-menu="submenu-3-1" id="submenu-3-1" class="menu__level"
-					tabindex="-1" role="menu" aria-label="Promo Packs">
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">Starter Kit</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">The Essential 8</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">Bolivian Secrets</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">Flour Packs</a></li>
+				<ul data-menu="submenu-3-1" id="submenu-3-1" class="menu__level" tabindex="-1" role="menu" aria-label="Promo Packs">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Starter Kit</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">The Essential 8</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Bolivian Secrets</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Flour Packs</a></li>
 				</ul>
 				<!-- Submenu 4 -->
 				<ul data-menu="submenu-4" id="submenu-4" class="menu__level"
 					tabindex="-1" role="menu" aria-label="Mylk &amp; Drinks">
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">Grain Mylks</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">Seed Mylks</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">Nut Mylks</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">Nutri Drinks</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						data-submenu="submenu-4-1" aria-owns="submenu-4-1" href="#">Selection</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Grain Mylks</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Seed Mylks</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Nut Mylks</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Nutri Drinks</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4-1" aria-owns="submenu-4-1" href="#">Selection</a></li>
 				</ul>
 				<!-- Submenu 4-1 -->
-				<ul data-menu="submenu-4-1" id="submenu-4-1" class="menu__level"
-					tabindex="-1" role="menu" aria-label="Selection">
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">Nut Mylk Packs</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">Amino Acid Heaven</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link"
-						href="#">Allergy Free</a></li>
+				<ul data-menu="submenu-4-1" id="submenu-4-1" class="menu__level" tabindex="-1" role="menu" aria-label="Selection">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#" onclick="changeIframeUrl('MenuService.java')">Nut Mylk Packs</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Amino Acid Heaven</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Allergy Free</a></li>
 				</ul>
 			</div>
 		</nav>
-		<div class="content">
-			<div>
-				<h1>오늘은</h1>
-			</div>
-			<div class="slidebox">
-				<input type="radio" name="slide" id="slide01" checked> 
-				<input type="radio" name="slide" id="slide02"> 
-				<input type="radio" name="slide" id="slide03"> 
-				<input type="radio" name="slide" id="slide04">
-				<input type="radio" name="slide" id="slide05">
-				<input type="radio" name="slide" id="slide07">
-				<input type="radio" name="slide" id="slide08">
-				<input type="radio" name="slide" id="slide09">
-				<input type="radio" name="slide" id="slide10">
-				<input type="radio" name="slide" id="slide11">
-				<input type="radio" name="slide" id="slide12">
-				<input type="radio" name="slide" id="slide13">
-				<input type="radio" name="slide" id="slide14">
-				<input type="radio" name="slide" id="slide15">
-				<input type="radio" name="slide" id="slide16">
-				<input type="radio" name="slide" id="slide17">
-				<input type="radio" name="slide" id="slide18">
-				<input type="radio" name="slide" id="slide19">
-				<input type="radio" name="slide" id="slide20">
-				<input type="radio" name="slide" id="slide21">
 
-
-				<ul class="slidelist">
-					<li class="slideitem" id="chicken">
-						<div>
-							<a href="http://www.kyochon.com/main/"><img src="images/0.png"></a>
-						</div>
-					</li>
-					<li class="slideitem" id="icecream">
-						<div>
-							<a href="http://www.baskinrobbins.co.kr/"><img src="images/1.png"></a>
-						</div>
-					</li>
-					<li class="slideitem" id="pizza">
-						<div>
-							<a href="https://web.dominos.co.kr/main"><img src="images/2.png"></a>
-						</div>
-					</li>
-					<li class="slideitem" id="nabe">
-						<div>
-							<a href="http://www.chaesundang.co.kr/"><img src="images/3.png"></a>
-						</div>
-					</li>
-					<li class="slideitem" id="gukbab">
-						<div>
-							<a href="#"><img src="images/4.png"></a>
-						</div>
-					</li>
-					<li class="slideitem" id="gogi">
-						<div>
-							<a href="#"><img src="images/5.png"></a>
-						</div>
-					</li>
-					<li class="slideitem" id="roll">
-						<div>
-							<a href="#"><img src="images/7.png"></a>
-						</div>
-					</li>
-					<li class="slideitem" id="Steak">
-						<div>
-							<a href="#"><img src="images/8.png"></a>
-						</div>
-					</li>
-					<li class="slideitem" id="bibimbab">
-						<div>
-							<a href="#"><img src="images/9.png"></a>
-						</div>
-					</li>
-					<li class="slideitem" id="pie">
-						<div>
-							<a href="#"><img src="images/10.png"></a>
-						</div>
-					</li>
-					<li class="slideitem" id="dudbab">
-						<div>
-							<a href="#"><img src="images/11.png"></a>
-						</div>
-					</li>
-					<li class="slideitem" id="brunch">
-						<div>
-							<a href="#"><img src="images/12.png"></a>
-						</div>
-					</li>
-					<li class="slideitem" id="dosirak">
-						<div>
-							<a href="#"><img src="images/13.png"></a>
-						</div>
-					</li>
-					<li class="slideitem" id="kebab">
-						<div>
-							<a href="#"><img src="images/14.png"></a>
-						</div>
-					</li>
-					<li class="slideitem" id="beer">
-						<div>
-							<a href="#"><img src="images/15.png"></a>
-						</div>
-					</li>
-					<li class="slideitem" id="pasta">
-						<div>
-							<a href="#"><img src="images/16.png"></a>
-						</div>
-					</li>
-					<li class="slideitem" id="mandu">
-						<div>
-							<a href="#"><img src="images/17.png"></a>
-						</div>
-					</li>
-					<li class="slideitem" id="sushi">
-						<div>
-							<a href="#"><img src="images/18.png"></a>
-						</div>
-					</li>
-					<li class="slideitem" id="fish">
-						<div>
-							<a href="#"><img src="images/19.png"></a>
-						</div>
-					</li>
-					<li class="slideitem" id="tendong">
-						<div>
-							<a href="#"><img src="images/20.png"></a>
-						</div>
-					</li>
-					<li class="slideitem" id="dongath">
-						<div>
-							<a href="#"><img src="images/21.png"></a>
-						</div>
-			<div>
-				<h1>이거 어때?</h1>
-			</div>
-
-
-			<button class="button" onclick="showPopup();">
-				<span class="button__text"> <span class="button__text-inner">골라봐</span>
-				</span>
-			</button>
-
-			<!-- Ajax loaded content here -->
-			
-			<!-- 스크립트 -> 게시글을 클릭 할 시, board .innerHTML <iframe>  -->
-			<div class="board_container"></div>
-
-		</div>
-	</div>
+		<iframe id="products" src="randomFood.html"></iframe>
 	
 	<!-- /view -->
 	<script src="js/classie.js"></script>
@@ -413,7 +228,7 @@
 		}
 	})();
 	</script>
-	<script> function showPopup() { window.open("select.html", "a", "width=1300, height=450, left=100, top=50"); }</script>
+	<script> function showPopup() { window.open("select.html", "a", "width=810, height=600, left=100, top=50"); }</script>
 	<script type="text/javascript">
       
         $(document).ready(function() {
@@ -424,6 +239,11 @@
              $('#myModal').hide();
         };		       
     </script>
+		<script>
+			function changeIframeUrl(url){
+				document.getElementById("products").src = url;
+			}
+		</script>
 	<script>
 		 $(".submit").on("mouseover",function(){
             $("#myModal > div > div > div.submit > input[type=submit]").css("font-size","2em");
