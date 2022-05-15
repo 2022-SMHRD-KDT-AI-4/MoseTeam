@@ -45,11 +45,10 @@
 						<span class="rmenuName"><%=rmenuList.get(rm).getRmenu_nm()%></span>
 						<span class="rmenuPrice"><%= "    -----" + rmenuList.get(rm).getPrice()%></span>
 						<br>
-					<%
-					}
-				}
-			}
-			%>
+					<%}%>
+				</div>
+			<%}
+			}%>
 		</div>
 	</div>
 </body>
