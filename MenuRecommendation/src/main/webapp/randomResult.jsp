@@ -35,7 +35,7 @@
 				<div class="restaurantWrap">
 					<p class="restName"><%=restList.get(r).getRest_nm()%></p>
 					<button class="resBtn">
-						<a href='#'>상세정보>></a>
+						<a href='RestaurantService?rest_id=<%=restList.get(r).getRest_id()%>'>상세정보>></a>
 					</button>
 					<button class="btnChoice">Pick!</button>
 					<%
