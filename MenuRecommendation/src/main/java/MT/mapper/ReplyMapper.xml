@@ -28,6 +28,13 @@
 	</select>
 	
 	
+	<select id="myList"
+	resultType="ReviewVO">
+		select * from reply
+		where member_id like #{MEMBER_ID}
+		order by review_NO desc
+	</select>
+	
 	
 	
 </mapper>

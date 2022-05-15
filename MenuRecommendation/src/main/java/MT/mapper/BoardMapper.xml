@@ -124,4 +124,12 @@
 	</select>
 	
 	
+	<select id="myList"
+	resultType="BoardVO">
+		select * from board
+		where member_id like #{MEMBER_ID}
+		order by BOARD_NO desc
+	</select>
+	
+	
 </mapper>

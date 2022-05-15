@@ -54,6 +54,16 @@ public class ReplyDAO {
 			session.close();
 			return list;
 		}
+		
+		
+
+		// myList ¸Þ¼­µå
+		public List<ReplyVO> myList(String MEMBER_ID) {
+			SqlSession session = sqlSessionFactory.openSession(true);
+			List<ReplyVO> list = session.selectList("myList",MEMBER_ID);
+			session.close();
+			return list;
+		}
 
 		
 		

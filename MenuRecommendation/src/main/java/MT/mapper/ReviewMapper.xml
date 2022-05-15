@@ -19,5 +19,33 @@
 		)
 	</insert>
 	
-
+	
+	<delete id="delete"
+	parameterType="int">
+		delete from review
+		where REVIEW_NO = #{num}
+	</delete>
+	
+	
+	<select id="search"
+	resultType="ReviewVO">
+		select * from review
+		where rest_id like #{REST_ID}
+		order by review_NO desc
+	</select>
+	
+	
+	<select id="myList"
+	resultType="ReviewVO">
+		select * from review
+		where member_id like #{MEMBER_ID}
+		order by review_NO desc
+	</select>
+	
+	
+	
+	
+	
+	
+	
 </mapper>
