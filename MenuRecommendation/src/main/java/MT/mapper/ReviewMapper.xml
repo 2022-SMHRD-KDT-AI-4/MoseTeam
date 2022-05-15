@@ -20,14 +20,15 @@
 	</insert>
 	
 	
-	<delete id="delete"
+	<delete id="rDelete"
 	parameterType="int">
 		delete from review
 		where REVIEW_NO = #{num}
 	</delete>
 	
 	
-	<select id="search"
+	<select id="rSearch"
+	parameterType="String"
 	resultType="ReviewVO">
 		select * from review
 		where rest_id like #{REST_ID}
@@ -35,7 +36,7 @@
 	</select>
 	
 	
-	<select id="myList"
+	<select id="myRList"
 	resultType="ReviewVO">
 		select * from review
 		where member_id like #{MEMBER_ID}

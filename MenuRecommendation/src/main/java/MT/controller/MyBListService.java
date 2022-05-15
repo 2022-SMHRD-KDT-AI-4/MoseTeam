@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import MT.model.BoardDAO;
 import MT.model.BoardVO;
 
-@WebServlet("/MyRListService")
+@WebServlet("/MyBListService")
 public class MyBListService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

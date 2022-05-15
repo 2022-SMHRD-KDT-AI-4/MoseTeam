@@ -158,7 +158,7 @@ public class BoardDAO {
 	// myList ¸Þ¼­µå
 	public List<BoardVO> myList(String MEMBER_ID) {
 		SqlSession session = sqlSessionFactory.openSession(true);
-		List<BoardVO> list = session.selectList("myList",MEMBER_ID);
+		List<BoardVO> list = session.selectList("myBList",MEMBER_ID);
 		session.close();
 		return list;
 	}

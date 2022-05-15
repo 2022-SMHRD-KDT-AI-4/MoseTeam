@@ -45,7 +45,7 @@ public class ReviewDAO {
 	// 리뷰 삭제
 	public void delete(int num) {
 		SqlSession session = sqlSessionFactory.openSession(true);
-		int cnt = session.delete("delete",num);
+		session.delete("rDelete",num);
 		session.close();
 	}
 	
@@ -53,16 +53,16 @@ public class ReviewDAO {
 	// 가게 리뷰 불러오기
 	public List<ReviewVO> search(String REST_ID) {
 		SqlSession session = sqlSessionFactory.openSession(true);
-		List<ReviewVO> list = session.selectList("search",REST_ID);
+		List<ReviewVO> list = session.selectList("rSearch",REST_ID);
 		session.close();
 		return list;
 	}
 	
 	
-	// 가게 리뷰 불러오기
+	// 내리뷰 불러오기
 	public List<ReviewVO> myList(String MEMBER_ID) {
 		SqlSession session = sqlSessionFactory.openSession(true);
-		List<ReviewVO> list = session.selectList("myList",MEMBER_ID);
+		List<ReviewVO> list = session.selectList("myRList",MEMBER_ID);
 		session.close();
 		return list;
 	}

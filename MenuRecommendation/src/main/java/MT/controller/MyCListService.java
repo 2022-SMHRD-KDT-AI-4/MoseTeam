@@ -14,7 +14,7 @@ import MT.model.ReplyDAO;
 import MT.model.ReplyVO;
 
 
-@WebServlet("/MyRListService")
+@WebServlet("/MyCListService")
 public class MyCListService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

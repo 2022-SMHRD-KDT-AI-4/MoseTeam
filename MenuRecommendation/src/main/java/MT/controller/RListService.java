@@ -23,6 +23,7 @@ public class RListService extends HttpServlet {
 		
 		// 파라미터 수집
 		String REST_ID = request.getParameter("id");
+		System.out.println(REST_ID);
 
 		// DAO메서드 사용
 		ReviewDAO dao = new ReviewDAO();
