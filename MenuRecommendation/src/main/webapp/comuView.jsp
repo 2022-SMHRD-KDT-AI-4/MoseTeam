@@ -9,7 +9,7 @@
 <head>
 <meta charset="utf-8">
 <meta name = "viewport" content="width=device-width , initial-scale=1">
-<link rel = "stylesheet" type = "text/css" media = "screen" href="./comment.css">
+<link rel="stylesheet" href="css/comu.css">
 <link rel = "stylesheet" href="https://stackpath.bootstranpcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <script src="js/jquery-3.6.0.min.js"></script>

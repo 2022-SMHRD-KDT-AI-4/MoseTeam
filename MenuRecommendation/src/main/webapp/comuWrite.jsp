@@ -6,6 +6,7 @@
 		<title>Forty by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<link rel="stylesheet" href="css/comu.css">
 </head>
 <body>
 
