@@ -2,11 +2,19 @@ body{
     color:  white;
     margin: 10%
 }
+.reviewDetail{
+	display : none;
+}
+.reviewEmpty{
+	display : none;
+}
+
 .select_res{
     width: 100%;
-    box-sizing: border-box;
-    
+    box-sizing: border-box; 
+    margin: 5px;
 }
+
 .btnS{
     float: right;
 }
