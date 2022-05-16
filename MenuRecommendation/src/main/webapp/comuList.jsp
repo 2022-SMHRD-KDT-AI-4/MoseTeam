@@ -19,11 +19,8 @@
 	<div id="board">
 		<table id="list" border="1" cellspacing="0">
 		
-<<<<<<< HEAD
 		<caption>게시글</caption>
-=======
-
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-4/MoseTeam.git
+		
 			<colgroup>
 		
             <col width="5%">
@@ -41,6 +38,7 @@
 					<td>시간</td>
 				</tr>
 			</thead>
+			
 			<%-- 공지사항 --%>
 			<tbody>
 				<%for(BoardVO vo : list2){ %>
@@ -55,7 +53,6 @@
 					
 				<%} %>
 			</tbody>
-<<<<<<< HEAD
 			
 
 			<colgroup>
@@ -66,10 +63,6 @@
 			</colgroup>
 			
 			<%-- 게시글 --%>
-=======
-
-
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-4/MoseTeam.git
 			<tbody>
 				<%for(BoardVO vo : list){ %>
 				<tr>
