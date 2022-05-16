@@ -51,6 +51,8 @@ public class LoginService extends HttpServlet {
 			// 성공
 			out.print(true);
 			System.out.println("로그인 성공");
+			
+			
 		}
 
 		
