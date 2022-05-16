@@ -14,7 +14,7 @@
 		RestaurantVO vo = (RestaurantVO)request.getAttribute("restaurantVO");
 	%>
 	<div class = 'controlWrap'>
-		<img src="images/backAllowIcon.png" width = "50px" height = "50px"/>
+		<img src="images/backAllowIcon.png" width = "50px" height = "50px" onclick="history.back()">
 	</div>
 	<div class = 'restaurantWrap'>
 		<div class = 'restaurantDtail'>
