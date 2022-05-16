@@ -52,21 +52,6 @@
 			
 			
 
-			<colgroup>
-				<col>
-				<col width="110">
-				<col width="100">
-				<col width="80">
-			</colgroup>
-			<thead>
-				<tr>
-					<td>번호</td>
-					<td>추천수</td>
-					<td>제목</td>
-					<td>작성자</td>
-					<td>시간</td>
-				</tr>
-			</thead>
 			<tbody>
 				<%for(BoardVO vo : list){ %>
 				<tr>
