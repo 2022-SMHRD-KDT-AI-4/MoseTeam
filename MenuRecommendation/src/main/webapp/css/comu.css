@@ -41,6 +41,14 @@ body{
     color: #e76d09;
     
 }
+.writer{
+    width: 20%;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: white;
+    color: #e76d09;
+    
+}
 
 #searchType{
     height: 20px;
@@ -60,5 +68,10 @@ body{
 }
 #btnBoard{
     margin: 5px;
+}
+a{
+	 text-decoration: none;
+	 color: #e76d09;
+	 
 }
 

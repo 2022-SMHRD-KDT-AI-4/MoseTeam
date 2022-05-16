@@ -6,16 +6,16 @@
 		<title>Forty by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<link rel="stylesheet" href="css/comu.css">
+<link rel="stylesheet" href="css/comuW.css?ver=1">
 </head>
 <body>
 
 			<div id = "board">
-				<form action="WriteService" method="post" enctype="multipart/form-data">
+				<form class="form" action="WriteService" method="post" enctype="multipart/form-data">
 				<table id="list">
-					<tr>
+					<tr class="sub">
 						<td>Á¦¸ñ: 
-							<input name="title" type="text" >
+							<input class="input" name="title" type="text" >
 							
 							<input name="writer" type="hidden" value="aaa">
 							
@@ -29,7 +29,7 @@
 					</tr>
 					<tr>
 						<td>
-							<textarea name="content" rows="10" style="resize: none;"></textarea>	
+							<textarea width="400" name="content" rows="10" style="resize: none;"></textarea>	
 						</td>
 					</tr>
 					<tr>
