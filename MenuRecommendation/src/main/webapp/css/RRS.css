@@ -48,6 +48,12 @@ div.restaurantList {
     color: white;
     border-radius: 10px;
 }
+.rmenuName{
+	margin : 3%;
+}
+.rmenuPrice{
+	margin : 3%;
+}
 .restaurantWrap{
     width: 100%;
     /*height: 52px;*/
