@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -23,7 +24,6 @@ public class LoginService extends HttpServlet {
 		String MEMBER_ID = request.getParameter("id");
 		String MEMBER_PW = request.getParameter("pw");
 		MemberVO vo = new MemberVO(MEMBER_ID,MEMBER_PW);
-		System.out.println(vo.getMEMBER_ID());
 		
 		// 2. DAO 메서드
 		MemberDAO dao = new MemberDAO();
@@ -42,6 +42,12 @@ public class LoginService extends HttpServlet {
 			// 사용자의 정보 유지 --> Session 이용
 			HttpSession session = request.getSession();
 			session.setAttribute("vo", mvo);
+			
+			// 사용자의 정보 유지 --> Cookie 이용
+			Cookie cookie = new Cookie("id", mvo.getMEMBER_ID());
+			cookie.setMaxAge(60*60);
+			response.addCookie(cookie);
+			
 			// 성공
 			out.print(true);
 			System.out.println("로그인 성공");

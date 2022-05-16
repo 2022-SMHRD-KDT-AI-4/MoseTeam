@@ -53,7 +53,7 @@
 					</div>
 				</div>
 				<div class="submit">
-					<input class="btn1" type="submit" value="login" onclick="close_pop()">
+					<input class="btn1" type="submit" value="login">
 				</div>
 				<div class="submit2">
 					<input class="btn2" type="submit" value="join"
@@ -275,9 +275,9 @@
 	<script type = "text/javascript">
 		// 로그인 버튼 클릭시 동작
 		// 로그인 기능 ajax
-		$('#btn1').on("click", function(){
-			let id = $('#id').val();
-			let pw = $('#pw').val();
+		$('.submit').on("click", function(){
+			let id = document.getElementsByName("id")[0].value;
+			let pw = document.getElementsByName("pw")[0].value;
 			
 			console.log("id : " + id)
 			console.log("pw : " + pw)
