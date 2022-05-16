@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<link rel="stylesheet" href="css/comu.css?ver=2">
+<link rel="stylesheet" href="css/comu.css?ver=3">
 <script src="js/jquery-3.6.0.min.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
