@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<link rel="stylesheet" type="text/css" href="css/RRS.css" />
+<link rel="stylesheet" type="text/css" href="css/RRS.css?ver=1" />
 <script src="js/jquery-3.6.0.min.js"></script>
 <title>추천 메뉴 결과</title>
 </head>
