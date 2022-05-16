@@ -4,6 +4,8 @@ body{
 #list{
     background-color: white;
     color: black;
+	border: 3px solid rgb(255, 178, 127);
+	 border-radius: 10px;
     
 }
 #input{
