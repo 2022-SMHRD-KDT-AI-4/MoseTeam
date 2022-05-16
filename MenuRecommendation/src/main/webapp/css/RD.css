@@ -19,7 +19,7 @@ body{
     border-radius: 10px;
     text-align: center;
     color:  #e76d09;
-       background-color: coral;
+    background-color: coral;
 }
 .rMenuList{
     box-sizing: border-box;
@@ -27,7 +27,7 @@ body{
     width: 50%;
     border: 6px solid rgb(255, 178, 127);
     border-radius: 10px;
-       background-color: coral;
+    background-color: coral;
 }
 .rMenuWrap{
     background-color: white;
