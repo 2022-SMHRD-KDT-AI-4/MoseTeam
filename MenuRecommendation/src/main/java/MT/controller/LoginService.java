@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -45,6 +46,11 @@ public class LoginService extends HttpServlet {
 			// 성공
 			out.print(true);
 			System.out.println("로그인 성공");
+			
+			// 쿠키생성(자동로그인 버튼 생성 후 if문 사용하도록 바꾸기)
+			Cookie cookie = new Cookie("loginCookie",session.getId());
+			
+			
 		}
 
 		
