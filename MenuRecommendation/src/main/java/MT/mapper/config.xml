@@ -17,6 +17,7 @@
 	<typeAlias type="MT.model.RestmenuVO" alias="RestmenuVO"/>
 	<typeAlias type="MT.model.PushVO" alias="PushVO"/>
 	<typeAlias type="MT.model.ReplyVO" alias="ReplyVO"/>
+	<typeAlias type="MT.model.HistoryVO" alias="HistoryVO"/>
 </typeAliases>
 
   <environments default="development">
@@ -39,5 +40,6 @@
     <mapper resource="MT/mapper/ReviewMapper.xml"/>
     <mapper resource="MT/mapper/RestaurantMapper.xml"/>
     <mapper resource="MT/mapper/ReplyMapper.xml"/>
+    <mapper resource="MT/mapper/HistoryMapper.xml"/>
   </mappers>
 </configuration>

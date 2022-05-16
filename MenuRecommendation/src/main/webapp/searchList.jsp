@@ -6,7 +6,14 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<link rel="stylesheet" href="css/comu.css?ver=3">
+<script src="js/jquery-3.6.0.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Gugi&family=Stylish&display=swap');
+</style>
+<title>검색</title>
 </head>
 <body>
 
@@ -15,14 +22,15 @@
 	%>
 	<div id="board">
 		<table id="list" border="1" cellspacing="0">
-			<caption>게시글</caption>
+			<caption class="cap">게시글</caption>
 			<colgroup>
-				<col>
-				<col width="110">
-				<col width="100">
-				<col width="80">
+            <col width="5%">
+            <col width="5%">
+            <col width="45%">
+            <col width="30%">
+            <col width="15%">
 			</colgroup>
-			<thead>
+			<thead class="head">
 				<tr>
 					<td>번호</td>
 					<td>추천수</td>
@@ -49,12 +57,11 @@
 		</table>
 
 
-		<a href="comuWrite"><button id="writer">글작성</button></a>
-		
 		<form action="SearchService" method="get" class="boardSearch">
 		<tr>
-			<td colspan="3"><input name="search" type="text"></td>
-			<td align="left"><button type="submit" onclick="boardSearch()">검색</button></td>
+			<td id="writer"><button id="writer" href="comuWrite.jsp">글작성</button></td>
+			<td align="right" id="btn"><button class="btn" type="submit" onclick="boardSearch()">검색</button></td>
+			<td colspan="3" id="input"><input class="input" name="search" type="text"></td>
 		</tr>
 		</form>
 

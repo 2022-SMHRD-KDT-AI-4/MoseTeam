@@ -1,7 +1,8 @@
 body{
-    margin: 10%;
+    margin: 5%;
     color: white;
     font-family: 'Cute Font', cursive;
+    font-size: 2em;
 }
 
 .row{
@@ -17,13 +18,28 @@ body{
 }
 .btn{
     border-radius: 10px;
-    width: 18%;
+    width: 22%;
     color: #e76d09;
     border: 3px solid rgb(255, 178, 127);
     background-color: white;
+    border-radius: 10px;
 }
 .table{
-    width: 82%;
+    width: 100%;
+    border: 3px solid rgb(255, 178, 127);
+    background-color: white;
+    color: black;
+}
+.input{
+	width: 600px;
+}
+.btn1{
+	float: right;
+	width: 100%;
+	color: #e76d09;
+    border: 3px solid rgb(255, 178, 127);
+    background-color: white;
+    border-radius: 10px;
 }
 #btn-report{
     margin: 1%;
@@ -49,7 +65,7 @@ body > div > div.col-xs-8.col-md-8 > div > table > tbody > tr> th{
 .chu{
 	float: right;
 	border-radius: 10px;
-    width: 18%;
+    width: 10%;
     heiht: 50%;
     color: #e76d09;
     border: 3px solid rgb(255, 178, 127);

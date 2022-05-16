@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 어떤 DAO에서 사용하는지 -->
+<mapper namespace="MT.model.HistoryDAO">
+	<select id = "selectHistory"
+			parameterType="java.util.HashMap"
+			resultType="HistoryVO">
+			
+			SELECT A.REVIEW_NO
+			    ,  A.REST_ID
+			    ,  B.REST_NM
+			    ,  B.SUB_CATE
+			    ,  A.ENTER_DATE
+			    ,  A.REVIEW_LEVEL
+			    ,  A.REVIEW_CONTENT
+			    ,  A.MEMBER_ID
+			    ,  A.REVIEW_DATE
+			  FROM REVIEW       A
+			    ,  RESTAURANT   B
+			 WHERE A.MEMBER_ID = #{member_id}
+			   AND A.REVIEW_DATE BETWEEN ADD_MONTHS(SYSDATE,#{month}) AND SYSDATE
+			   AND A.REST_ID = B.REST_ID
+	</select>
+
+</mapper>

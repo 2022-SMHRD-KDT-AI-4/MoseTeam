@@ -11,35 +11,37 @@ body{
 	font-size: 30px;
     
 }
-#input{
-    width: 40%;
-    margin: 0px;
-    height: 20px;
+.head{
+	background-color: rgb(199, 198, 198);
 }
-.input1{
-    width: 100%;
+.admin{
+	background-color:rgb(253, 197, 160);
 }
-#btn{
-    width: 15%;
-}
-.btn1{
-    width: 100%;
+	
+
+.btn{
+    width: 10%;
     border-radius: 10px;
-    margin: 0px;
-    color: #e76d09;
-}
-#write{
-    width: 30%;
-    border-radius: 10px;
-    margin: 3px;
-    
-}
-.write1{
-    width: 60%;
-    border-radius: 10px;
+    margin: 5px;
     background-color: white;
     color: #e76d09;
+    float:right;
 }
+.input{
+    width: 40%;
+    margin: 5px;
+    height: 20px;
+    float:right;
+}
+#writer{
+    width: 20%;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: white;
+    color: #e76d09;
+    
+}
+
 #searchType{
     height: 20px;
     margin: 0px;
@@ -47,7 +49,7 @@ body{
 }
 .cap{
     font-size: 1.5em;
-    margin: 10%;
+    margin: 1%;
     color: white;
 }
 .head{

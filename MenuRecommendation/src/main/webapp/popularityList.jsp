@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<link rel="stylesheet" href="css/comu.css?ver=2">
+<link rel="stylesheet" href="css/comu.css?ver=3">
 <script src="js/jquery-3.6.0.min.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
@@ -34,7 +34,7 @@
             <col width="30%">
             <col width="15%">
 			</colgroup>
-			<thead>
+			<thead class="head">
 				<tr>
 					<td>번호</td>
 					<td>추천수</td>
@@ -61,13 +61,11 @@
 
 		</table>
 
-
-		<a href="comuWrite.jsp"><button id="writer">글작성</button></a>
-		
 		<form action="SearchService" method="get" class="boardSearch">
 		<tr>
-			<td colspan="3"><input name="search" type="text"></td>
-			<td align="left"><button type="submit" onclick="boardSearch()">검색</button></td>
+			<td id="writer"><button id="writer" href="comuWrite.jsp">글작성</button></td>
+			<td align="right" id="btn"><button class="btn" type="submit" onclick="boardSearch()">검색</button></td>
+			<td colspan="3" id="input"><input class="input" name="search" type="text"></td>
 		</tr>
 		</form>
 
