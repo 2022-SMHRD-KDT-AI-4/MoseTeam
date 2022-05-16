@@ -1,6 +1,8 @@
 body{
     background-color:#e76d09;
     margin: 10%;
+    font-family: 'Cute Font', cursive;
+    font-size:2em;
 }
 .div {
     width: 40%;
@@ -16,7 +18,8 @@ body{
 	border: 3px solid rgb(255, 178, 127);
     background-color: white;
     color: #e76d09;
-    font-size: 0.8em;
+    font-size: 1em;
+    font-family: 'Cute Font', cursive;
 }
 .relode:hover{
 	background-color: rgb(253, 101, 0);
@@ -53,6 +56,7 @@ div.restaurantList {
     box-sizing: border-box;
     border: 2px solid white;
     border-radius: 10px;
+    
 }
 .menuName{
     font-weight: bold;
@@ -60,12 +64,15 @@ div.restaurantList {
     background-color: coral;
     color: white;
     font-weight: bold;
+    text-align: center;
 }
 .resBtn{
     background-color: rgb(255, 178, 127);
     border-radius: 10px;
     color: white;
     border: 1px solid white;
+    font-family: 'Cute Font', cursive;
+    font-size: 1em;
 }
 .resBtn:hover{
     background-color: rgb(253, 101, 0);
@@ -73,12 +80,14 @@ div.restaurantList {
 .btnChoice{
     text-align: center;
     float: right;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 100%;
     background-color: rgb(94, 221, 158);  
     color: white;
     border: 1px solid white;
+    font-family: 'Cute Font', cursive;
+    font-size: 1em;
 }
 .btnChoice:hover{
     background-color: rgb(0, 228, 49); 

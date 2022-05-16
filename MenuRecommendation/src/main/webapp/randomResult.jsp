@@ -10,6 +10,11 @@
 <meta charset="EUC-KR">
 <link rel="stylesheet" type="text/css" href="css/RRS.css?ver=1" />
 <script src="js/jquery-3.6.0.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Gugi&family=Stylish&display=swap');
+</style>
 <title>추천 메뉴 결과</title>
 </head>
 <body>
