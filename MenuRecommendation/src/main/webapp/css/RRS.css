@@ -9,10 +9,10 @@ body{
 }
 .relode{
 	float: right;
-	border-radius: 100%;
-	width: 50px;
+	border-radius: 10px;
+    width: 50%;
+    min-width: 300px;
 	height: 50px;
-	margin: 2%;
 	border: 3px solid rgb(255, 178, 127);
     background-color: white;
     color: #e76d09;
@@ -24,7 +24,7 @@ body{
 	border: 3px solid white;
 }
 div.menuWrap {
-    width: 35%;
+    width: 30%;
     min-width: 200px;
     float: left;
     box-sizing: border-box;
