@@ -9,9 +9,13 @@
 <head>
 <meta charset="utf-8">
 <meta name = "viewport" content="width=device-width , initial-scale=1">
-<link rel="stylesheet" href="css/comuView.css">
+<link rel="stylesheet" href="css/comuView.css?ver=1">
 <link rel = "stylesheet" href="https://stackpath.bootstranpcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Gugi&family=Stylish&display=swap');
+</style>
 <script src="js/jquery-3.6.0.min.js"></script>
 <title>Insert title here</title>
 </head>
@@ -26,8 +30,7 @@
 	<div class="row">
 		<div class="col-xs-2 col-md-2"></div>
 		<div class="col-xs-8 col-md-8">
-			<h2 class="text-center">게시글 보기</h2>
-			<p>&nbsp;</p>
+
 			<div class="table table-responsive">
 				<table table class="table" border="2" cellspacing="0">
 					<tr>
