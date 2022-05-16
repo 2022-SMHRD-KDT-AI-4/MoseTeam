@@ -9,7 +9,6 @@
 <head>
 <meta charset="utf-8">
 <meta name = "viewport" content="width=device-width , initial-scale=1">
-<link rel="stylesheet" href="css/comu.css">
 <link rel="stylesheet" href="css/comuView.css">
 <link rel = "stylesheet" href="https://stackpath.bootstranpcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -30,15 +29,13 @@
 			<h2 class="text-center">게시글 보기</h2>
 			<p>&nbsp;</p>
 			<div class="table table-responsive">
-				<table table class="table" border="1" cellspacing="0">
+				<table table class="table" border="2" cellspacing="0">
 					<tr>
 						<th class="success">글번호</th>
 						<td><%=vo.getBOARD_NO() %></td>
 						<th class="success">추천수</th>
-						<td><%=vo.getGOOD() %></td>
-						<td>
-						<a href="GoodAddService?num=<%=vo.getBOARD_NO() %>"><button>추천하기</button></a>
-						</td>
+						<td><%=vo.getGOOD() %><button class="chu" onclick="location.href='GoodAddService?num=<%=vo.getBOARD_NO() %>'">추천</button></td>
+
 					</tr>
 
 
@@ -64,28 +61,29 @@
 						<td colspan="3"><%=vo.getBOARD_CONTENT() %></td>
 					</tr>
 
+				</table>	
 					<tr>
 							<td colspan="4" class="text-center">
-							<input type="button" class="btn" id="btn-warning" value="수정하기"
-							onclick="location.href='BoardUpdateForm.jsp?num=<%=vo.getBOARD_NO() %>'">
-
-							<input type="button" class="btn" id="btn-danger" value="삭제하기"
-							onclick="location.href='BoardDeleteForm.jsp?num=<%=vo.getBOARD_NO() %>'">
 
 							<input type="button" class="btn" id="btn-primary" value="목록보기"
-							onclick="location.href='http://localhost:8081/MenuRecommendation/ListService'"></td>
+							onclick="location.href='http://localhost:8081/MenuRecommendation/ListService'">
 							
+							<input type="button" class="btn" id="btn-danger" value="삭제하기"
+							onclick="location.href='BoardDeleteForm.jsp?num=<%=vo.getBOARD_NO() %>'">
+							
+							<input type="button" class="btn" id="btn-warning" value="수정하기"
+							onclick="location.href='BoardUpdateForm.jsp?num=<%=vo.getBOARD_NO() %>'">
+						
 							<input type="button" class="btn" id="btn-report" value="신고하기"
 							onclick="location.href='BadReportService?num=<%=vo.getBOARD_NO() %>'"></td>
 					</tr>	
-				</table>	
-					
+	</div>			
 	<div id="comment">
 		<table>
 		<thead>
 			<form action="CommentService" method="get" class="addComment">
 				<tr>
-					<div> 댓글 <span id ="count"><%=count %></span></>
+					<div> 댓글 <span id ="count"><%=count %></span>
 				</tr>
 				<tr>
 					<td colspan="3"><input name="comment" type="text" placeholder="댓글을 입력해 주세요."></td>

@@ -2,6 +2,13 @@ body{
     margin: 10%;
     color: white;
 }
+
+.row{
+	margin: 2%;
+}
+#comment{
+	margin: 2%;
+}
 #list{
     background-color: white;
     color: black;
@@ -11,6 +18,8 @@ body{
     border-radius: 10px;
     width: 18%;
     color: #e76d09;
+    border: 3px solid rgb(255, 178, 127);
+    background-color: white;
 }
 .table{
     width: 82%;
@@ -35,4 +44,13 @@ body{
 }
 body > div > div.col-xs-8.col-md-8 > div > table > tbody > tr> th{
     width: 10%;
+}
+.chu{
+	float: right;
+	border-radius: 10px;
+    width: 18%;
+    heiht: 50%;
+    color: #e76d09;
+    border: 3px solid rgb(255, 178, 127);
+    background-color: white;
 }
