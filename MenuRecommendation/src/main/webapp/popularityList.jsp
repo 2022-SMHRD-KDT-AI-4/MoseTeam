@@ -8,7 +8,6 @@
 <head>
 <meta charset="EUC-KR">
 <link rel="stylesheet" href="css/comu.css">
-<link rel="stylesheet" type="text/css" href="css/demo.css" />
 <script src="js/jquery-3.6.0.min.js"></script>
 <title>Insert title here</title>
 </head>
@@ -20,12 +19,13 @@
 	<div id="board">
 		<table id="list" border="1" cellspacing="0">
 		
-		<caption>공지사항</caption>
+
 			<colgroup>
-				<col>
-				<col width="110">
-				<col width="100">
-				<col width="80">
+            <col width="5%">
+            <col width="5%">
+            <col width="50%">
+            <col width="30%">
+            <col width="10%">
 			</colgroup>
 			<thead>
 				<tr>
@@ -51,7 +51,7 @@
 			</tbody>
 			
 			
-			<caption>게시글</caption>
+
 			<colgroup>
 				<col>
 				<col width="110">
