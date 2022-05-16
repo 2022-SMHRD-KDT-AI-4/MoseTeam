@@ -10,6 +10,7 @@
 <meta charset="utf-8">
 <meta name = "viewport" content="width=device-width , initial-scale=1">
 <link rel="stylesheet" href="css/comu.css">
+<link rel="stylesheet" href="css/comuView.css">
 <link rel = "stylesheet" href="https://stackpath.bootstranpcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <script src="js/jquery-3.6.0.min.js"></script>
@@ -29,7 +30,7 @@
 			<h2 class="text-center">게시글 보기</h2>
 			<p>&nbsp;</p>
 			<div class="table table-responsive">
-				<table class="table">
+				<table table class="table" border="1" cellspacing="0">
 					<tr>
 						<th class="success">글번호</th>
 						<td><%=vo.getBOARD_NO() %></td>
@@ -64,22 +65,20 @@
 					</tr>
 
 					<tr>
-						<td colspan="4" class="text-center">
-							<%-- 댓글작성 미완성 --%>
-							<input type="button" class="btn btn-wirte" value="댓글 쓰기"
-							onclick="location.href='BoardReWriteForm.jsp?num=  &ref=  &ref_step=  &ref_level='">
+							<td colspan="4" class="text-center">
+							<input type="button" class="btn" id="btn-warning" value="수정하기"
+							onclick="location.href='BoardUpdateForm.jsp?num=<%=vo.getBOARD_NO() %>'">
+
+							<input type="button" class="btn" id="btn-danger" value="삭제하기"
+							onclick="location.href='BoardDeleteForm.jsp?num=<%=vo.getBOARD_NO() %>'">
+
+							<input type="button" class="btn" id="btn-primary" value="목록보기"
+							onclick="location.href='http://localhost:8081/MenuRecommendation/ListService'"></td>
 							
-							<a href="BEditLoadService?num=<%=vo.getBOARD_NO() %>"><button>수정하기</button></a>
-							
-							<a href="BDeleteService?num=<%=vo.getBOARD_NO() %>"><button>삭제하기</button></a>
-							
-							<a href="ListService"><button>목록보기</button></a>
-							
-						</td>
-						<td><a href="BadReportService?num=<%=vo.getBOARD_NO() %>"><button>신고하기</button></a>
-					</tr>
-					
-					
+							<input type="button" class="btn" id="btn-report" value="신고하기"
+							onclick="location.href='BadReportService?num=<%=vo.getBOARD_NO() %>'"></td>
+					</tr>	
+				</table>	
 					
 	<div id="comment">
 		<table>
