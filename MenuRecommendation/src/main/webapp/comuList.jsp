@@ -7,9 +7,14 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<link rel="stylesheet" href="css/comu.css?ver=1">
+<link rel="stylesheet" href="css/comu.css?ver=2">
 <script src="js/jquery-3.6.0.min.js"></script>
-<title>Insert title here</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Gugi&family=Stylish&display=swap');
+</style>
+<title>게시판</title>
 </head>
 <body>
 	<%
