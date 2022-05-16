@@ -1,6 +1,7 @@
 package MT.model;
 
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.io.Resources;
@@ -26,7 +27,18 @@ public class ReviewDAO {
 	}
 
 	// ==============================================================
-	
+	// 결정 선택시 히스토리 정보 생성(Review 내용 평가는 null로 삽입)
+	public int insertReview(HashMap<String, String> map) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		int res = 0;
+		try {
+			res = session.insert("insertReview", map);
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		session.close();
+		return res;
+	}
 	// 새 리뷰 작성
 	public int insert(ReviewVO vo) {
 

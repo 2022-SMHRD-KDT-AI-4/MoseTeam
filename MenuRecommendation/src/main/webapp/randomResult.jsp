@@ -35,7 +35,7 @@
 				<div class="restaurantWrap">
 					<%=restList.get(r).getRest_nm()%>
 					<button class="resBtn" onclick="location.href='RestaurantService?rest_id=<%=restList.get(r).getRest_id()%>'">상세정보</button>
-					<button class="btnChoice">Pick!</button>
+					<button class="btnChoice" value = <%=restList.get(r).getRest_id()%>>Pick!</button>
 					<P><%
 					List<RestmenuVO> rmenuList = restList.get(r).getRestMenu();
 					for (int rm = 0; rm < rmenuList.size(); rm++) {
@@ -50,5 +50,26 @@
 			}%>
 		</div>
 	</div>
+	<script>
+		$('.btnChoice').on('click', function(){
+			let rest_id = $(this).val();
+			
+			$.ajax({
+				url : 'RestChoiceService',
+				type : 'POST',
+				data : {
+					"rest_id" : rest_id
+				},
+				// dataType : '',
+				success : function(res){
+					console.log(res);
+					alert('확인! 마이페이지로 이동하시겠습니까??');
+				},
+				error : function(){
+					elert('저장 실패');
+				}
+			})
+		});
+	</script>
 </body>
 </html>

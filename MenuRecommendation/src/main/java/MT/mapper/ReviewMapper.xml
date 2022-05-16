@@ -5,7 +5,23 @@
 
 <!-- 어떤 DAO에서 사용하는지 -->
 <mapper namespace="MT.model.ReviewDAO">
-
+	<!-- 식당 결정시 히스토리 내역 생성 -->
+	<insert id = "insertReview"
+			parameterType = "java.util.HashMap">
+		INSERT INTO REVIEW(
+			REVIEW_NO
+		  , REST_ID
+		  , ENTER_DATE
+		  , MEMBER_ID
+		  , REVIEW_DATE)
+		VALUES(
+			review_seq.nextval
+		  , #{rest_id}
+		  , SYSDATE
+		  , #{member_id}
+		  , SYSDATE)
+	</insert>
+	
 	<insert id="insert"
 	parameterType="ReviewVO">
 		insert into review
