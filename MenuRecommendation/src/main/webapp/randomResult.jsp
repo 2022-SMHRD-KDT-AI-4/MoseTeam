@@ -33,13 +33,14 @@
 				for (int r = 0; r < restList.size(); r++) {
 			%>
 				<div class="restaurantWrap">
-					<p class="restName"><%=restList.get(r).getRest_nm()%></p>
+					<%=restList.get(r).getRest_nm()%>
 					<button class="resBtn" onclick="location.href='RestaurantService?rest_id=<%=restList.get(r).getRest_id()%>'">상세정보</button>
 					<button class="btnChoice">Pick!</button>
-					<%
+					<P><%
 					List<RestmenuVO> rmenuList = restList.get(r).getRestMenu();
 					for (int rm = 0; rm < rmenuList.size(); rm++) {
-					%>
+					%></P>
+					
 						<span class="rmenuName"><%=rmenuList.get(rm).getRmenu_nm()%></span>
 						<span class="rmenuPrice"><%= "    -----" + rmenuList.get(rm).getPrice()%></span>
 						<br>
