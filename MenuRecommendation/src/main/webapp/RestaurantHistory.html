@@ -15,23 +15,24 @@
         <h2>식당 방문 내역</h2> 
     </div>
     
-    <form action = "HistoryService" method = "Post">
+    
     <div class = 'Nav'>
         <tr>
         	<td align = "right">
         		검색 기간 : 
-        		<select name = "month">
-        			<option value = "1">1개월</option>
-        			<option value = "2">3개월</option>
-        			<option value = "3">6개월</option>
-        		</select>
+        		<form action = "HistoryService" method = "Post" onchange="this.form.submit()">
+	        		<select name = "month">
+	        			<option value = "1">1개월</option>
+	        			<option value = "2">3개월</option>
+	        			<option value = "3">6개월</option>
+	        		</select>
+        		</form>
         	</td>
             <td colspan="3"><input name = "search" type="text"></td>
             <td align="right"><input type = "submit" name = "btnSearch" value = "검색"></td>
         </tr>
     </div>
-    </form>
-    
+   
     <div class="select_res">
     	<div class = "mark"></div>
         <button class="btnS" id="bad">싫어요</button>

@@ -38,5 +38,7 @@ public class HistoryService extends HttpServlet {
 		
 		request.setAttribute("hisList", hisList);
 		
+		RequestDispatcher rd = request.getRequestDispatcher("RestaurantHistory.jsp");
+		rd.forward(request, response);
 	}		
 }
