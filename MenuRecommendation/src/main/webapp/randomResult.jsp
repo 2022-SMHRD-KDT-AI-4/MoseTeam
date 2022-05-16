@@ -18,7 +18,7 @@
 	List<RestaurantVO> restList = (List) request.getAttribute("restList");
 	%>
 	<div>
-		<button class="relode" onclick="homereload()">다시~</button>
+		<button class="relode" onclick="homereload()">이거 말고</button>
 		<div class="menuWrap">
 			<p class="menuName"><%=vo.getMenu_nm()%></p>
 			<img

@@ -7,6 +7,22 @@ body{
     min-width: 500px;
     height: 500px;  
 }
+.relode{
+	float: right;
+	border-radius: 100%;
+	width: 50px;
+	height: 50px;
+	margin: 2%;
+	border: 3px solid rgb(255, 178, 127);
+    background-color: white;
+    color: #e76d09;
+    font-size: 0.8em;
+}
+.relode:hover{
+	background-color: rgb(253, 101, 0);
+	color : white;
+	border: 3px solid white;
+}
 div.menuWrap {
     width: 35%;
     min-width: 200px;
@@ -19,7 +35,7 @@ div.menuWrap {
     font-size: 1em;
 }
 div.restaurantList {
-    width: 60%;
+    width: 50%;
     min-width: 300px;
     float: right;
     box-sizing: border-box;
