@@ -8,6 +8,7 @@ body{
     color: black;
 	border: 3px solid rgb(255, 178, 127);
 	border-radius: 10px;
+	font-size: 30px;
     
 }
 #input{

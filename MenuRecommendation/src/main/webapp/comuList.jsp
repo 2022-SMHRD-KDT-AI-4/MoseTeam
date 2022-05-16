@@ -32,9 +32,9 @@
 		
             <col width="5%">
             <col width="5%">
-            <col width="50%">
+            <col width="45%">
             <col width="30%">
-            <col width="10%">
+            <col width="15%">
 			</colgroup>
 			<thead>
 				<tr>
