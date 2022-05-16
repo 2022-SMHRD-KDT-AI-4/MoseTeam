@@ -21,7 +21,9 @@ public class WriteService extends HttpServlet {
 		
 		// 저장공간
 		// => C:\Users\smhrd\Desktop\web\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\MenuRecommendation\comuFileImg
+		// => MenuRecommendation/Users/smhrd/Desktop/folder/web/MenuRecommendation
 		String savePath = request.getServletContext().getRealPath("comuFileImg");
+		System.out.println(savePath);
 		// 최대크기(5메가바이트)
 		int maxSize = 5 * 1024 * 1024;
 		String encoding = "euc-kr";
