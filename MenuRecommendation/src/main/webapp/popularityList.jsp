@@ -36,21 +36,7 @@
 					<td>½Ã°£</td>
 				</tr>
 			</thead>
-			<tbody>
-				<%for(BoardVO vo : list2){ %>
-				<tr>
-					<td><%=vo.getBOARD_NO() %></td>
-					<td><%=vo.getGOOD() %></td>
-					<td><a href="ViewService?num=<%=vo.getBOARD_NO() %>">
-						<%=vo.getBOARD_TITLE() %></a></td>
-					<td><%=vo.getWRITER() %></td>
-					<td><%=vo.getWRITE_DATE() %></td>
-				</tr>
-					
-				<%} %>
-			</tbody>
-			
-			
+	
 
 			<tbody>
 				<%for(BoardVO vo : list){ %>
