@@ -18,7 +18,7 @@
 	%>
 	<div id="board">
 		<table id="list" border="1" cellspacing="0">
-		
+			<caption class="cap">°Ô½ÃÆÇ</caption>
 
 			<colgroup>
 		

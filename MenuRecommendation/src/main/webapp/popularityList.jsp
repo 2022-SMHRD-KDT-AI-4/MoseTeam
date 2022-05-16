@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<link rel="stylesheet" href="css/comu.css">
+<link rel="stylesheet" href="css/comu.css?ver=1">
 <script src="js/jquery-3.6.0.min.js"></script>
 <title>Insert title here</title>
 </head>
@@ -18,7 +18,7 @@
 	%>
 	<div id="board">
 		<table id="list" border="1" cellspacing="0">
-		
+		<caption class="cap">인기글</caption>
 
 			<colgroup>
             <col width="5%">
