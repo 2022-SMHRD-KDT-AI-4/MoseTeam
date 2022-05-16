@@ -2,20 +2,24 @@ body{
     margin: 10%;
     font-family: 'Cute Font', cursive;
     font-size: 2em;
+ 
 }
 .controlWrap{
     box-sizing: border-box;
 }
 .restaurantWrap{
     box-sizing: border-box;
+    
 }
 .restaurantDtail{
     box-sizing: border-box;
     float: left;
-    width: 20%;
+    width: 40%;
     border: 5px solid rgb(255, 178, 127);
     border-radius: 10px;
     text-align: center;
+    color:  #e76d09;
+    background-color: coral;
 }
 .rMenuList{
     box-sizing: border-box;
@@ -23,4 +27,20 @@ body{
     width: 50%;
     border: 6px solid rgb(255, 178, 127);
     border-radius: 10px;
+    background-color: coral;
+}
+.rMenuWrap{
+    background-color: white;
+}
+.restaurantName{
+    background-color: white;
+}
+.restaurantCate{
+    background-color: white;
+}
+.restaurantAddr{
+    background-color: white;
+}
+.restaurantOpenTime{
+    background-color: white;
 }

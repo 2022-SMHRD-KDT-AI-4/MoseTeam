@@ -7,8 +7,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<link rel="stylesheet" href="css/comu.css">
-<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" href="css/comu.css?ver=1">
 <script src="js/jquery-3.6.0.min.js"></script>
 <title>Insert title here</title>
 </head>
@@ -20,12 +19,18 @@
 	<div id="board">
 		<table id="list" border="1" cellspacing="0">
 		
+<<<<<<< HEAD
 		<caption>게시글</caption>
+=======
+
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-4/MoseTeam.git
 			<colgroup>
-				<col>
-				<col width="110">
-				<col width="100">
-				<col width="80">
+		
+            <col width="5%">
+            <col width="5%">
+            <col width="50%">
+            <col width="30%">
+            <col width="10%">
 			</colgroup>
 			<thead>
 				<tr>
@@ -50,6 +55,7 @@
 					
 				<%} %>
 			</tbody>
+<<<<<<< HEAD
 			
 
 			<colgroup>
@@ -60,6 +66,10 @@
 			</colgroup>
 			
 			<%-- 게시글 --%>
+=======
+
+
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-4/MoseTeam.git
 			<tbody>
 				<%for(BoardVO vo : list){ %>
 				<tr>
