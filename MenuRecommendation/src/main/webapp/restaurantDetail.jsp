@@ -7,7 +7,13 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>식당 상세</title>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Stylish&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Gugi&family=Stylish&display=swap');
+</style>	
+<link rel="stylesheet" type="text/css" href="css/RD.css" />
 </head>
 <body>
 	<%
