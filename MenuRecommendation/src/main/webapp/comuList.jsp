@@ -18,14 +18,11 @@
 	%>
 	<div id="board">
 		<table id="list" border="1" cellspacing="0">
-<<<<<<< HEAD
+
 			<caption class="cap">게시판</caption>
 
-=======
-		
-		<caption>게시글</caption>
-		
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-4/MoseTeam.git
+
+
 			<colgroup>
 		
             <col width="5%">
@@ -60,12 +57,6 @@
 			</tbody>
 			
 
-			<colgroup>
-				<col>
-				<col width="110">
-				<col width="100">
-				<col width="80">
-			</colgroup>
 			
 			<%-- 게시글 --%>
 			<tbody>
