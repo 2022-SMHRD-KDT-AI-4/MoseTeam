@@ -1,6 +1,9 @@
 package MT.controller;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.Set;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,7 +25,10 @@ public class WriteService extends HttpServlet {
 		// 저장공간
 		// => C:\Users\smhrd\Desktop\web\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\MenuRecommendation\comuFileImg
 		// => MenuRecommendation/Users/smhrd/Desktop/folder/web/MenuRecommendation
-		String savePath = request.getServletContext().getRealPath("comuFileImg");
+		// => /MenuRecommendation/Users/smhrd/Desktop/folder/web/MenuRecommendation/comuFileImg
+		// => C:\Users\smhrd\git\MoseTeam2\MenuRecommendation\src\main\java\MT\controller\WriteService.java
+		// => C:\Users\smhrd\git\MoseTeam2\MenuRecommendation\Users\smhrd\Desktop\folder\web\MenuRecommendation
+		String savePath = request.getServletContext().getRealPath("./Users/smhrd/Desktop/folder/web/MenuRecommendation/comuFileImg");
 		System.out.println(savePath);
 		// 최대크기(5메가바이트)
 		int maxSize = 5 * 1024 * 1024;
