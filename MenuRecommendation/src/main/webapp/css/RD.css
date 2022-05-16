@@ -1,0 +1,26 @@
+body{
+    margin: 10%;
+    font-family: 'Cute Font', cursive;
+    font-size: 2em;
+}
+.controlWrap{
+    box-sizing: border-box;
+}
+.restaurantWrap{
+    box-sizing: border-box;
+}
+.restaurantDtail{
+    box-sizing: border-box;
+    float: left;
+    width: 20%;
+    border: 5px solid rgb(255, 178, 127);
+    border-radius: 10px;
+    text-align: center;
+}
+.rMenuList{
+    box-sizing: border-box;
+    float: right;
+    width: 50%;
+    border: 6px solid rgb(255, 178, 127);
+    border-radius: 10px;
+}
