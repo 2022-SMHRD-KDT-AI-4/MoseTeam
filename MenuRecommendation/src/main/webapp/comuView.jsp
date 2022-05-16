@@ -19,7 +19,7 @@
 	<%
 		BoardVO vo = (BoardVO)request.getAttribute("bvo");
 		List<ReplyVO> list = (List<ReplyVO>)request.getAttribute("list");
-		int count = (int)request.getAttribute("count");
+		int count = Integer.parseInt(String.valueOf(request.getAttribute("count")));
 	%>
 	
 	
