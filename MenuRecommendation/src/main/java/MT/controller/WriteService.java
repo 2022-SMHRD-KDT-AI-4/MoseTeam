@@ -23,12 +23,8 @@ public class WriteService extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		// 저장공간
-		// => C:\Users\smhrd\Desktop\web\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\MenuRecommendation\comuFileImg
-		// => MenuRecommendation/Users/smhrd/Desktop/folder/web/MenuRecommendation
-		// => /MenuRecommendation/Users/smhrd/Desktop/folder/web/MenuRecommendation/comuFileImg
-		// => C:\Users\smhrd\git\MoseTeam2\MenuRecommendation\src\main\java\MT\controller\WriteService.java
-		// => C:\Users\smhrd\git\MoseTeam2\MenuRecommendation\Users\smhrd\Desktop\folder\web\MenuRecommendation
-		String savePath = request.getServletContext().getRealPath("./Users/smhrd/Desktop/folder/web/MenuRecommendation/comuFileImg");
+		// => C:\Users\smhrd\Desktop\web\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\MenuRecommendation\img
+		String savePath = request.getServletContext().getRealPath("img");
 		System.out.println(savePath);
 		// 최대크기(5메가바이트)
 		int maxSize = 5 * 1024 * 1024;
