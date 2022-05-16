@@ -35,6 +35,7 @@ div.menuWrap {
     font-size: 1em;
 }
 div.restaurantList {
+	margin-top:1%;
     width: 50%;
     min-width: 300px;
     float: right;
