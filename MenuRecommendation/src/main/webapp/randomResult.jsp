@@ -18,6 +18,7 @@
 	List<RestaurantVO> restList = (List) request.getAttribute("restList");
 	%>
 	<div>
+		<button class="relode" onclick="homereload()">´Ù½Ã~</button>
 		<div class="menuWrap">
 			<p class="menuName"><%=vo.getMenu_nm()%></p>
 			<img
@@ -50,6 +51,11 @@
 			}%>
 		</div>
 	</div>
+	<script>
+			function homereload(){
+				window.location.reload();
+			}
+</script>
 	<script>
 		$('.btnChoice').on('click', function(){
 			let rest_id = $(this).val();
