@@ -15,7 +15,7 @@
 <!-- food icons -->
 <link rel="stylesheet" type="text/css" href="css/organicfoodicons.css" />
 <!-- demo styles -->
-<link rel="stylesheet" type="text/css" href="css/demo.css?ver=1" />
+<link rel="stylesheet" type="text/css" href="css/demo.css?ver=2" />
 <!-- menu styles -->
 <link rel="stylesheet" type="text/css" href="css/component.css" />
 <link rel="stylesheet" href="css/login.css">
@@ -114,9 +114,7 @@
 						data-submenu="submenu-4" aria-owns="submenu-4" href="#">그냥</a></li>
 				</ul>
 				<!-- Submenu 1 -->
-				<ul data-menu="submenu-1" id="submenu-1" class="menu__level"
-					tabindex="-1" role="menu" aria-label="community">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">공지사항</a></li>
+				<ul data-menu="submenu-1" id="submenu-1" class="menu__level" tabindex="-1" role="menu" aria-label="community">
 					<li class="menu__item" role="menuitem"><a class="menu__link" href="#" onclick="changeIframeUrl('http://localhost:8081/MenuRecommendation/ListService')">게시글</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" href="#" onclick="changeIframeUrl('http://localhost:8081/MenuRecommendation/PopListService')">인기글</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">내글 관리</a></li>
@@ -144,36 +142,34 @@
 					<li class="menu__item" role="menuitem"><a class="menu__link"href="#">내후기</a></li>
 				</ul>
 				<!-- Submenu 3 -->
-				<ul data-menu="submenu-3" id="submenu-3" class="menu__level"
-					tabindex="-1" role="menu" aria-label="Grains">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Buckwheat</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Millet</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Quinoa</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Wild Rice</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Durum Wheat</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3-1" aria-owns="submenu-3-1" href="#">Promo Packs</a></li>
+				<ul data-menu="submenu-3" id="submenu-3" class="menu__level" tabindex="-1" role="menu" aria-label="all">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">한식</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">중식</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">일식</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">양식</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">디저트</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3-1" aria-owns="submenu-3-1" href="#">음료</a></li>
 				</ul>
 				<!-- Submenu 3-1 -->
 				<ul data-menu="submenu-3-1" id="submenu-3-1" class="menu__level" tabindex="-1" role="menu" aria-label="Promo Packs">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Starter Kit</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">The Essential 8</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Bolivian Secrets</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Flour Packs</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">커피,차</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">음료</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">술</a></li>
 				</ul>
 				<!-- Submenu 4 -->
 				<ul data-menu="submenu-4" id="submenu-4" class="menu__level"
 					tabindex="-1" role="menu" aria-label="Mylk &amp; Drinks">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Grain Mylks</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Seed Mylks</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Nut Mylks</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Nutri Drinks</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4-1" aria-owns="submenu-4-1" href="#">Selection</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">임시</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">임시</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">임시</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">임시</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4-1" aria-owns="submenu-4-1" href="#">임시</a></li>
 				</ul>
 				<!-- Submenu 4-1 -->
 				<ul data-menu="submenu-4-1" id="submenu-4-1" class="menu__level" tabindex="-1" role="menu" aria-label="Selection">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#" onclick="changeIframeUrl('MenuService.java')">Nut Mylk Packs</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Amino Acid Heaven</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Allergy Free</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#" onclick="changeIframeUrl('MenuService.java')">임시</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">임시</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">임시</a></li>
 				</ul>
 			</div>
 		</nav>

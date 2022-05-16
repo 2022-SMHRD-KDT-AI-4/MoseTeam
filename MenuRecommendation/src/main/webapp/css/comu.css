@@ -1,9 +1,14 @@
 body{
-    margin: 10%;
+    margin: 5%;
+    font-family: 'Cute Font', cursive; 
+    font-size:1.2em;  
 }
 #list{
     background-color: white;
     color: black;
+	border: 3px solid rgb(255, 178, 127);
+	border-radius: 10px;
+	font-size: 30px;
     
 }
 #input{

@@ -7,9 +7,14 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<link rel="stylesheet" href="css/comu.css">
+<link rel="stylesheet" href="css/comu.css?ver=2">
 <script src="js/jquery-3.6.0.min.js"></script>
-<title>Insert title here</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Gugi&family=Stylish&display=swap');
+</style>
+<title>인기글</title>
 </head>
 <body>
 	<%
@@ -18,14 +23,16 @@
 	%>
 	<div id="board">
 		<table id="list" border="1" cellspacing="0">
-		
-		<caption>인기글</caption>
+
+			<caption class="cap">인기글</caption>
+
+
 			<colgroup>
             <col width="5%">
             <col width="5%">
-            <col width="50%">
+            <col width="45%">
             <col width="30%">
-            <col width="10%">
+            <col width="15%">
 			</colgroup>
 			<thead>
 				<tr>
@@ -36,29 +43,6 @@
 					<td>시간</td>
 				</tr>
 			</thead>
-			
-			<%-- 공지사항 --%>
-			<tbody>
-				<%for(BoardVO vo : list2){ %>
-				<tr>
-					<td><b><%=vo.getBOARD_NO() %></b></td>
-					<td><b><%=vo.getGOOD() %></b></td>
-					<td><a href="ViewService?num=<%=vo.getBOARD_NO() %>">
-						<b><%=vo.getBOARD_TITLE() %></b></a></td>
-					<td><b><%=vo.getWRITER() %></b></td>
-					<td><b><%=vo.getWRITE_DATE() %></b></td>
-				</tr>
-					
-				<%} %>
-			</tbody>
-			
-			
-			<colgroup>
-				<col>
-				<col width="110">
-				<col width="100">
-				<col width="80">
-			</colgroup>
 			
 			<%-- 인기순 게시글 --%>
 			<tbody>

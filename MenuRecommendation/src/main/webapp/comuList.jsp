@@ -7,9 +7,14 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<link rel="stylesheet" href="css/comu.css?ver=1">
+<link rel="stylesheet" href="css/comu.css?ver=2">
 <script src="js/jquery-3.6.0.min.js"></script>
-<title>Insert title here</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Gugi&family=Stylish&display=swap');
+</style>
+<title>게시판</title>
 </head>
 <body>
 	<%
@@ -18,16 +23,18 @@
 	%>
 	<div id="board">
 		<table id="list" border="1" cellspacing="0">
-		
-		<caption>게시글</caption>
-		
+
+			<caption class="cap">게시판</caption>
+
+
+
 			<colgroup>
 		
             <col width="5%">
             <col width="5%">
-            <col width="50%">
+            <col width="45%">
             <col width="30%">
-            <col width="10%">
+            <col width="15%">
 			</colgroup>
 			<thead>
 				<tr>
@@ -55,12 +62,6 @@
 			</tbody>
 			
 
-			<colgroup>
-				<col>
-				<col width="110">
-				<col width="100">
-				<col width="80">
-			</colgroup>
 			
 			<%-- 게시글 --%>
 			<tbody>
