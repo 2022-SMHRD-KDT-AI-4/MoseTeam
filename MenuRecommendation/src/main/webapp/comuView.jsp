@@ -9,7 +9,7 @@
 <head>
 <meta charset="utf-8">
 <meta name = "viewport" content="width=device-width , initial-scale=1">
-<link rel="stylesheet" href="css/comuView.css?ver=1">
+<link rel="stylesheet" href="css/comuView.css?ver=2">
 <link rel = "stylesheet" href="https://stackpath.bootstranpcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
@@ -32,7 +32,7 @@
 		<div class="col-xs-8 col-md-8">
 
 			<div class="table table-responsive">
-				<table table class="table" border="2" cellspacing="0">
+				<table class="table" border="2" cellspacing="0">
 					<tr>
 						<th class="success">글번호</th>
 						<td><%=vo.getBOARD_NO() %></td>
@@ -86,37 +86,38 @@
 		<thead>
 			<form action="CommentService" method="get" class="addComment">
 				<tr>
-					<div> 댓글 <span id ="count"><%=count %></span>
+					<div> 댓글<span id ="count"><%=count %></span>
 				</tr>
 				<tr>
-					<td colspan="3"><input name="comment" type="text" placeholder="댓글을 입력해 주세요."></td>
+					<td colspan="3"><input class="input" name="comment" type="text" placeholder="댓글을 입력해 주세요." ></td>
 					<td colspan="3"><input name="bodnum" type="hidden" value="<%=vo.getBOARD_NO()%>"></td>
 					<td colspan="3"><input name="id" type="hidden" value="yj1<%-- 세션 ID --%>"></td>
 					<td colspan="3"><input name="nick" type="hidden" value="test<%-- 세션 ID 닉네임 --%>"></td>
-					<td align="left"><button type="submit" onclick="boardSearch()">등록</button></td>
+					<td align="left"><button class="btn1" type="submit" onclick="boardSearch()">등록</button></td>
 				</tr>
 			</form>
 		</thead>
 		
 		<tbody>
-			<div id="comment_list">
-			
-				<tr>
+			<div id="comment_list" >
+				<table class="table" border="2" cellspacing="0">
+				<tr class="head">
 					<td>작성자</td>
-					<td>작성날짜</td>
 					<td>작성내용</td>
+					<td>작성날짜</td>
 				</tr>
 				
 				<%for(ReplyVO rvo : list){ %>
 				<div>
 				<tr>
 					<td><%=rvo.getNICK() %></td>
-					<td><%=rvo.getWRITE_DATE() %></td>
 					<td><%=rvo.getREPLY_CONTENT() %></td>
+					<td><%=rvo.getWRITE_DATE() %></td>
 				</tr>
 				</div>
 					
 				<%} %>
+				</table>
 			</div>
 		</tbody>
 		</table>
