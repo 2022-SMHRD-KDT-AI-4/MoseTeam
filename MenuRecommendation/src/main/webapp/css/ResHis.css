@@ -1,9 +1,9 @@
 body{
-    margin: 10%;
     color:  white;
+    margin: 10%
 }
 .select_res{
-    width: 400px;
+    width: 100%;
     box-sizing: border-box;
     
 }
