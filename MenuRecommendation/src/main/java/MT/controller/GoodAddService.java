@@ -49,7 +49,7 @@ public class GoodAddService extends HttpServlet {
 		
 		request.setAttribute("bvo", bvo);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("comuView.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("ViewService");
 		rd.forward(request, response);
 		
 		
