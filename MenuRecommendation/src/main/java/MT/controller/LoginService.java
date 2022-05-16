@@ -52,9 +52,6 @@ public class LoginService extends HttpServlet {
 			out.print(true);
 			System.out.println("로그인 성공");
 			
-			// 쿠키생성(자동로그인 버튼 생성 후 if문 사용하도록 바꾸기)
-			Cookie cookie = new Cookie("loginCookie",session.getId());
-			
 			
 		}
 
