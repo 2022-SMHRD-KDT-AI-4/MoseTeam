@@ -45,6 +45,7 @@
 		    ,  RESTAURANT B
 		 WHERE A.MENU_ID = #{menu_id}
 		   AND A.REST_ID = B.REST_ID
+		 ORDER BY B.COUNT DESC
 	</select>
 	
 	<select id="selectMenuById" 
@@ -86,4 +87,14 @@
 		  FROM RESTMENU  
 		 WHERE REST_ID = #{rest_id}
 	</select>
+	
+	<update id="addRestLevel">
+		update restaurant set rest_level = restaurant.rest_level + 1
+		where rest_id = #{rest_id}
+	</update>
+	
+	<update id="minusRestLevel">
+		update restaurant set rest_level = restaurant.rest_level - 1
+		where rest_id = #{rest_id}
+	</update>
 </mapper>
