@@ -84,7 +84,7 @@
 		
 		<form action="SearchService" method="get" class="boardSearch">
 		<tr>
-			<td id="writer"><button class="writer"><a href="comuWrite.jsp">글작성</a></button></td>
+			<td id="writer"><a href="comuWrite.jsp"><button class="writer" onclick="location.href='comuWrite.jsp'">글작성</button></a></td>
 			<td align="right" id="btn"><button class="btn" type="submit" onclick="boardSearch()">검색</button></td>
 			<td colspan="3" id="input"><input class="input" name="search" type="text"></td>
 		</tr>

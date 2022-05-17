@@ -22,7 +22,7 @@
 	%>
 	<div id="board">
 		<table id="list" border="1" style=" border-radius: 10px; ">
-			<caption class="cap">게시글</caption>
+			<caption class="cap">검색목록</caption>
 			<colgroup>
             <col width="5%">
             <col width="8%">
