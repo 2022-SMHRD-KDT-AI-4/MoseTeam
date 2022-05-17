@@ -9,8 +9,7 @@
 <head>
 <meta charset="utf-8">
 <meta name = "viewport" content="width=device-width , initial-scale=1">
-<link rel="stylesheet" href="css/comuView.css?ver=2">
-<link rel = "stylesheet" href="https://stackpath.bootstranpcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/comuView.css?ver=3">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gugi&family=Stylish&display=swap');
@@ -32,54 +31,49 @@
 		<div class="col-xs-8 col-md-8">
 
 			<div class="table table-responsive">
-				<table class="table" border="2" cellspacing="0">
+				<table class="table" border="5" style=" border-radius: 7px; border-style: solid;">
+				<tbody class="body">
 					<tr>
-						<th class="success">글번호</th>
+						<th class="success" style=" background-color:rgb(253, 197, 160)">글번호</th>
 						<td><%=vo.getBOARD_NO() %></td>
-						<th class="success">추천수</th>
+						<th class="success" style=" background-color:rgb(253, 197, 160)">추천수</th>
 						<td><%=vo.getGOOD() %><button class="chu" onclick="location.href='GoodAddService?num=<%=vo.getBOARD_NO() %>'">추천</button></td>
 
 					</tr>
 
 
 					<tr>
-						<th class="success">작성자</th>
+						<th class="success" style=" background-color:rgb(253, 197, 160)">작성자</th>
 						<td><%=vo.getWRITER() %></td>
-						<th class="success">작성일</th>
+						<th class="success" style=" background-color:rgb(253, 197, 160)">작성일</th>
 						<td><%=vo.getWRITE_DATE() %></td>
 					</tr>
 
 					<tr>
-						<th class="success">제목</th>
+						<th class="success" style=" background-color:rgb(253, 197, 160)">제목</th>
 						<td colspan="3"><%=vo.getBOARD_TITLE() %></td>
 					</tr>
 					<tr>
-						<th class="success">글 내용(이미지)</th>
+						<th class="success" style=" background-color:rgb(253, 197, 160)">사진</th>
 						<td colspan="3">
 						<img alt="" src="comuFileImg/<%=vo.getFILE_NAME() %>"></td>
 					</tr>
 					
 					<tr>
-						<th class="success">글 내용(텍스트)</th>
+						<th class="success" style=" background-color:rgb(253, 197, 160)">글 내용</th>
 						<td colspan="3"><%=vo.getBOARD_CONTENT() %></td>
 					</tr>
-
+				</tbody>
 				</table>	
 					<tr>
-							<td colspan="4" class="text-center">
-
-							<input type="button" class="btn" id="btn-primary" value="목록보기"
-							onclick="location.href='http://localhost:8081/MenuRecommendation/ListService'">
-							
-							<input type="button" class="btn" id="btn-danger" value="삭제하기"
-							onclick="location.href='BoardDeleteForm.jsp?num=<%=vo.getBOARD_NO() %>'">
-							
-							<input type="button" class="btn" id="btn-warning" value="수정하기"
-							onclick="location.href='BoardUpdateForm.jsp?num=<%=vo.getBOARD_NO() %>'">
-						
-							<input type="button" class="btn" id="btn-report" value="신고하기"
-							onclick="location.href='BadReportService?num=<%=vo.getBOARD_NO() %>'"></td>
+						<td colspan="4" class="text-center">
+						<input type="button" class="btn" id="btn-primary" value="목록보기" onclick="location.href='http://localhost:8081/MenuRecommendation/ListService'">
+						<input type="button" class="btn" id="btn-danger" value="삭제하기" 	onclick="location.href='BoardDeleteForm.jsp?num=<%=vo.getBOARD_NO() %>'">
+						<input type="button" class="btn" id="btn-warning" value="수정하기" onclick="location.href='BoardUpdateForm.jsp?num=<%=vo.getBOARD_NO() %>'">
+						<input type="button" class="btn" id="btn-report" value="신고하기" onclick="location.href='BadReportService?num=<%=vo.getBOARD_NO() %>'"></td>
 					</tr>	
+		</div>
+		</div>
 	</div>			
 	<div id="comment">
 		<table>
@@ -100,8 +94,8 @@
 		
 		<tbody>
 			<div id="comment_list" >
-				<table class="table" border="2" cellspacing="0">
-				<tr class="head">
+				<table class="table" border="5" style="background-color: white; border-radius: 7px; border-style: solid;">
+				<tr class="head" style=" background-color:rgb(253, 197, 160)">
 					<td>작성자</td>
 					<td>작성내용</td>
 					<td>작성날짜</td>
