@@ -2,17 +2,36 @@ body{
     color:  white;
     margin: 10%
 }
-.reviewDetail{
-	display : none;
-}
-.reviewEmpty{
-	display : none;
+
+hr{
+	width: 90%;
+	color: gray;
+	align-items: center;
+	margin: 10px;
 }
 
-.select_res{
-    width: 100%;
-    box-sizing: border-box; 
-    margin: 5px;
+#restName{
+	text-align: center;
+	margin-top: 5%;
+	margin-left: 5%; 
+	font-size: 20px;
+	vertical-align: middle;
+}
+
+#restCate{
+	text-align: center;
+	margin-top: 5%;
+	margin-left: 2%; 
+	font-size: 14px;
+	vertical-align: middle;
+}
+
+#enterDate{
+	font-size: 14px;
+	margin-top: 3%;
+	margin-right: 10%;
+	float: right;
+	vertical-align: middle;
 }
 
 .btnS{
@@ -49,6 +68,14 @@ body{
 #bad:hover{
     background-color: rgb(247, 0, 0);
 }
+
+<!--府轰技何郴开-->
+.select_res{
+    width: 100%;
+    box-sizing: border-box; 
+    margin: 5%;
+}
+
 .sel{
     font-size: 20px;
     background-color: rgb(250, 160, 76);
@@ -57,6 +84,39 @@ body{
     box-sizing: border-box;
     border: 2px solid white;
     border-radius: 10px;
+    margin: 1%;
+    padding: 1%;
+}
+.reviewDetail{
+	margin-left: 4%;
+	display : none;
+}
+
+.rateWrap{
+	width: 75%;
+	height: 20%;
+	float: left;
+}
+
+.rate{
+	width: 30%;
+	height: 100%;
+	text-align: center;
+	font-size: 13px;
+	border: 2px solid greenyellow;
+	border-radius: 10%;
+	margin: 1%;
+	display: inline-block;
+}
+
+.btnWrap{
+	width: 25%;
+	height: 20%;
+	float: right;
+}
+
+.reviewContent{
+	width:100%;
 }
 
 .innerReview{
