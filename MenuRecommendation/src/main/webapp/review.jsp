@@ -30,8 +30,9 @@
                 <div class="rating">
                     <div class="ratefill"></div>
                     <!-- [D] 해당 별점이 선택될 때 그 점수 이하의 input엘리먼트에 checked 클래스 추가 -->
-                    <!-- review_level 싫어요(1), 좋아요(2) -->
+                    <!-- review_level 싫어요(1), 평범해요(2), 싫어요(3) -->
                     <button type="button" class="btnS" id="bad" value="1">싫어요</button>
+                    <button type="button" class="btnS" id="nomal" value="3">평범해요</button>   
                     <button type="button" class="btnS" id="good" value="2">좋아요</button>   
                     
                 </div>
@@ -43,7 +44,6 @@
             <div class="cmd">
                 <input type="button" name="save" id="save" value="등록">
             </div>
-                <input type="button" name="close1" id="close1" value="창 닫기">
         </form>
     </div>
     <script>
@@ -53,13 +53,17 @@
     	$("#good").click(function(){
     		$("#rate").val("2");
     	});
+    	$("#nomal").click(function(){
+    		$("#rate").val("3");
+    	});
     </script>
     <script>
     	$("#save").click(function(){
     		if(($("#rate").val()!=0)&&($(".review_textarea").val()!="")){
     			$("#save").prop("type","submit");
     			setTimeout(function(){
-    			window.close();
+    				// RestaurantHistory.html로 이동 -> 나중에 바꾸기
+    				location.href="RestaurantHistory.jsp"
     			},100);
     		};
     	});

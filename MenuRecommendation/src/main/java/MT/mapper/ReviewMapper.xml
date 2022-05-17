@@ -31,6 +31,7 @@
 		#{REVIEW_LEVEL},
 		#{REVIEW_CONTENT},
 		#{MEMBER_ID},
+		sysdate,
 		sysdate
 		)
 	</insert>
@@ -48,6 +49,7 @@
 	resultType="ReviewVO">
 		select * from review
 		where rest_id like #{REST_ID}
+		and review_level !=1
 		order by review_NO desc
 	</select>
 	

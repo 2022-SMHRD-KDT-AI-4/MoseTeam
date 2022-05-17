@@ -18,3 +18,9 @@ select * from reply
 		where rest_id = 1
 		
 select restcount from restaurant
+
+
+select * from review
+		where rest_id like 300
+		and review_level !=1
+		order by review_NO desc
