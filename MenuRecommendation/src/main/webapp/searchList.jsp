@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<link rel="stylesheet" href="css/comu.css?ver=3">
+<link rel="stylesheet" href="css/comu.css?ver=4">
 <script src="js/jquery-3.6.0.min.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
@@ -21,7 +21,7 @@
 		List<BoardVO> list = (List<BoardVO>)request.getAttribute("list");
 	%>
 	<div id="board">
-		<table id="list" border="1" cellspacing="0">
+		<table id="list" border="1" style=" border-radius: 10px; ">
 			<caption class="cap">게시글</caption>
 			<colgroup>
             <col width="5%">
@@ -30,7 +30,7 @@
             <col width="30%">
             <col width="15%">
 			</colgroup>
-			<thead class="head">
+			<thead class="head" style=" border-radius: 10px; ">
 				<tr>
 					<td>번호</td>
 					<td>추천수</td>
@@ -39,7 +39,7 @@
 					<td>시간</td>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody style=" border-radius: 10px; ">
 				<%for(BoardVO vo : list){ %>
 				<%-- 나중에 view로 join해서 작성자 닉네임으로 변경하기 --%>
 				<tr>

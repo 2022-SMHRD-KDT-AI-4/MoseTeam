@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<link rel="stylesheet" href="css/comu.css?ver=3">
+<link rel="stylesheet" href="css/comu.css?ver=4">
 <script src="js/jquery-3.6.0.min.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
@@ -22,7 +22,7 @@
 		List<BoardVO> list2 = (List<BoardVO>)request.getAttribute("list2");
 	%>
 	<div id="board">
-		<table id="list" border="1" cellspacing="0">
+		<table id="list" border="1" style=" border-radius: 10px; ">
 
 			<caption class="cap">인기글</caption>
 
@@ -34,7 +34,7 @@
             <col width="30%">
             <col width="15%">
 			</colgroup>
-			<thead class="head">
+			<thead class="head" style=" border-radius: 10px; ">
 				<tr>
 					<td>번호</td>
 					<td>추천수</td>
@@ -45,7 +45,7 @@
 			</thead>
 			
 			<%-- 인기순 게시글 --%>
-			<tbody>
+			<tbody style=" border-radius: 10px; ">
 				<%for(BoardVO vo : list){ %>
 				<tr>
 					<td><%=vo.getBOARD_NO() %></td>
