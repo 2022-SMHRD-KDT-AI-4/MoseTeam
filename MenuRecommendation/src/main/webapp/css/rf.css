@@ -82,29 +82,26 @@ ul, li {list-style:none;}
 }
 
 
-/* 페이징 스타일 */
-
-
-[id="slide01"]:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide01 60s infinite;}
-[id="slide02"]:checked ~ .slidelist .slideitem {transform:translateX(-100%);animation:slide02 60s infinite;}
-[id="slide03"]:checked ~ .slidelist .slideitem {transform:translateX(-200%);animation:slide03 60s infinite;}
-[id="slide04"]:checked ~ .slidelist .slideitem {transform:translateX(-300%);animation:slide04 60s infinite;}
-[id="slide05"]:checked ~ .slidelist .slideitem {transform:translateX(-400%);animation:slide05 60s infinite;}
-[id="slide07"]:checked ~ .slidelist .slideitem {transform:translateX(-500%);animation:slide07 60s infinite;}
-[id="slide08"]:checked ~ .slidelist .slideitem {transform:translateX(-600%);animation:slide08 60s infinite;}
-[id="slide09"]:checked ~ .slidelist .slideitem {transform:translateX(-700%);animation:slide09 60s infinite;}
-[id="slide10"]:checked ~ .slidelist .slideitem {transform:translateX(-800%);animation:slide10 60s infinite;}
-[id="slide11"]:checked ~ .slidelist .slideitem {transform:translateX(-900%);animation:slide11 60s infinite;}
-[id="slide12"]:checked ~ .slidelist .slideitem {transform:translateX(-1000%);animation:slide12 60s infinite;}
-[id="slide13"]:checked ~ .slidelist .slideitem {transform:translateX(-1100%);animation:slide13 60s infinite;}
-[id="slide14"]:checked ~ .slidelist .slideitem {transform:translateX(-1200%);animation:slide14 60s infinite;}
-[id="slide15"]:checked ~ .slidelist .slideitem {transform:translateX(-1300%);animation:slide15 60s infinite;}
-[id="slide16"]:checked ~ .slidelist .slideitem {transform:translateX(-1400%);animation:slide16 60s infinite;}
-[id="slide17"]:checked ~ .slidelist .slideitem {transform:translateX(-1500%);animation:slide17 60s infinite;}
-[id="slide18"]:checked ~ .slidelist .slideitem {transform:translateX(-1600%);animation:slide18 60s infinite;}
-[id="slide19"]:checked ~ .slidelist .slideitem {transform:translateX(-1700%);animation:slide19 60s infinite;}
-[id="slide20"]:checked ~ .slidelist .slideitem {transform:translateX(-1800%);animation:slide20 60s infinite;}
-[id="slide21"]:checked ~ .slidelist .slideitem {transform:translateX(-1900%);animation:slide21 60s infinite;}
+[id="slide01"]:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide01 80s infinite;}
+[id="slide02"]:checked ~ .slidelist .slideitem {transform:translateX(-100%);animation:slide02 80s infinite;}
+[id="slide03"]:checked ~ .slidelist .slideitem {transform:translateX(-200%);animation:slide03 80s infinite;}
+[id="slide04"]:checked ~ .slidelist .slideitem {transform:translateX(-300%);animation:slide04 80s infinite;}
+[id="slide05"]:checked ~ .slidelist .slideitem {transform:translateX(-400%);animation:slide05 80s infinite;}
+[id="slide07"]:checked ~ .slidelist .slideitem {transform:translateX(-500%);animation:slide07 80s infinite;}
+[id="slide08"]:checked ~ .slidelist .slideitem {transform:translateX(-600%);animation:slide08 80s infinite;}
+[id="slide09"]:checked ~ .slidelist .slideitem {transform:translateX(-700%);animation:slide09 80s infinite;}
+[id="slide10"]:checked ~ .slidelist .slideitem {transform:translateX(-800%);animation:slide10 80s infinite;}
+[id="slide11"]:checked ~ .slidelist .slideitem {transform:translateX(-900%);animation:slide11 80s infinite;}
+[id="slide12"]:checked ~ .slidelist .slideitem {transform:translateX(-1000%);animation:slide12 80s infinite;}
+[id="slide13"]:checked ~ .slidelist .slideitem {transform:translateX(-1100%);animation:slide13 80s infinite;}
+[id="slide14"]:checked ~ .slidelist .slideitem {transform:translateX(-1200%);animation:slide14 80s infinite;}
+[id="slide15"]:checked ~ .slidelist .slideitem {transform:translateX(-1300%);animation:slide15 80s infinite;}
+[id="slide16"]:checked ~ .slidelist .slideitem {transform:translateX(-1400%);animation:slide16 80s infinite;}
+[id="slide17"]:checked ~ .slidelist .slideitem {transform:translateX(-1500%);animation:slide17 80s infinite;}
+[id="slide18"]:checked ~ .slidelist .slideitem {transform:translateX(-1600%);animation:slide18 80s infinite;}
+[id="slide19"]:checked ~ .slidelist .slideitem {transform:translateX(-1700%);animation:slide19 80s infinite;}
+[id="slide20"]:checked ~ .slidelist .slideitem {transform:translateX(-1800%);animation:slide20 80s infinite;}
+[id="slide21"]:checked ~ .slidelist .slideitem {transform:translateX(-1900%);animation:slide21 80s infinite;}
 
 
 @keyframes slide01 {

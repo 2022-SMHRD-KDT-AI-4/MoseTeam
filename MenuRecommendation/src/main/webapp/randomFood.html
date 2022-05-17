@@ -164,6 +164,14 @@
         </button>
     </div>
     
+	<script>
+		 $(".button").on("mouseover",function(){
+            $("body > div.container > div > button > span > span").css("font-size","65px");
+        })
+		$(".button").on("mouseout",function(){
+            $("body > div.container > div > button > span > span").css("font-size","40px");
+        })
+	</script>
     <script src="js/classie.js"></script>
     <script src="js/dummydata.js"></script>
     <script src="js/main.js"></script>
