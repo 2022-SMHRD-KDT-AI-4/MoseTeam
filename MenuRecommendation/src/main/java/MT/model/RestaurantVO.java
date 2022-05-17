@@ -27,5 +27,5 @@ public class RestaurantVO {
 	private String menu_id;
 	@NonNull
 	private List<RestmenuVO> restMenu;  
-	private int count;
+	private int restcount;
 }
