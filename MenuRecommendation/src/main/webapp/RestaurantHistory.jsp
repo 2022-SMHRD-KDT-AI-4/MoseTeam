@@ -31,6 +31,7 @@
 						<option value="2">3개월</option>
 						<option value="3">6개월</option>
 					</select>
+					<button>검색</button>
 				</form>
 			</td>
 			<!--  <td colspan="2"><input name="search" type="text"></td>
@@ -59,8 +60,8 @@
 				<div class = "reviewDetail">	
 					<hr>
 					<div class = "rateWrap" value = "review_level">
-						<div class = "rate" name = "3" value ="none">좋아요</div>
-						<div class = "rate" name = "2" value ="none">보통이에요</div>
+						<div class = "rate" name = "2" value ="none">좋아요</div>
+						<div class = "rate" name = "3" value ="none">보통이에요</div>
 						<div class = "rate" name = "1" value ="none">별로에요</div>
 						<input type = 'hidden' name = "review_level" value = "">
 					</div>

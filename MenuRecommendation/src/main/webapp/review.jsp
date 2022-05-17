@@ -63,7 +63,7 @@
     			$("#save").prop("type","submit");
     			setTimeout(function(){
     				// RestaurantHistory.html로 이동 -> 나중에 바꾸기
-    				location.href="RestaurantHistory.html"
+    				location.href="RestaurantHistory.jsp"
     			},100);
     		};
     	});

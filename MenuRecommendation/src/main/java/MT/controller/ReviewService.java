@@ -41,7 +41,7 @@ public class ReviewService extends HttpServlet {
 			System.out.println("리뷰작성 성공");
 		}else {
 			System.out.println("리뷰작성 실패");
-			if(REVIEW_LEVEL==2) {
+			if(REVIEW_LEVEL==3) {
 				// 좋아요
 				restdao.getAddCount(REST_ID);				
 			}else if(REVIEW_LEVEL==1) {
