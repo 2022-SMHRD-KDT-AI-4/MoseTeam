@@ -38,6 +38,9 @@ body {
 	background-color: white;
 	cursor:pointer;
 }
+.button__text-inner:hover{
+	font-size:65px;
+}
 
 .button:focus,
 .button--hover {

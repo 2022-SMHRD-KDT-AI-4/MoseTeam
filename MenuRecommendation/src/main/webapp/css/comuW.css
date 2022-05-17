@@ -1,9 +1,34 @@
 body{
 	margin : 5%;
+	color: white;
+    font-family: 'Cute Font', cursive;
+    font-size: 2em;
 }
-table, th, td {
-    border: 1px solid #bcbcbc;
-  }
-  table {
-    width: 600px;
-  }
+table{
+    border: 3px solid rgb(255, 178, 127);
+    border-radius: 10px;
+    width: 100%;
+}
+#file{
+    border-radius: 10px;
+    width: 22%;
+    color: #e76d09;
+    border: 3px solid rgb(255, 178, 127);
+    background-color: white;
+    border-radius: 10px;
+}
+.write:hover{
+	color: white;
+    border: 3px solid white;
+    background-color: #e76d09;
+}
+.cancel:hover{
+	color: white;
+    border: 3px solid white;
+    background-color: #e76d09;
+}
+.reset:hover{
+	color: white;
+    border: 3px solid white;
+    background-color: #e76d09;
+}
