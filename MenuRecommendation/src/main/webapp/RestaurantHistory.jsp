@@ -13,6 +13,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<script>let flag = "parent"</script>
 	<div class='Header'>
 		<h2>식당 방문 내역</h2>
 	</div>
@@ -81,14 +82,24 @@
 </body>
 <script src="js/reviewHis.js"></script>
 <script type ="text/javascript">
-	// 제목 클릭하면 리뷰 세부정보 펼쳐짐
+	// 하위요소 작성중에 창이 닫기지 않도록 함
+	$('.reviewDetail').on('click', function() {
+		console.log("reviewDetail")
+		flag = "child"
+	});
+	
 	$('.sel').on('click', function() {
 		console.log("sel")
-		var review = this.getElementsByClassName('reviewDetail')	
-		console.log(review[0])
+		console.log(flag)
+		if(flag == "child"){
+			// 자식 요소에서 호출시 동작X
+			flag = parent;
+			return;
+		}
+		var review = this.getElementsByClassName('reviewDetail')
 		if(review[0].style.display == 'block'){
-			//review[0].style.display = 'none';
-			//this.style.height = "55px"
+			review[0].style.display = 'none';
+			this.style.height = "55px"
 		}else{
 			review[0].style.display = 'block';
 			this.style.height = "150px"
