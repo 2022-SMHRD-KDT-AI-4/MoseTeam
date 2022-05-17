@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import MT.model.RestaurantDAO;
 import MT.model.ReviewDAO;
 import MT.model.ReviewVO;
 
@@ -14,6 +15,10 @@ import MT.model.ReviewVO;
 public class ReviewService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		ReviewDAO dao = new ReviewDAO();
+		RestaurantDAO restdao = new RestaurantDAO();
+		
 		
 		request.setCharacterEncoding("utf-8");
 		
@@ -29,7 +34,6 @@ public class ReviewService extends HttpServlet {
 		
 		ReviewVO vo = new ReviewVO(REST_ID, REVIEW_LEVEL, REVIEW_CONTENT, MEMBER_ID);
 		
-		ReviewDAO dao = new ReviewDAO();
 		int cnt = dao.insert(vo);
 		
 		if(cnt>0) {
@@ -37,7 +41,15 @@ public class ReviewService extends HttpServlet {
 			System.out.println("리뷰작성 성공");
 		}else {
 			System.out.println("리뷰작성 실패");
+			if(REVIEW_LEVEL==2) {
+				// 좋아요
+				restdao.getAddCount(REST_ID);				
+			}else if(REVIEW_LEVEL==1) {
+				// 싫어요
+				restdao.getMinusCount(REST_ID);
+			}
 		}
+		
 		
 	}
 

@@ -38,4 +38,16 @@ public class RestaurantDAO {
 		session.close();
 		return vo;
 	}
+	
+	public void getAddCount(int rest_id) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		session.update("addCount",rest_id);
+		session.close();
+	}
+	
+	public void getMinusCount(int rest_id) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		session.update("minusCount",rest_id);
+		session.close();
+	}
 }

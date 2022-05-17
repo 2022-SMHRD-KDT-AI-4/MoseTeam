@@ -20,7 +20,7 @@
     <div class="wrap">
         <h1>후기</h1>
         <form name="reviewform" class="reviewform" method="post" action="ReviewService" target="close">
-            <input type="hidden" name="resrId" value="1"/>
+            <input type="hidden" name="resrId" value="300"/>
             <input type="hidden" name="memberId" value="yj1"/>
             <input type="hidden" name="rate" id="rate" value="0"/>
             <p class="title_star">음식은 어땠나요??</p>
