@@ -32,4 +32,18 @@ public class HistoryDAO{
 		session.close();
 		return hisList;
 	}
+	
+	public ReviewVO getReview(String review_no) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		ReviewVO rvo = session.selectOne("selectReview", review_no);
+		session.close();
+		return rvo;
+	}
+	
+	public int UpdateReview(ReviewVO vo) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		int res = session.update("UpdateReview", vo);
+		session.close();
+		return res;
+	}
 }
