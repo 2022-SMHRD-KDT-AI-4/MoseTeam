@@ -42,7 +42,8 @@
 	
 	<select id="selectBoard"
 	resultType="BoardVO">
-		select * from board
+		select BOARD_NO, BOARD_TITLE, BOARD_CONTENT, FILE_NAME, MEMBER_ID, to_char(WRITE_DATE,'YYYY.MM.DD') WRITE_DATE, WRITER, GOOD 
+		from board
 		order by BOARD_NO desc
 	</select>
 	
