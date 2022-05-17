@@ -75,6 +75,13 @@
 				success : function(res){
 					console.log(res);
 					alert('확인! 마이페이지로 이동하시겠습니까??');
+					// 팝업 닫고 5초 후 후기이동 팝업 생성 --> 확인 시 review.jsp로 이동
+					setTimeout(function(){
+						let goReview = confirm("평가하지 않은 식당이 있습니다. 후기를 작성하시겠습니까?");
+						if(goReview==true){
+							location.href="review.jsp";
+						}
+	    			},5000);
 				},
 				error : function(){
 					elert('저장 실패');
