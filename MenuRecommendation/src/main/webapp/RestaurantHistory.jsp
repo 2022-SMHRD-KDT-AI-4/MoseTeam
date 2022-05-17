@@ -96,8 +96,19 @@
 	// 리뷰 레벨 입력
 	$('.rateWrap').on('click', function() {
 		$('input[name=review_level]').attr('value',tempLevel)
-		console.log(this.getElementsByClassName('rate'))
-		
+		var elements = this.getElementsByClassName("rate");
+		if($(elements[0]).attr('name') == tempLevel){}else{
+			elements[0].style.color = "white"
+			elements[0].style.background = "rgb(250, 160, 76)"
+		}
+		if($(elements[1]).attr('name') == tempLevel){}else{
+			elements[1].style.color = "white"
+			elements[1].style.background = "rgb(250, 160, 76)"
+		}
+		if($(elements[2]).attr('name') == tempLevel){}else{
+			elements[2].style.color = "white"
+			elements[2].style.background = "rgb(250, 160, 76)"
+		}
 	});
 	
 	// 하위요소 작성중에 창이 닫기지 않도록 함
