@@ -25,8 +25,8 @@
 			<caption class="cap">°Ô½Ã±Û</caption>
 			<colgroup>
             <col width="5%">
-            <col width="5%">
-            <col width="45%">
+            <col width="8%">
+            <col width="42%">
             <col width="30%">
             <col width="15%">
 			</colgroup>
