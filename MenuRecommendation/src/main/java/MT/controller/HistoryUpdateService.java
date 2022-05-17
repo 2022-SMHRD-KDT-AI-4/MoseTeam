@@ -23,7 +23,7 @@ public class HistoryUpdateService extends HttpServlet {
 		System.out.println(flag);
 		
 		String review_no = request.getParameter("review_no");
-		String review_level = "1";
+		String review_level = request.getParameter("review_level");;
 		String review_content = request.getParameter("review_content");
 		
 		if(flag.equals("Delete")) {

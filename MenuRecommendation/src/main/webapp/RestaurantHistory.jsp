@@ -13,7 +13,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<script>let flag = "parent"</script>
+	<script>
+		let flag = "parent"
+		let tempLevel = ""
+	</script>
 	<div class='Header'>
 		<h2>식당 방문 내역</h2>
 	</div>
@@ -59,6 +62,7 @@
 						<div class = "rate" name = "3" value ="none">좋아요</div>
 						<div class = "rate" name = "2" value ="none">보통이에요</div>
 						<div class = "rate" name = "1" value ="none">별로에요</div>
+						<input type = 'hidden' name = "review_level" value = "">
 					</div>
 					<div class = "btnWrap">
 						<input type = "submit" name="action" value="Update">
@@ -82,15 +86,26 @@
 </body>
 <script src="js/reviewHis.js"></script>
 <script type ="text/javascript">
+	// 리뷰 레벨 선택
+	$('.rate').on('click', function() {
+		tempLevel = $(this).attr("name")
+		this.style.color = "greenyellow"
+		this.style.background = "navy"
+	});
+	
+	// 리뷰 레벨 입력
+	$('.rateWrap').on('click', function() {
+		$('input[name=review_level]').attr('value',tempLevel)
+		console.log(this.getElementsByClassName('rate'))
+		
+	});
+	
 	// 하위요소 작성중에 창이 닫기지 않도록 함
 	$('.reviewDetail').on('click', function() {
-		console.log("reviewDetail")
 		flag = "child"
 	});
 	
 	$('.sel').on('click', function() {
-		console.log("sel")
-		console.log(flag)
 		if(flag == "child"){
 			// 자식 요소에서 호출시 동작X
 			flag = parent;
