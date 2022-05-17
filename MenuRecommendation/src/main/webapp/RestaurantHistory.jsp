@@ -1,6 +1,6 @@
 <%@page import="MT.model.HistoryVO"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
@@ -19,7 +19,7 @@
 	<div class='Nav'>
 	<table>
 		<tr>
-			<td align="right"> 검색 기간 :
+			<td> 검색 기간 :
 				<form action="HistoryService" method="Post" onchange="this.form.submit()">
 					<select name="month">
 						<option value="1">1개월</option>
@@ -28,8 +28,8 @@
 					</select>
 				</form>
 			</td>
-			<td colspan="2"><input name="search" type="text"></td>
-			<td align="right"><input type="submit" name="btnSearch" value="검색"></td>
+			<!--  <td colspan="2"><input name="search" type="text"></td>
+			<td align="right"><input type="submit" name="btnSearch" value="검색"></td>-->
 		</tr>
 	</table>
 	</div>
@@ -40,64 +40,64 @@
 			for (int i = 0; i < hisList.size(); i++) {
 	%>
 		<div class="select_res">
-			<button class="btnS" id="bad">싫어요</button>
+			<!-- <button class="btnS" id="bad">싫어요</button>
 			<button class="btnS" id="good">좋아요</button>
-			<button class="btnS" id="rv" onclick=<%="revv"+i+"()" %>>후기</button>
+			<button class="btnS" id="rv" onclick= "revv1()">후기</button> -->
 			
 			<div class="sel">
-				<span><%=hisList.get(i).getRest_nm() %></span>
-				<span><%=hisList.get(i).getEnter_date() %></span>
-			</div>
-		<% 
-			if(hisList.get(i).getReview_level() != null){
-		%>
-			<div class = reviewDetail>
-				<hr>
-				<p><span>
-					<%=hisList.get(i).getReview_level().equals("1")? "좋아요. 다시 방문하고 싶어요" : "" %>
-					<%=hisList.get(i).getReview_level().equals("2")? "그럭저럭 먹을만 해요" : "" %>
-					<%=hisList.get(i).getReview_level().equals("3")? "싫어요. 다신 가고싶지 않아요" : "" %>
-				</span></p>
-				<div class = 'reviewContent'>
-					<textarea rows="3" cols="1"><%=hisList.get(i).getReview_content() %></textarea>
-					<input type = "submit" value = "수정"/>
-					<input type = "submit" value = "삭제"/>
+				<span id = "restName"><%=hisList.get(i).getRest_nm() %></span>
+				<span id = "restCate"><%=hisList.get(i).getSub_cate() %></span>
+				<span id = "enterDate"><%=hisList.get(i).getEnter_date() +"일에 방문" %></span>
+				<div class = "reviewDetail">
+					<hr>
+					<div class = "rateWrap">
+						<div class = "rate" name = "best" value ="3">좋아요</div>
+						<div class = "rate" name = "soso" value ="2">보통이에요</div>
+						<div class = "rate" name = "worst" value ="1">별로에요</div>
+					</div>
+					<div class = "btnWrap">
+						<input type = "submit" value = "저장">
+						<input type = "submit" value = "삭제">
+					</div>
+					<div class = 'reviewContent'>
+						<textarea rows="3" cols="80"></textarea>
+					</div>
 				</div>
 			</div>
-		<%
-		}else{%>
-			<div class = 'reviewEmpty'>
-				<hr>
-				<a>후기 작성하기 >></a>
-			</div>
-		<%} %>
-		
 			<div id=<%="review" + i%>>
 				<tr>
 	
 				</tr>
 			</div>
-	</div>
+		</div>
 	<%
-	}
+		}
 	}
 	%>
 
 </body>
 <script src="js/reviewHis.js"></script>
 <script type ="text/javascript">
-	$('.select_res').on('click', function() {
-		console.log('클릭');
-		var re = this.getElementsByClassName('reviewEmpty')
-		if(re[0].style.display == 'block'){
-			re[0].style.display = 'none';
+	$('.sel').on('click', function() {
+		console.log(this)
+		var review = this.getElementsByClassName('reviewDetail')	
+		console.log(review[0])
+		if(review[0].style.display == 'block'){
+			review[0].style.display = 'none';
+			this.style.height = "55px"
 		}else{
-			re[0].style.display = 'block';
+			review[0].style.display = 'block';
+			this.style.height = "150px"
 		}
-		
-		console.log(re[0].style.display);
-		
 	});
+	
+	//$('.reviewEmpty > a').on('click',function(){
+	//	console.log('클릭')
+	//	var url = "review.jsp";
+    //    var name = "Review Write";
+    //    var option = "width = 500, height = 500, top = 100, left = 200, location = centor"
+    //    window.open(url, name, option);
+	//})
 
 </script>
 </html>
