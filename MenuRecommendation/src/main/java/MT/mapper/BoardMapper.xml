@@ -50,7 +50,8 @@
 	
 	<select id="notice"
 	resultType="BoardVO">
-		select * from board
+		select BOARD_NO, BOARD_TITLE, BOARD_CONTENT, FILE_NAME, MEMBER_ID, to_char(WRITE_DATE,'YYYY.MM.DD') WRITE_DATE, WRITER, GOOD 
+		from board
 		where member_id = 'admin'
 		order by BOARD_NO desc
 	</select>
@@ -65,7 +66,8 @@
 	
 	<select id="search"
 	resultType="BoardVO">
-		select * from board
+		select BOARD_NO, BOARD_TITLE, BOARD_CONTENT, FILE_NAME, MEMBER_ID, to_char(WRITE_DATE,'YYYY.MM.DD') WRITE_DATE, WRITER, GOOD 
+		from board
 		where board_title like #{search}
 		order by BOARD_NO desc
 	</select>
@@ -78,7 +80,8 @@
 	
 	<select id="selectOne"
 	resultType="BoardVO">
-		select * from board
+		select BOARD_NO, BOARD_TITLE, BOARD_CONTENT, FILE_NAME, MEMBER_ID, to_char(WRITE_DATE,'YYYY.MM.DD') WRITE_DATE, WRITER, GOOD 
+		from board
 		where BOARD_NO = #{num}
 	</select>
 	
@@ -107,7 +110,8 @@
 	
 	<select id="badList"
 	resultType="BoardVO">
-		select * from board
+		select BOARD_NO, BOARD_TITLE, BOARD_CONTENT, FILE_NAME, MEMBER_ID, to_char(WRITE_DATE,'YYYY.MM.DD') WRITE_DATE, WRITER, GOOD 
+		from board
 		where bad >= 1
 		order by BOARD_NO desc
 	</select>
@@ -120,14 +124,16 @@
 	
 	<select id="popList"
 	resultType="BoardVO">
-		select * from board
+		select BOARD_NO, BOARD_TITLE, BOARD_CONTENT, FILE_NAME, MEMBER_ID, to_char(WRITE_DATE,'YYYY.MM.DD') WRITE_DATE, WRITER, GOOD 
+		from board
 		order by good desc
 	</select>
 	
 	
 	<select id="myBList"
 	resultType="BoardVO">
-		select * from board
+		select BOARD_NO, BOARD_TITLE, BOARD_CONTENT, FILE_NAME, MEMBER_ID, to_char(WRITE_DATE,'YYYY.MM.DD') WRITE_DATE, WRITER, GOOD 
+		from board
 		where member_id like #{MEMBER_ID}
 		order by BOARD_NO desc
 	</select>
