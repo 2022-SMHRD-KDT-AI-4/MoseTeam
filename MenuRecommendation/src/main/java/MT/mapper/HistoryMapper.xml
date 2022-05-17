@@ -25,4 +25,25 @@
 			   AND A.REST_ID = B.REST_ID
 	</select>
 
+	<select id = "selectReview"
+			resultType="ReviewVO">
+			
+			SELECT REVIEW_NO
+			    ,  REST_ID
+			    ,  REVIEW_LEVEL
+			    ,  REVIEW_CONTENT
+			    ,  MEMBER_ID
+			    ,  REVIEW_DATE
+			  FROM REVIEW       
+			 WHERE REVIEW_NO = #{review_no}
+	</select>
+	
+	<update id = "UpdateReview"
+			parameterType="ReviewVO">
+			UPDATE REVIEW
+			   SET REVIEW_LEVEL = DECODE(#{REVIEW_LEVEL},'0',NULL,#{REVIEW_LEVEL},#{REVIEW_LEVEL})
+			     , REVIEW_CONTENT = DECODE(#{REVIEW_CONTENT},'',NULL,#{REVIEW_CONTENT},#{REVIEW_CONTENT})
+			     , REVIEW_DATE = SYSDATE
+			 WHERE REVIEW_NO = #{REVIEW_NO}
+	</update>
 </mapper>
