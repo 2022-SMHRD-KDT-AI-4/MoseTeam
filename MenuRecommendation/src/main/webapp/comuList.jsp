@@ -22,9 +22,16 @@
 		List<BoardVO> list2 = (List<BoardVO>)request.getAttribute("list2");
 	%>
 	<div id="board">
+			<h1 class="cap">게시판</h1>
+				<form action="SearchService" method="get" class="boardSearch">
+		<tr>
+			<td id="writer"><button class="writer"><a href="comuWrite.jsp">글작성</a></button></td>
+			<td align="right" id="btn"><button class="btn" type="submit" onclick="boardSearch()">검색</button></td>
+			<td colspan="3" id="input"><input class="input" name="search" type="text"></td>
+		</tr>
+		</form>
 		<table id="list" border= "1" style=" border-radius: 10px; ">
 
-			<caption class="cap">게시판</caption>
 
 
 
@@ -82,13 +89,7 @@
 
 
 		
-		<form action="SearchService" method="get" class="boardSearch">
-		<tr>
-			<td id="writer"><button class="writer"><a href="comuWrite.jsp">글작성</a></button></td>
-			<td align="right" id="btn"><button class="btn" type="submit" onclick="boardSearch()">검색</button></td>
-			<td colspan="3" id="input"><input class="input" name="search" type="text"></td>
-		</tr>
-		</form>
+
 
 	</div>
 </body>
