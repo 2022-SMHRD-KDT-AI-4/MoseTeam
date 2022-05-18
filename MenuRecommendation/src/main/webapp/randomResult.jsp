@@ -30,7 +30,7 @@
 				src=<%=vo.getImage_path() == null ? "https://img.apti.co.kr/aptHome/images/sub/album_noimg.gif" : vo.getImage_path()%>
 				width="100%">
 			<P class="menuDiscript">
-				<%=vo.getDiscript()%>
+				<%=vo.getDiscription() %>
 			</P>
 		</div>
 		<div class="restaurantList">

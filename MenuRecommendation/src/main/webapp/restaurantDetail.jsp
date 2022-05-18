@@ -27,8 +27,8 @@
 			<p class = 'restaurantName'><%=vo.getRest_nm() %></p>
 			<p class = 'restaurantCate'><%=vo.getSub_cate() %></p>
 			<script> //지도가 들어갈자리! </script>
-			<p class = 'restaurantAddr'<%=vo.getRest_addr() %>>주소 : 용봉동 용봉빌딩 5층</p>
-			<p class = 'restaurantOpenTime'>영업시간 : (월-금)10:00 ~ 19:00</p>
+			<p class = 'restaurantAddr'><%=vo.getRest_addr() %></p>
+			<p class = 'restaurantOpenTime'>-</p>
 		</div>
 		<div class = 'rMenuList'>
 			<% 

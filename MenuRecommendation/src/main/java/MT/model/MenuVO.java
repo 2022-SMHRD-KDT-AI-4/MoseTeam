@@ -11,7 +11,7 @@ public class MenuVO {
 	private String menu_id;
 	private String menu_nm;
 	private String parent_id;
-	private String discript;
+	private String discription;
 	private String code_list;
 	private String image_path;
 }
