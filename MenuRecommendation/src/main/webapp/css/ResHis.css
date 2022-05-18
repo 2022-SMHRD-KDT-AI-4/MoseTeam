@@ -104,10 +104,12 @@ hr{
 	height: 100%;
 	text-align: center;
 	font-size: 13px;
-	border: 2px solid greenyellow;
+	border: 2px solid rgb(94, 221, 158);
 	border-radius: 10%;
 	margin: 1%;
 	display: inline-block;
+	color: rgb(94, 221, 158);
+	background-color: white;
 }
 
 .btnWrap{

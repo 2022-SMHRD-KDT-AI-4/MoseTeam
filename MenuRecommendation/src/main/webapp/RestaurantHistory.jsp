@@ -9,7 +9,7 @@
 <script src="js/modernizr-custom.js"></script>
 <script src="js/jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/demo.css" />
-<link rel="stylesheet" type="text/css" href="css/ResHis.css" />
+<link rel="stylesheet" type="text/css" href="css/ResHis.css?ver=1" />
 <title>Insert title here</title>
 </head>
 <body>
@@ -70,7 +70,7 @@
 						<input type = "submit" name="action" value="Delete">
 					</div>
 					<div class = 'reviewContent'>
-						<textarea name = "review_content" rows="3" cols="75">
+						<textarea name = "review_content" rows="2" cols="75" style="width:75%; resize: none;">
 						<%=hisList.get(i).getReview_content() != null? hisList.get(i).getReview_content(): "" %>
 						</textarea>
 					</div>
@@ -90,8 +90,8 @@
 	// 리뷰 레벨 선택
 	$('.rate').on('click', function() {
 		tempLevel = $(this).attr("name")
-		this.style.color = "greenyellow"
-		this.style.background = "navy"
+		this.style.color = "white"
+		this.style.background = "rgb(94, 221, 158)"
 	});
 	
 	// 리뷰 레벨 입력
@@ -99,16 +99,16 @@
 		$('input[name=review_level]').attr('value',tempLevel)
 		var elements = this.getElementsByClassName("rate");
 		if($(elements[0]).attr('name') == tempLevel){}else{
-			elements[0].style.color = "white"
-			elements[0].style.background = "rgb(250, 160, 76)"
+			elements[0].style.color = "rgb(94, 221, 158)"
+			elements[0].style.background = "white"
 		}
 		if($(elements[1]).attr('name') == tempLevel){}else{
-			elements[1].style.color = "white"
-			elements[1].style.background = "rgb(250, 160, 76)"
+			elements[1].style.color = "rgb(94, 221, 158)"
+			elements[1].style.background = "white"
 		}
 		if($(elements[2]).attr('name') == tempLevel){}else{
-			elements[2].style.color = "white"
-			elements[2].style.background = "rgb(250, 160, 76)"
+			elements[2].style.color = "rgb(94, 221, 158)"
+			elements[2].style.background = "white"
 		}
 	});
 	
